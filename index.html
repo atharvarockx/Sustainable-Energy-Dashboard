@@ -4,8 +4,24 @@
     <meta charset="utf-8">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <title>Home</title>
+   
     <link rel="stylesheet" href="nicepage.css" media="screen">
+    <head>
+      <title>Comparison - Sunburst and Glyph Charts</title>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/highcharts-more.js"></script>
+      <script src="https://code.highcharts.com/modules/sunburst.js"></script>
+      <style>
+          #charts-container {
+              display: flex;
+              justify-content: space-around;
+          }
+          .chart-box {
+              width: 48%;
+              height: 1000px;
+          }
+      </style>
+  </head>
 <link rel="stylesheet" href="index.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -15,13 +31,7 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
+  
     
     
     
@@ -31,6 +41,7 @@
 		"name": "Site1",
 		"logo": "images/default-logo.png"
 }</script>
+
     <meta name="theme-color" content="#478ac9">
     <meta property="og:title" content="Home">
     <meta property="og:description" content="">
@@ -236,7 +247,12 @@
           </div>
         </div>
       </div>
+
     </section>
+    <div id="charts-container">
+      <div id="sunburst-chart" class="chart-box"></div>
+      <div id="glyph-chart" class="chart-box"></div>
+  </div>
     <div class="flourish-embed" data-src="story/2742285"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="100%" alt="visualization" /></noscript></div>
     <section class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-clearfix u-section-5" id="carousel_fddd">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -396,6 +412,7 @@
         </p>
       </div>
     </section>
+   
     <section class="u-clearfix u-section-9" id="carousel_597b">
       <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
         <div class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-30 u-layout-wrap u-layout-wrap-1">
@@ -469,5 +486,199 @@
         </a> -->
       </p>
     </section>
+    
   
-</body></html>
+
+  <script>
+    Highcharts.chart('sunburst-chart', {
+      chart: {
+          type: 'sunburst',
+          height: 800
+      },
+      title: {
+          text: 'Sunburst Chart - Financial Flows Top 8 countries'
+      },
+      colors: [
+          '#5B8FF9', '#5AD8A6', '#5D7092', '#F6BD16', '#6F5EF9',
+          '#6DC8EC', '#945FB9', '#FF9845', '#1E9493', '#FF99C3',
+          '#CDDDFD', '#CDF3E4', '#CED4DE', '#FFD591', '#D3CEFD',
+          '#D3F261', '#D9F7BE', '#FFF566', '#FFA39E', '#ADC6FF',
+          
+      ], // Use a custom muted color palette
+      series: [{
+          type: 'sunburst',
+          data: [
+              { id: 'India', parent: '', name: 'India', value: 18.23811 },
+              { id: 'India-Bioenergy', parent: 'India', name: 'Bioenergy', value: 0.14551 },
+              { id: 'India-Geothermal', parent: 'India', name: 'Geothermal', value: 0.13179 },
+              { id: 'India-Hydropower', parent: 'India', name: 'Hydropower', value: 3.6668 },
+              { id: 'India-Marine', parent: 'India', name: 'Marine', value: 0.54003 },
+              { id: 'India-Multiple Renewables', parent: 'India', name: 'Multiple Renewables', value: 6.00528 },
+              { id: 'India-Wind', parent: 'India', name: 'Wind', value: 6.49622 },
+              { id: 'Pakistan', parent: '', name: 'Pakistan', value: 9.49918 },
+              { id: 'Pakistan-Bioenergy', parent: 'Pakistan', name: 'Bioenergy', value: 0.02929 },
+              { id: 'Pakistan-Geothermal', parent: 'Pakistan', name: 'Geothermal', value: 0.27408 },
+              { id: 'Pakistan-Hydropower', parent: 'Pakistan', name: 'Hydropower', value: 6.59981 },
+              { id: 'Pakistan-Marine', parent: 'Pakistan', name: 'Marine', value: 0.08352 },
+              { id: 'Pakistan-Multiple Renewables', parent: 'Pakistan', name: 'Multiple Renewables', value: 0.73742 },
+              { id: 'Pakistan-Wind', parent: 'Pakistan', name: 'Wind', value: 0.69646 },
+              { id: 'Türkiye', parent: '', name: 'Türkiye', value: 8.77109 },
+              { id: 'Türkiye-Bioenergy', parent: 'Türkiye', name: 'Bioenergy', value: 0.00455 },
+              { id: 'Türkiye-Geothermal', parent: 'Türkiye', name: 'Geothermal', value: 0.47006 },
+              { id: 'Türkiye-Hydropower', parent: 'Türkiye', name: 'Hydropower', value: 0.01272 },
+              { id: 'Türkiye-Marine', parent: 'Türkiye', name: 'Marine', value: 0.1424 },
+              { id: 'Türkiye-Multiple Renewables', parent: 'Türkiye', name: 'Multiple Renewables', value: 6.53983 },
+              { id: 'Türkiye-Wind', parent: 'Türkiye', name: 'Wind', value: 1.21432 },
+              { id: 'South Africa', parent: '', name: 'South Africa', value: 7.76615 },
+              { id: 'South Africa-Bioenergy', parent: 'South Africa', name: 'Bioenergy', value: 0.01889 },
+              { id: 'South Africa-Geothermal', parent: 'South Africa', name: 'Geothermal', value: 0.00137 },
+              { id: 'South Africa-Hydropower', parent: 'South Africa', name: 'Hydropower', value: 2.32271 },
+              { id: 'South Africa-Marine', parent: 'South Africa', name: 'Marine', value: 0.00775 },
+              { id: 'South Africa-Multiple Renewables', parent: 'South Africa', name: 'Multiple Renewables', value: 2.57308 },
+              { id: 'South Africa-Wind', parent: 'South Africa', name: 'Wind', value: 2.50343 },
+              { id: 'Indonesia', parent: '', name: 'Indonesia', value: 7.06734 },
+              { id: 'Indonesia-Bioenergy', parent: 'Indonesia', name: 'Bioenergy', value: 0.02503 },
+              { id: 'Indonesia-Geothermal', parent: 'Indonesia', name: 'Geothermal', value: 3.13048 },
+              { id: 'Indonesia-Hydropower', parent: 'Indonesia', name: 'Hydropower', value: 2.34325 },
+              { id: 'Indonesia-Marine', parent: 'Indonesia', name: 'Marine', value: 0.2261 },
+              { id: 'Indonesia-Multiple Renewables', parent: 'Indonesia', name: 'Multiple Renewables', value: 0.44361 },
+              { id: 'Indonesia-Wind', parent: 'Indonesia', name: 'Wind', value: 0.66411 },
+              { id: 'Egypt', parent: '', name: 'Egypt', value: 6.61353 },
+              { id: 'Egypt-Bioenergy', parent: 'Egypt', name: 'Bioenergy', value: 0.00113 },
+              { id: 'Egypt-Geothermal', parent: 'Egypt', name: 'Geothermal', value: 0.06051 },
+              { id: 'Egypt-Hydropower', parent: 'Egypt', name: 'Hydropower', value: 0.18628 },
+              { id: 'Egypt-Marine', parent: 'Egypt', name: 'Marine', value: 0.01143 },
+              { id: 'Egypt-Multiple Renewables', parent: 'Egypt', name: 'Multiple Renewables', value: 2.21802 },
+              { id: 'Egypt-Wind', parent: 'Egypt', name: 'Wind', value: 2.69876 },
+              { id: 'Brazil', parent: '', name: 'Brazil', value: 6.48679 },
+              { id: 'Brazil-Bioenergy', parent: 'Brazil', name: 'Bioenergy', value: 0.5048 },
+              { id: 'Brazil-Geothermal', parent: 'Brazil', name: 'Geothermal', value: 0.40355 },
+              { id: 'Brazil-Hydropower', parent: 'Brazil', name: 'Hydropower', value: 0.19573 },
+              { id: 'Brazil-Marine', parent: 'Brazil', name: 'Marine', value: 0.04919 },
+              { id: 'Brazil-Multiple Renewables', parent: 'Brazil', name: 'Multiple Renewables', value: 2.75342 },
+              { id: 'Brazil-Wind', parent: 'Brazil', name: 'Wind', value: 2.01552 },
+              { id: 'Argentina', parent: '', name: 'Argentina', value: 5.39596 },
+              { id: 'Argentina-Bioenergy', parent: 'Argentina', name: 'Bioenergy', value: 0.19085 },
+              { id: 'Argentina-Geothermal', parent: 'Argentina', name: 'Geothermal', value: 0.00001 },
+              { id: 'Argentina-Hydropower', parent: 'Argentina', name: 'Hydropower', value: 3.03283 },
+              { id: 'Argentina-Marine', parent: 'Argentina', name: 'Marine', value: 0.0 },
+              { id: 'Argentina-Multiple Renewables', parent: 'Argentina', name: 'Multiple Renewables', value: 0.55514 },
+              { id: 'Argentina-Wind', parent: 'Argentina', name: 'Wind', value: 0.84826 }
+          ],
+          allowDrillToNode: true,
+          cursor: 'pointer',
+          dataLabels: {
+              format: '{point.name}',
+              filter: {
+                  property: 'innerArcLength',
+                  operator: '>',
+                  value: 16
+              }
+          },
+          levels: [{
+              level: 1,
+              levelIsConstant: false,
+              dataLabels: {
+                  filter: {
+                      property: 'outerArcLength',
+                      operator: '>',
+                      value: 64
+                  }
+              },
+              colorByPoint: true
+          }, {
+              level: 2,
+              colorVariation: {
+                  key: 'brightness',
+                  to: -0.4
+              }
+          }]
+      }],
+      tooltip: {
+          headerFormat: '',
+          pointFormat: '<b>{point.name}</b>: {point.value} Billion USD'
+      }
+  });
+  
+  
+      // Glyph Chart
+      Highcharts.chart('glyph-chart', {
+          chart: {
+              polar: true,
+              type: 'column',
+              height: 800
+          },
+          title: {
+              text: 'Radial Chart - Financial Flows Energy Types'
+          },
+          pane: {
+              size: '100%'
+          },
+          xAxis: {
+              categories: ['Bioenergy', 'Geothermal', 'Hydropower', 'Marine', 'Multiple Renewables', 'Wind'],
+              tickmarkPlacement: 'on',
+              lineWidth: 0
+          },
+          yAxis: {
+              gridLineInterpolation: 'polygon',
+              lineWidth: 0,
+              min: 0,
+              max: 5, // Adjusted to fit the data range
+              title: {
+                  text: 'Financial Flows (Billion USD)'
+              }
+          },
+          tooltip: {
+              shared: true,
+              pointFormat: '<b>{series.name}</b>: {point.y} Billion USD<br>'
+          },
+          legend: {
+              enabled: true
+          },
+          series: [
+              {
+                  name: 'India',
+                  data: [0.14551, 0.13179, 3.6668, 0.54003, 6.00528, 6.49622],
+                  pointPlacement: 'on'
+              },
+              {
+                  name: 'Pakistan',
+                  data: [0.02929, 0.27408, 6.59981, 0.08352, 0.73742, 0.69646],
+                  pointPlacement: 'on'
+              },
+              {
+                  name: 'Türkiye',
+                  data: [0.00455, 0.47006, 0.01272, 0.1424, 6.53983, 1.21432],
+                  pointPlacement: 'on'
+              },
+              {
+                  name: 'South Africa',
+                  data: [0.01889, 0.00137, 2.32271, 0.00775, 2.57308, 2.50343],
+                  pointPlacement: 'on'
+              },
+              {
+                  name: 'Indonesia',
+                  data: [0.02503, 3.13048, 2.34325, 0.2261, 0.44361, 0.66411],
+                  pointPlacement: 'on'
+              },
+              {
+                  name: 'Egypt',
+                  data: [0.00113, 0.06051, 0.18628, 0.01143, 2.21802, 2.69876],
+                  pointPlacement: 'on'
+              },
+              {
+                  name: 'Brazil',
+                  data: [0.5048, 0.40355, 0.19573, 0.04919, 2.75342, 2.01552],
+                  pointPlacement: 'on'
+              },
+              {
+                  name: 'Argentina',
+                  data: [0.19085, 0.00001, 3.03283, 0.0, 0.55514, 0.84826],
+                  pointPlacement: 'on'
+              }
+          ]
+      });
+  </script>
+</body>
+
+</html>
