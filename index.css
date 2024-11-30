@@ -18,7 +18,13 @@
   min-width: 100%; 
   min-height: 100%;
 }
-
+.card-deck .card {
+  margin: 0.5rem; /* Optional: Adjust spacing between cards */
+}
+.card-deck-container {
+  max-width: 80%; /* Restrict width */
+  margin: 0 auto; /* Center horizontally */
+}
 
 .u-section-1 .u-sheet-1 {
   min-height: 755px;
