@@ -1,84 +1,103 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;" lang="en"><head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>Home</title>
-    <link rel="stylesheet" href="nicepage.css" media="screen">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <head>
-      <title>Comparison - Sunburst and Glyph Charts</title>
-      <script src="https://code.highcharts.com/highcharts.js"></script>
-      <script src="https://code.highcharts.com/highcharts-more.js"></script>
-      <script src="https://code.highcharts.com/modules/sunburst.js"></script>
-      <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-      <script src="https://code.highcharts.com/modules/exporting.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-      <style>
-          .charts-container {
-            display: flex;
-    flex-direction: row; /* Change from column to row */
-    justify-content: space-between; /* Distribute space between items */
-    align-items: center; /* Align items vertically */
-    gap: 20px; /* Optional: Add space between the divs */
-    padding:100px;
-    padding-top: 130px;
-    padding-bottom:130px;
-          }
-          .chart-box {
-              width: 38%;
-              height: 1000px;
-          }
-         
-        #charts {
-            padding: 15px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+<html style="font-size: 16px;" lang="en">
 
-        .tableau-container {
-          display: flex; /* Enable flexbox */
-          justify-content: center; /* Center horizontally */
-          align-items: center; /* Center vertically */
-          /* height: 100vh;  */ /* Full viewport height */
-          margin-left: 10%;
-        }
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>Home</title>
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-        .tableauPlaceholder {
-            max-width: 80%; /* Optional: Limit the width of the visualization */
-            max-height: 80%; /* Optional: Limit the height of the visualization */
-        }
+  <head>
+    <title>Comparison - Sunburst and Glyph Charts</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/sunburst.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <style>
+      .charts-container {
+        display: flex;
+        flex-direction: row;
+        /* Change from column to row */
+        justify-content: space-between;
+        /* Distribute space between items */
+        align-items: center;
+        /* Align items vertically */
+        gap: 20px;
+        /* Optional: Add space between the divs */
+        padding: 100px;
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
 
-      
+      .chart-box {
+        width: 38%;
+        height: 1000px;
+      }
 
-      </style>
+      #charts {
+        padding: 15px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .tableau-container {
+        display: flex;
+        /* Enable flexbox */
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        /* height: 100vh;  */
+        /* Full viewport height */
+        margin-left: 10%;
+      }
+
+      .tableauPlaceholder {
+        max-width: 80%;
+        /* Optional: Limit the width of the visualization */
+        max-height: 80%;
+        /* Optional: Limit the height of the visualization */
+      }
+    </style>
   </head>
-<link rel="stylesheet" href="index.css" media="screen">
-    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <meta name="generator" content="Nicepage 7.0.3, nicepage.com">
-    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
- 
-    
-    <script type="application/ld+json">{
+  <link rel="stylesheet" href="index.css" media="screen">
+  <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+  <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+  <meta name="generator" content="Nicepage 7.0.3, nicepage.com">
+  <link id="u-theme-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+  <link id="u-page-google-font" rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+
+
+  <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
 		"name": "Site1",
 		"logo": "images/default-logo.png"
 }</script>
-    <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Home">
-    <meta property="og:description" content="">
-    <meta property="og:type" content="website">
-  <meta data-intl-tel-input-cdn-path="intlTelInput/"></head>
-  <body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <!-- <header class="u-clearfix u-header u-header" id="sec-ea65"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Home">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="website">
+  <meta data-intl-tel-input-cdn-path="intlTelInput/">
+</head>
+
+<body data-home-page="Home.html" data-home-page-title="Home" data-path-to-root="./" data-include-products="false"
+  class="u-body u-xl-mode" data-lang="en">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <!-- <header class="u-clearfix u-header u-header" id="sec-ea65"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <a href="#" class="u-image u-logo u-image-1">
           <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
         </a>
@@ -110,127 +129,166 @@
           </div>
         </nav>
       </div></header> -->
-    <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1" src="images/bg.mp4" id="carousel_30e5">
-      <video autoplay muted loop id="myVideo">
-        <source src="images/bg.mp4" type="video/mp4">
-      </video>
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <!-- <div class="u-opacity u-opacity-65 u-palette-4-base u-shape u-shape-circle u-shape-1"></div> -->
-        <!-- <h2 class="u-text u-text-body-alt-color u-text-1">Caring for</h2> -->
-        <div class="bg-rect" style="margin-top:150px;">
-          <span class="u-color-scheme-u10 u-color-style-multicolor-1 u-text  u-title u-text-2" style="text-transform: none; font-size: 100px; text-color: #021100 ;text-shadow: 2px 2px #ffffff;">Towards </span>
-          <span ><img style="height: 90px" src="images/arrow.png" alt=""></span>
+  <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1" src="images/bg.mp4"
+    id="carousel_30e5">
+    <video autoplay muted loop id="myVideo">
+      <source src="images/bg.mp4" type="video/mp4">
+    </video>
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <!-- <div class="u-opacity u-opacity-65 u-palette-4-base u-shape u-shape-circle u-shape-1"></div> -->
+      <!-- <h2 class="u-text u-text-body-alt-color u-text-1">Caring for</h2> -->
+      <div class="bg-rect" style="margin-top:150px;">
+        <span class="u-color-scheme-u10 u-color-style-multicolor-1 u-text  u-title u-text-2"
+          style="text-transform: none; font-size: 100px; text-color: #021100 ;text-shadow: 2px 2px #ffffff;">Towards
+        </span>
+        <span><img style="height: 90px" src="images/arrow.png" alt=""></span>
 
-          <h1 class="u-color-scheme-u10 u-color-style-multicolor-1 u-text u-title u-text-2" style="text-transform: none; font-size: 100px;  color: #021100 ;text-shadow: 2px 2px #ffffff;">Sustainable Energy </h1>
-        </div>
-        <!-- <h1 class="u-color-scheme-u10 u-color-style-multicolor-1 u-text u-text-body-alt-color u-title u-text-2">TOWARDS </h1>
+        <h1 class="u-color-scheme-u10 u-color-style-multicolor-1 u-text u-title u-text-2"
+          style="text-transform: none; font-size: 100px;  color: #021100 ;text-shadow: 2px 2px #ffffff;">Sustainable
+          Energy </h1>
+      </div>
+      <!-- <h1 class="u-color-scheme-u10 u-color-style-multicolor-1 u-text u-text-body-alt-color u-title u-text-2">TOWARDS </h1>
         <h1 class="u-color-scheme-u10 u-color-style-multicolor-1 u-text u-text-body-alt-color u-title u-text-2">SUSTAINABLE ENERGY </h1>
         <p class="u-text u-text-body-alt-color u-text-3">Image from <a href="https://freepik.com/photos/forest" class="u-active-none u-border-1 u-border-active-grey-5 u-border-hover-grey-5 u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">Freepik </a> -->
-        </p>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-grey-5 u-section-2" id="carousel_f1a4">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h3 class="u-text u-text-default u-text-1"> Sustainable Development Goal 7 (SDG 7): Ensuring Affordable and Clean Energy for All</h3>
-        <p class="u-text u-text-grey-50 u-text-2" align="justify">
-          SDG 7 aims to ensure universal access to affordable, reliable, sustainable, and modern energy by 2030. 
-        Energy is a cornerstone of progress, powering homes, schools, healthcare, and industries. 
-        However, millions worldwide still lack access to electricity or clean cooking solutions, relying instead on harmful and unsustainable energy sources. 
-        SDG 7 focuses on accelerating the transition to renewable energy, improving energy efficiency, and ensuring equitable access, particularly in underprivileged and remote communities. 
-        Achieving this goal is vital for combating climate change, fostering economic growth, and enhancing global well-being. 
-        
-        </p>
-        <h5 style="text-align: center;" class="u-text u-text-default u-text-2"> Let's look at how far we have progressed towards SDG 7. </h5>
-          
-        <a href="#" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-1">read more</a>
-      </div>
-    </section>
+      </p>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-container-align-center u-grey-5 u-section-2" id="carousel_f1a4">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <h3 class="u-text u-text-default u-text-1"> Sustainable Development Goal 7 (SDG 7): Ensuring Affordable and Clean
+        Energy for All</h3>
+      <p class="u-text u-text-grey-50 u-text-2" align="justify">
+        SDG 7 aims to ensure universal access to affordable, reliable, sustainable, and modern energy by 2030.
+        Energy is a cornerstone of progress, powering homes, schools, healthcare, and industries.
+        However, millions worldwide still lack access to electricity or clean cooking solutions, relying instead on
+        harmful and unsustainable energy sources.
+        SDG 7 focuses on accelerating the transition to renewable energy, improving energy efficiency, and ensuring
+        equitable access, particularly in underprivileged and remote communities.
+        Achieving this goal is vital for combating climate change, fostering economic growth, and enhancing global
+        well-being.
 
-    <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1" style="background-color: #41807c; padding-top:40px;">
-      <div class="text-center mt-3 my-4" >
-        <h2 style="color: #ffffff;">SDG 7 is characterized by 5 targets. Each target has a list of indicators to track for measuring progress.</h2>
-      </div>
-      <div class="card-deck card-deck-container" style="margin-bottom:60px;">
-        <div class="row">
-          <div class="col-md-4 d-flex" >
-            <div class="card flex-fill" style="background-color: #f2f2f2;">
-              <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto" src="./images/eco-house.png" alt="Card image cap">
-              <div class="card-body">
-                
-                <h5 class="card-title text-center">Target 7.1</h5>
-                <p class="card-text">By 2030, ensure universal access to affordable, reliable and modern energy services</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex">
-            <div class="card flex-fill" style="background-color: #f2f2f2;">
-              <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto" src="./images/renewable-energy.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title text-center">Target 7.2</h5>
-                <p class="card-text">By 2030, increase substantially the share of renewable energy in the global energy mix</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex">
-            <div class="card flex-fill" style="background-color: #f2f2f2;">
-              <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto" src="./images/green-energy.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title text-center">Target 7.3</h5>
-                <p class="card-text">By 2030, double the global rate of improvement in energy efficiency</p>
-              </div>
+      </p>
+      <h5 style="text-align: center;" class="u-text u-text-default u-text-2"> Let's look at how far we have progressed
+        towards SDG 7. </h5>
+
+      <a href="#"
+        class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-1">read
+        more</a>
+    </div>
+  </section>
+
+  <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1"
+    style="background-color: #41807c; padding-top:40px;">
+    <div class="text-center mt-3 my-4">
+      <h2 style="color: #ffffff;">Targets of SDG 7</h2>
+      Sustainable Development Goal 7 is built on ambitious yet vital targets aimed at transforming the global energy
+      landscape. These targets focus on ensuring universal access to clean and sustainable energy while improving
+      efficiency and encouraging renewable solutions.
+    </div>
+    <div class="card-deck card-deck-container" style="margin-bottom:60px;">
+      <div class="row">
+        <div class="col-md-4 d-flex">
+          <div class="card flex-fill" style="background-color: #f2f2f2;">
+            <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
+              src="./images/eco-house.png" alt="Card image cap">
+            <div class="card-body">
+
+              <h5 class="card-title text-center">Universal Access to Modern Energy Services (Target 7.1)</h5>
+              <p class="card-text">By 2030, ensure universal access to affordable, reliable and modern energy services
+              </p>
             </div>
           </div>
         </div>
-        <div class="row mt-4">
-          <div class="col-md-6 d-flex">
-            <div class="card flex-fill" style="background-color: #f2f2f2;">
-              <img class="card-img-top mt-3 mb-0 center" style="max-height:80px; max-width:80px; margin:0 auto" src="./images/recpc-removebg-preview.png" alt="Card image cap">
-              <div class="card-body pt-0">
-                <h5 class="card-title text-center">Target 7.a</h5>
-                <p class="card-text">By 2030, enhance international cooperation to facilitate access to clean energy research and technology, including renewable energy, energy efficiency and advanced and cleaner fossil-fuel technology, and promote investment in energy infrastructure and clean energy technology</p>
-              </div>
+        <div class="col-md-4 d-flex">
+          <div class="card flex-fill" style="background-color: #f2f2f2;">
+            <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
+              src="./images/renewable-energy.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title text-center">Increase Renewable Energy Share (Target 7.2):</h5>
+              <p class="card-text">By 2030, increase substantially the share of renewable energy in the global energy
+                mix</p>
             </div>
           </div>
-          <div class="col-md-6 d-flex">
-            <div class="card flex-fill" style="background-color: #f2f2f2;">
-              <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto" src="./images/financial.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title text-center">Target 7.b</h5>
-                <p class="card-text">By 2030, expand infrastructure and upgrade technology for supplying modern and sustainable energy services for all in developing countries, in particular least developed countries, small island developing States, and land-locked developing countries, in accordance with their respective programmes of support</p>
-              </div>
+        </div>
+        <div class="col-md-4 d-flex">
+          <div class="card flex-fill" style="background-color: #f2f2f2;">
+            <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
+              src="./images/green-energy.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title text-center">Improve Energy Efficiency (Target 7.3)</h5>
+              <p class="card-text">By 2030, double the global rate of improvement in energy efficiency</p>
             </div>
           </div>
         </div>
       </div>
-    </section>    
+      <div class="row mt-4">
+        <div class="col-md-6 d-flex">
+          <div class="card flex-fill" style="background-color: #f2f2f2;">
+            <img class="card-img-top mt-3 mb-0 center" style="max-height:80px; max-width:80px; margin:0 auto"
+              src="./images/recpc-removebg-preview.png" alt="Card image cap">
+            <div class="card-body pt-0">
+              <h5 class="card-title text-center">Enhance International Cooperation and Technology Access (Target 7.A)
+              </h5>
+              <p class="card-text">By 2030, enhance international cooperation to facilitate access to clean energy
+                research and technology, including renewable energy, energy efficiency and advanced and cleaner
+                fossil-fuel technology, and promote investment in energy infrastructure and clean energy technology</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex">
+          <div class="card flex-fill" style="background-color: #f2f2f2;">
+            <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
+              src="./images/financial.png" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title text-center">Expand Energy Infrastructure for Developing Nations (Target 7.B)</h5>
+              <p class="card-text">By 2030, expand infrastructure and upgrade technology for supplying modern and
+                sustainable energy services for all in developing countries, in particular least developed countries,
+                small island developing States, and land-locked developing countries, in accordance with their
+                respective programmes of support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="u-clearfix u-section-3" id="carousel_96d5">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h5 class="u-custom-font u-font-montserrat u-text u-text-1"> More information</h5>
-                  <p class="u-text u-text-grey-30 u-text-2">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                  <img class="u-expanded-width u-image u-image-default u-image-1" src="images/trtrrt-min.jpg" alt="" data-image-width="730" data-image-height="1080">
-                </div>
+  <section class="u-clearfix u-section-3" id="carousel_96d5">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+              <div class="u-container-layout u-container-layout-1">
+                <h5 class="u-custom-font u-font-montserrat u-text u-text-1"> More information</h5>
+                <p class="u-text u-text-grey-30 u-text-2">Target 7.2 focuses on accelerating the global shift toward
+                  renewable energy. By 2030, the goal is to significantly increase the proportion of energy generated
+                  from renewable sources such as solar, wind, hydropower, geothermal, and bioenergy, reducing dependence
+                  on fossil fuels and mitigating greenhouse gas emissions.</p>
+                <!-- <img class="u-expanded-width u-image u-image-default u-image-1" src="images/trtrrt-min.jpg" alt="" data-image-width="730" data-image-height="1080"> -->
+                <img class="u-expanded-width u-image u-image-default u-image-1"
+                  src="https://aoneenergies.com/wp-content/uploads/2023/08/desktop-wallpaper-green-renewable-energy-in-digital-teahub-io-sustainable-energy.jpg"
+                  alt="" data-image-width="730" data-image-height="1080">
               </div>
-              <div class="u-align-center u-container-align-center u-container-style u-grey-5 u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-valign-middle u-container-layout-2">
-                  <div class="u-opacity u-opacity-65 u-palette-4-base u-shape u-shape-circle u-shape-1"></div>
-                  <h2 class="u-text u-text-3"> Help us to look after our forests</h2>
-                  <p class="u-text u-text-grey-40 u-text-4">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                  <a href="#" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-1">read more</a>
-                </div>
+            </div>
+            <div
+              class="u-align-center u-container-align-center u-container-style u-grey-5 u-layout-cell u-shape-rectangle u-size-30 u-layout-cell-2">
+              <div class="u-container-layout u-valign-middle u-container-layout-2">
+                <div class="u-opacity u-opacity-65 u-palette-4-base u-shape u-shape-circle u-shape-1"></div>
+                <h2 class="u-text u-text-3">Increasing Renewable Energy Share</h2>
+                <p class="u-text u-text-grey-40 u-text-4">Let's look at how our renewable energy shares are today, and
+                  their primary utilization purposes.</p>
+                <a href="#"
+                  class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-1">read
+                  more</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- <section class="u-align-center u-clearfix u-container-align-center u-palette-4-base u-section-4" id="carousel_10ca">
+  <!-- <section class="u-align-center u-clearfix u-container-align-center u-palette-4-base u-section-4" id="carousel_10ca">
       <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
         <h3 class="u-text u-text-2 m-10"> SDG 7 is characterized by 5 targets. Each target has a list of indicators to track for measuring progress.</h3>
         <div class="u-expanded-width u-list u-list-1">
@@ -340,207 +398,331 @@
 
     </section>
     -->
+  <section>
+    <div>
+      <h3 class="u-align-center">Renewable Energy Share</h3>
+    </div>
+    <div class="u-align-center">
+      <div class='tableauPlaceholder' id='viz1733006071822' style='position: relative'>
+        <noscript><a href='#'><img alt='Dashboard 1 '
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1_rss.png'
+              style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='path' value='shared&#47;M4BYJ73MS' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image'
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1733006071822');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = '1000px';
+          vizElement.style.height = '827px';
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width = '1000px';
+          vizElement.style.height = '827px';
+        } else {
+          vizElement.style.width = '100%';
+          vizElement.style.height = '727px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
 
-    <section>
-      <div>
-        <h3 class="u-align-center">Energy Efficiency</h3>
-      </div>
-      <div class="u-align-center">
-        <div class='tableauPlaceholder' id='viz1733005722583' style='position: relative'>
-          <noscript><a href='#'><img alt='Energy Efficiency Trends ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;en&#47;energy_efficiency_charts&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript>
-          <object class='tableauViz'  style='display:none;'>
-             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-             <param name='embed_code_version' value='3' />
-             <param name='site_root' value='' />
-             <param name='name' value='energy_efficiency_charts&#47;Sheet1' />
-             <param name='tabs' value='no' />
-             <param name='toolbar' value='yes' />
-             <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;en&#47;energy_efficiency_charts&#47;Sheet1&#47;1.png' />
-             <param name='animate_transition' value='yes' />
-             <param name='display_static_image' value='yes' />
-             <param name='display_spinner' value='yes' />
-             <param name='display_overlay' value='yes' />
-             <param name='display_count' value='yes' />
-             <param name='language' value='en-US' />
-             <param name='filter' value='publish=yes' />
-          </object>
-        </div>
-        <script type='text/javascript'>                    
-          var divElement = document.getElementById('viz1733005722583');                    
-          var vizElement = divElement.getElementsByTagName('object')[0];                    
-          vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
-          var scriptElement = document.createElement('script');                    
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-        </script>
-      </div>
-    </section>
+      </script>
 
-    <section>
-      <div>
-        <h3 class="u-align-center">Energy Usage in Heat, Transport, and Electricty</h3>
-      </div>
-      <div class="u-align-center">
-        <div class='tableauPlaceholder' id='viz1733006157957' style='position: relative'>
-          <noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RenewableEnergyUsageShare&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript>
-          <object class='tableauViz'  style='display:none;'>
-             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-             <param name='embed_code_version' value='3' />
-             <param name='site_root' value='' />
-             <param name='name' value='RenewableEnergyUsageShare&#47;Dashboard2' />
-             <param name='tabs' value='no' />
-             <param name='toolbar' value='yes' />
-             <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RenewableEnergyUsageShare&#47;Dashboard2&#47;1.png' />
-             <param name='animate_transition' value='yes' />
-             <param name='display_static_image' value='yes' />
-             <param name='display_spinner' value='yes' />
-             <param name='display_overlay' value='yes' />
-             <param name='display_count' value='yes' />
-             <param name='language' value='en-US' />
-             <param name='filter' value='publish=yes' />
-          </object>
-        </div>
-        <script type='text/javascript'>                    
-          var divElement = document.getElementById('viz1733006157957');                    
-          var vizElement = divElement.getElementsByTagName('object')[0];                    
-          if ( divElement.offsetWidth > 800 ) { 
-            vizElement.style.width='1000px';
-            vizElement.style.height='827px';
-          } else if ( divElement.offsetWidth > 500 ) { 
-            vizElement.style.width='1000px';vizElement.style.height='827px';
-          } else { 
-            vizElement.style.width='100%';
-            vizElement.style.height='777px';
-          }                     
-          var scriptElement = document.createElement('script');                    
-          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);                
-        </script>
-      </div>
-    </section>
+      The Evolving Story of Renewable Energy: A Tale of Two Trends <br>
+      As the world accelerates its efforts toward achieving Sustainable Development Goal 7 (SDG 7), the journey of
+      renewable energy adoption reveals contrasting narratives between developed and developing nations. Data
+      visualization brings these stories to life, illustrating the complex dynamics at play in the global energy
+      landscape.
+
+      In developed nations, the total energy demand has remained relatively constant over time, reflecting a matured
+      stage of industrialization and economic growth. However, what's remarkable is the increasing proportion of this
+      energy sourced from renewables. Investments in clean energy technologies, supportive policies, and public
+      awareness have enabled a steady transition. As a result, the percentage of renewable energy in the overall energy
+      mix has consistently risen, marking significant progress toward sustainability.
+
+      In contrast, the story unfolds differently in developing countries. Here, rapid economic expansion and population
+      growth drive an ever-increasing demand for energy. Renewable energy production is also growing, bolstered by
+      international collaborations, innovative projects, and local efforts. Yet, the pace of total energy consumption is
+      outstripping the growth of renewables. This imbalance results in a declining percentage of renewable energy in the
+      overall mix, underscoring the challenges of meeting burgeoning energy needs sustainably.
+    </div>
+  </section>
 
 
-    <section>
-      <div>
-        <h3 class="u-align-center">Renewable Energy Share</h3>
+  <section>
+    <div>
+      <h3 class="u-align-center">Energy Usage in Heat, Transport, and Electricty</h3>
+    </div>
+    <div class="u-align-center">
+      <div class='tableauPlaceholder' id='viz1733006157957' style='position: relative'>
+        <noscript><a href='#'><img alt='Dashboard 2 '
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RenewableEnergyUsageShare&#47;Dashboard2&#47;1_rss.png'
+              style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='RenewableEnergyUsageShare&#47;Dashboard2' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image'
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Re&#47;RenewableEnergyUsageShare&#47;Dashboard2&#47;1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
       </div>
-      <div class="u-align-center">
-        <div class='tableauPlaceholder' id='viz1733006071822' style='position: relative'>
-          <noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1_rss.png' style='border: none' /></a></noscript>
-          <object class='tableauViz'  style='display:none;'>
-             <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-             <param name='embed_code_version' value='3' />
-             <param name='path' value='shared&#47;M4BYJ73MS' />
-             <param name='toolbar' value='yes' />
-             <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1.png' />
-             <param name='animate_transition' value='yes' />
-             <param name='display_static_image' value='yes' />
-             <param name='display_spinner' value='yes' />
-             <param name='display_overlay' value='yes' />
-             <param name='display_count' value='yes' />
-             <param name='language' value='en-US' />
-             <param name='filter' value='publish=yes' />
-          </object>
-       </div>
-      <script type='text/javascript'>                    
-        var divElement = document.getElementById('viz1733006071822');                    
-        var vizElement = divElement.getElementsByTagName('object')[0];                    
-        if ( divElement.offsetWidth > 800 ) { 
-        vizElement.style.width='1000px';
-        vizElement.style.height='827px';
-        } else if ( divElement.offsetWidth > 500 ) { 
-        vizElement.style.width='1000px';
-        vizElement.style.height='827px';
-        } else { 
-        vizElement.style.width='100%';
-        vizElement.style.height='727px';
-        }                     
-        var scriptElement = document.createElement('script');                    
-        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1733006157957');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if (divElement.offsetWidth > 800) {
+          vizElement.style.width = '1000px';
+          vizElement.style.height = '827px';
+        } else if (divElement.offsetWidth > 500) {
+          vizElement.style.width = '1000px'; vizElement.style.height = '827px';
+        } else {
+          vizElement.style.width = '100%';
+          vizElement.style.height = '777px';
+        }
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
         vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+      Diving Deeper: The Sectoral Story of Renewable Energy <br>
+      While the global narrative of renewable energy adoption provides a broad perspective, a closer look at
+      sector-specific trends reveals the complexity of this transition. A heatmap showcasing the use of renewable energy
+      across transport, heat, and electricity illustrates how countries prioritize different aspects of their energy
+      needs.
 
-       </script>
+      Take China, for instance. The data shows a decline in the use of renewable energy for heating, likely influenced
+      by the country's reliance on coal and natural gas for industrial processes and residential heating. However, there
+      is an encouraging rise in the use of renewables for electricity generation, driven by massive investments in solar
+      and wind infrastructure. This shift aligns with China's aggressive renewable energy targets and its role as a
+      global leader in clean energy production.
+
+      These sectoral nuances emphasize that the renewable energy transition is far from uniform. For some countries,
+      progress is most visible in electricity, where technologies like solar panels and wind turbines are rapidly
+      deployed. In contrast, sectors like transport and heat often lag due to technological and infrastructural
+      challenges. For example, electric vehicles (EVs) and biofuels are gaining traction, but their adoption requires
+      significant policy support and market incentives. Similarly, heating systems powered by renewables often face
+      competition from cheaper, traditional alternatives. <br>
+
+      Connecting the Stories: Holistic Action Across Sectors <br>
+      When viewed alongside broader energy trends, these sectoral insights paint a vivid picture of where progress is
+      happening-and where challenges remain. They remind us that achieving SDG 7 requires not only increasing the
+      overall share of renewables but also ensuring that growth is distributed across all key sectors.
+
+      This shift demands tailored approaches. Developed nations, with relatively stable energy demands, can lead by
+      transitioning hard-to-decarbonize sectors like transport and heat to renewable solutions. Developing countries,
+      meanwhile, need support in building versatile, renewable energy systems that cater to their growing needs across
+      all sectors.
+
+      By aligning global, national, and sectoral efforts, we can ensure that the renewable energy story evolves into a
+      comprehensive and impactful narrative-one that powers not just economies, but also a sustainable future for the
+      planet.
+    </div>
+  </section>
+
+
+  <section>
+    <div>
+      <h3 class="u-align-center">Bump Chart</h3>
+    </div>
+    <div class="u-align-center">
+      <div class="flourish-embed" data-src="story/2742285">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="10%"
+            alt="visualization" /></noscript>
       </div>
-    </section>
+      Renewable Energy Mix: A Global Ranking of Progress <br>
+      The renewable energy story becomes even more dynamic when we examine the specific contributions of different
+      energy sources—wind, hydro, solar, and others—across countries. A ranking of nations based on the percentage of
+      their total energy derived from these sources reveals an encouraging overall trend: renewable energy percentages
+      are rising globally. However, the pace of growth varies among the different forms, offering critical insights into
+      opportunities and challenges within the energy transition.
+      Countries leading the charge in wind energy, for example, are often those with abundant natural wind resources and
+      established infrastructure, such as Denmark and Germany. Similarly, nations like Norway and Brazil, rich in water
+      resources, dominate in hydroelectric power. Meanwhile, solar energy continues to make remarkable strides in sunny
+      regions like Australia and parts of the Middle East. <br>
+      Broadening the Renewable Energy Story<br>
+      When viewed in the context of broader energy trends, these rankings remind us that the path to sustainability is
+      not a one-size-fits-all solution. Each country’s energy strategy must be shaped by its unique resources,
+      capabilities, and needs. Importantly, slower-growing renewable forms should not be overlooked but rather seen as
+      areas ripe for innovation and investment.
+
+      As the global push toward SDG 7 continues, the increasing diversity of renewable energy sources offers hope. By
+      embracing a balanced energy portfolio, leveraging local strengths, and addressing challenges head-on, we can
+      ensure that all forms of renewable energy contribute meaningfully to a cleaner, more sustainable future. This
+      nuanced story of progress reflects the complexity and opportunity inherent in building a world powered by
+      renewables.
+    </div>
+  </section>
 
 
-    <section>
-      <div>
-        <h3 class="u-align-center">Bump Chart</h3>
+  <section>
+    <div>
+      <h3 class="u-align-center">Energy Efficiency</h3>
+    </div>
+    <div class="u-align-center">
+      <div class='tableauPlaceholder' id='viz1733005722583' style='position: relative'>
+        <noscript><a href='#'><img alt='Energy Efficiency Trends '
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;en&#47;energy_efficiency_charts&#47;Sheet1&#47;1_rss.png'
+              style='border: none' /></a></noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='energy_efficiency_charts&#47;Sheet1' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image'
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;en&#47;energy_efficiency_charts&#47;Sheet1&#47;1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
       </div>
-      <div class="u-align-center">
-        <div class="flourish-embed" data-src="story/2742285">
-          <script src="https://public.flourish.studio/resources/embed.js"></script>
-          <noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="100%" alt="visualization" /></noscript>
-        </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1733005722583');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+      </script>
+      The Efficiency Challenge: Energy Use in a Growing Economy <br>
+      The broader energy landscape reveals a pressing challenge: energy efficiency is declining worldwide.
+      Despite advancements in clean energy, the amount of energy required to generate
+      economic value is rising, signaling a critical barrier to achieving SDG 7, particularly Target 7.3, which aims to
+      double the rate of improvement in energy efficiency by 2030.
+      <br>
+      Understanding the Decline <br>
+      This global decline in energy efficiency can be attributed to several factors:
+      <ul>
+        <li> Economic Growth in Developing Nations: Rapid industrialization and urbanization often prioritize energy
+          expansion
+          over efficiency, leading to higher Total Energy Supply (TES) relative to GDP.
+        <li> Increased Energy Demand: As economies grow, so does demand for energy-intensive goods and services,
+          outpacing
+          efficiency measures in many cases.
+        <li> Technological Gaps: Many countries still rely on outdated, energy-inefficient technologies for production,
+          transport, and infrastructure.
+        <li> Energy-Intensive Sectors: Some nations experience growth in industries that are inherently less efficient,
+          such as
+          heavy manufacturing or resource extraction.
+      </ul>
+
+      A Call for Action <br>
+      The decline in energy efficiency poses a dual challenge: it undermines the economic benefits of renewable energy
+      adoption and exacerbates environmental pressures by increasing overall energy consumption. Reversing this trend
+      requires immediate, targeted action. Steps can include technology upgrades and policy interventions.
+      When juxtaposed with other trends in renewable energy, the decline in efficiency paints a complex picture.
+      Inefficiencies threaten to offset progress.
+
+    </div>
+  </section>
+
+
+  <section>
+    <div>
+      <h3 class="u-align-center">Financial Flows for Sustainable Energy</h3>
+    </div>
+
+
+
+    <div class="u-align-center">
+      <div id="filters">
+        <label for="countries">Select Countries:</label>
+        <select id="countries" multiple></select>
+
+        <label for="energyType">Select Energy Type:</label>
+        <select id="energyType">
+          <option value="All Renewables">All Renewables</option>
+          <option value="Bioenergy">Bioenergy</option>
+          <option value="Geothermal">Geothermal</option>
+          <option value="Hydropower">Hydropower</option>
+          <option value="Marine">Marine</option>
+          <option value="Multiple Renewables">Multiple Renewables</option>
+          <option value="Wind">Wind</option>
+        </select>
       </div>
-    </section>
-
-    <section>
-      <div>
-        <h3 class="u-align-center">Financial Flows for Sustainable Energy</h3>
+      <div id="charts">
+        <div id="chart1" class="chart-container" style="height:500px;"></div>
+        <div id="chart2" class="chart-container" style="height:500px;"></div>
       </div>
-
-   
-
-      <div class="u-align-center">
-        <div id="filters">
-          <label for="countries">Select Countries:</label>
-          <select id="countries" multiple></select>
-
-          <label for="energyType">Select Energy Type:</label>
-          <select id="energyType">
-              <option value="All Renewables">All Renewables</option>
-              <option value="Bioenergy">Bioenergy</option>
-              <option value="Geothermal">Geothermal</option>
-              <option value="Hydropower">Hydropower</option>
-              <option value="Marine">Marine</option>
-              <option value="Multiple Renewables">Multiple Renewables</option>
-              <option value="Wind">Wind</option>
-          </select>
-        </div>
-        <div id="charts">
-          <div id="chart1" class="chart-container" style="height:500px;"></div>
-          <div id="chart2" class="chart-container" style="height:500px;"></div>
-        </div>
-        <!-- <div id="charts-container">
+      <!-- <div id="charts-container">
           <div id="sunburst-chart" class="chart-box"></div>
           <div id="glyph-chart" class="chart-box"></div>
         </div> -->
-      </div>
-    </section>
-    
-    <!-- <div class="flourish-embed" data-src="story/2742285"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="100%" alt="visualization" /></noscript></div> -->
-    <section class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-clearfix u-section-5" id="carousel_fddd">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-gutter-0 u-layout">
-            <div class="u-layout-row">
-              <div class="u-size-32">
-                <div class="u-layout-col">
-                  <div class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-shading u-size-28 u-image-1" data-image-width="626" data-image-height="416">
-                    <div class="u-container-layout u-container-layout-1"></div>
-                  </div>
-                  <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-32 u-layout-cell-2" src="">
-                    <div class="u-container-layout u-container-layout-2">
-                      <h4 class="u-text u-text-1"> Advice&nbsp;on proper use of wood&nbsp;</h4>
-                      <p class="u-text u-text-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                      <p class="u-text u-text-default u-text-3">Image from <a href="https://freepik.com/photos/forest" class="u-active-none u-border-1 u-border-active-palette-4-base u-border-black u-border-hover-palette-4-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1">Freepik </a>
-                      </p>
-                      <a href="#" class="u-active-palette-4-dark-1 u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">learn more</a>
-                    </div>
+    </div>
+  </section>
+
+  <!-- <div class="flourish-embed" data-src="story/2742285"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="100%" alt="visualization" /></noscript></div> -->
+  <section
+    class="u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xl u-align-left-xs u-clearfix u-section-5"
+    id="carousel_fddd">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-clearfix u-gutter-30 u-layout-wrap u-layout-wrap-1">
+        <div class="u-gutter-0 u-layout">
+          <div class="u-layout-row">
+            <div class="u-size-32">
+              <div class="u-layout-col">
+                <div
+                  class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-shading u-size-28 u-image-1"
+                  data-image-width="626" data-image-height="416">
+                  <div class="u-container-layout u-container-layout-1"></div>
+                </div>
+                <div
+                  class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-32 u-layout-cell-2"
+                  src="">
+                  <div class="u-container-layout u-container-layout-2">
+                    <h4 class="u-text u-text-1"> Advice&nbsp;on proper use of wood&nbsp;</h4>
+                    <p class="u-text u-text-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                      dolore eu fugiat nulla pariatur. </p>
+                    <p class="u-text u-text-default u-text-3">Image from <a href="https://freepik.com/photos/forest"
+                        class="u-active-none u-border-1 u-border-active-palette-4-base u-border-black u-border-hover-palette-4-base u-border-no-left u-border-no-right u-border-no-top u-btn u-button-link u-button-style u-hover-none u-none u-text-body-color u-btn-1">Freepik
+                      </a>
+                    </p>
+                    <a href="#"
+                      class="u-active-palette-4-dark-1 u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-2"
+                      data-animation-name="" data-animation-duration="0" data-animation-delay="0"
+                      data-animation-direction="">learn more</a>
                   </div>
                 </div>
               </div>
-              <div class="u-size-28">
-                <div class="u-layout-col">
-                  <div class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-right-cell u-size-60 u-image-2" src="">
-                    <div class="u-container-layout u-container-layout-3" src="">
-                      <div class="u-container-style u-group u-palette-4-dark-2 u-group-1">
-                        <div class="u-container-layout u-valign-middle u-container-layout-4">
-                          <h2 class="u-text u-text-4"> Forestry <br>technique
-                          </h2>
-                        </div>
+            </div>
+            <div class="u-size-28">
+              <div class="u-layout-col">
+                <div
+                  class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-right-cell u-size-60 u-image-2"
+                  src="">
+                  <div class="u-container-layout u-container-layout-3" src="">
+                    <div class="u-container-style u-group u-palette-4-dark-2 u-group-1">
+                      <div class="u-container-layout u-valign-middle u-container-layout-4">
+                        <h2 class="u-text u-text-4"> Forestry <br>technique
+                        </h2>
                       </div>
                     </div>
                   </div>
@@ -550,441 +732,553 @@
           </div>
         </div>
       </div>
-    </section>
-    <section class="u-clearfix u-section-6" id="carousel_28cc">
-      <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+    </div>
+  </section>
+  <section class="u-clearfix u-section-6" id="carousel_28cc">
+    <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+      <div class="u-layout">
+        <div class="u-layout-row">
+          <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-42"
+            data-image-width="1500" data-image-height="1000">
+            <!-- <div class="u-container-layout u-valign-top u-container-layout-1"> -->
+            <!-- <div class="u-align-center u-container-align-center u-container-style u-group u-palette-1-light-3 u-shape-rectangle u-group-1"> -->
+            <!-- <div class="u-container-layout u-valign-middle u-container-layout-2"> -->
+            <!-- <p class="u-text u-text-1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&nbsp;</p> -->
+            <!-- </div> -->
+            <!-- </div> -->
+            <!-- <p class="u-text u-text-body-alt-color u-text-default u-text-2">Image from <a href="https://www.freepik.com/photos/vintage" class="u-active-none u-border-1 u-border-active-grey-5 u-border-hover-grey-5 u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">Freepik</a> -->
+            <!-- </p> -->
+            <!-- </div> -->
+            <div class="charts-container">
+              <div id="sunburst-chart"></div>
+              <div id="glyph-chart"></div>
+            </div>
+          </div>
+
+
+          <div class="u-container-style u-layout-cell u-right-cell u-shape-rectangle u-size-18 u-layout-cell-2">
+            <div
+              class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-3">
+              <!-- <img class="u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-image u-image-default u-image-2" src="images/pexels-photo-9789963.jpeg" alt="" data-image-width="500" data-image-height="750"> -->
+              <div
+                class="u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-image u-image-default u-image-2">
+                <h3>Description</h3>
+                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell
+                  u-size-42 u</p>
+                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell
+                  u-size-42 u</p>
+                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell
+                  u-size-42 u</p>
+                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell
+                  u-size-42 u</p>
+                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell
+                  u-size-42 u</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="u-align-center">
+      <h3>Conversion of Financial Flow to Energy Generation per capita</h3>
+    </div>
+    <div class="tableau-container">
+      <div class="tableauPlaceholder" id="viz1733041649651" style="position: relative">
+        <noscript>
+          <a href="#"><img alt="Dashboard 3"
+              src="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1_rss.png"
+              style="border: none" /></a>
+        </noscript>
+        <object class="tableauViz" style="display:none;">
+          <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+          <param name="embed_code_version" value="3" />
+          <param name="site_root" value="" />
+          <param name="name" value="DVPProjectfinancial/Dashboard3" />
+          <param name="tabs" value="no" />
+          <param name="toolbar" value="yes" />
+          <param name="static_image"
+            value="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1.png" />
+          <param name="animate_transition" value="yes" />
+          <param name="display_static_image" value="yes" />
+          <param name="display_spinner" value="yes" />
+          <param name="display_overlay" value="yes" />
+          <param name="display_count" value="yes" />
+          <param name="language" value="en-US" />
+          <param name="filter" value="publish=yes" />
+        </object>
+      </div>
+    </div>
+  </section>
+
+  <section class="u-clearfix u-section-7" id="carousel_02d0">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+      <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
         <div class="u-layout">
           <div class="u-layout-row">
-            <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-42" data-image-width="1500" data-image-height="1000">
-              <!-- <div class="u-container-layout u-valign-top u-container-layout-1"> -->
-                <!-- <div class="u-align-center u-container-align-center u-container-style u-group u-palette-1-light-3 u-shape-rectangle u-group-1"> -->
-                  <!-- <div class="u-container-layout u-valign-middle u-container-layout-2"> -->
-                    <!-- <p class="u-text u-text-1">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.&nbsp;</p> -->
-                  <!-- </div> -->
-                <!-- </div> -->
-                <!-- <p class="u-text u-text-body-alt-color u-text-default u-text-2">Image from <a href="https://www.freepik.com/photos/vintage" class="u-active-none u-border-1 u-border-active-grey-5 u-border-hover-grey-5 u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">Freepik</a> -->
-                <!-- </p> -->
-              <!-- </div> -->
-              <div class="charts-container">
-                <div id="sunburst-chart" ></div>
-                <div id="glyph-chart" ></div>
+            <div class="u-size-25-lg u-size-25-xl u-size-29-sm u-size-29-xs u-size-60-md">
+              <div class="u-layout-col">
+                <div class="u-size-60">
+                  <div class="u-layout-row">
+                    <div
+                      class="u-align-center u-container-align-center u-container-style u-layout-cell u-right-cell u-size-60 u-white u-layout-cell-1">
+                      <div class="u-container-layout u-valign-middle u-container-layout-1">
+                        <img class="u-expanded-width u-image u-image-default u-image-1"
+                          src="images/pexels-photo-9730582.jpeg" alt="" data-image-width="600" data-image-height="750">
+                        <h3 class="u-text u-text-default u-text-1"> monitoring the state of large carnivore populations
+                        </h3>
+                        <a href="#"
+                          class="u-active-none u-align-center u-border-2 u-border-active-palette-1-light-1 u-border-black u-border-hover-palette-1-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="u-size-31-sm u-size-31-xs u-size-35-lg u-size-35-xl u-size-60-md">
+              <div class="u-layout-col">
+                <div class="u-size-40">
+                  <div class="u-layout-row">
+                    <div
+                      class="u-align-center u-container-align-center u-container-style u-layout-cell u-left-cell u-opacity u-opacity-35 u-palette-5-light-2 u-shape-rectangle u-size-60 u-layout-cell-2">
+                      <div class="u-container-layout u-valign-bottom u-container-layout-2">
+                        <h2 class="u-text u-text-2"> Forest wildlife<br>and hunting&nbsp;
+                        </h2>
+                        <p class="u-text u-text-3"> Fringilla ut morbi tincidunt augue interdum velit euismod in. Vel
+                          pharetra vel turpis nunc eget. Vel pretium lectus quam id leo in vitae turpis massa. Nulla
+                          facilisi cras fermentum odio eu feugiat pretium. At tellus at.</p>
+                        <a href="#"
+                          class="u-active-none u-align-center u-border-1 u-border-active-palette-1-light-1 u-border-black u-border-hover-palette-1-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-2">more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="u-size-20">
+                  <div class="u-layout-row">
+                    <div
+                      class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-3"
+                      src="">
+                      <div class="u-container-layout u-valign-middle u-container-layout-3">
+                        <h4 class="u-text u-text-4">Forest</h4>
+                        <p class="u-text u-text-5"> Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt.
+                          Sodales neque sodales ut etiam sit amet nisl.</p><span
+                          class="u-icon u-icon-circle u-text-black u-icon-1"><svg class="u-svg-link"
+                            preserveAspectRatio="xMidYMin slice" viewBox="0 0 487 487" style="">
+                            <use xlink:href="#svg-bf3c"></use>
+                          </svg><svg class="u-svg-content" viewBox="0 0 487 487" x="0px" y="0px" id="svg-bf3c"
+                            style="enable-background:new 0 0 487 487;">
+                            <g>
+                              <path
+                                d="M482,234.839l-116.5-67.261c-4.783-2.761-10.898-1.122-13.66,3.66c-2.762,4.783-1.122,10.898,3.66,13.66l84.213,48.62H10   c-5.523,0-10,4.478-10,10c0,5.521,4.477,10,10,10h429.646L355.5,302.101c-4.783,2.762-6.422,8.877-3.66,13.66   c1.853,3.208,5.213,5.002,8.669,5.002c1.696,0,3.416-0.434,4.991-1.342L482,252.159c3.094-1.786,5-5.088,5-8.66   C487,239.927,485.094,236.625,482,234.839z">
+                              </path>
+                            </g>
+                          </svg></span>
+                      </div>
+                    </div>
+                    <div
+                      class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-2"
+                      data-image-width="500" data-image-height="750">
+                      <div class="u-container-layout u-container-layout-4"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-8" src=""
+    data-image-width="1620" data-image-height="1080" id="carousel_d48d">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h2 class="u-text u-text-1"> Caring for forest to benefit nature and people</h2>
+      <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
+        <div class="u-repeater u-repeater-1">
+          <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
+              <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2"> Biosecurity</h4>
+              <p class="u-custom-font u-font-montserrat u-text u-text-3">Sample text. Click to select the text box.
+                Click again or double click to start editing the text.</p>
+              <a href="#"
+                class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-1">learn
+                more</a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
+              <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-4"> Wildlife</h4>
+              <p class="u-custom-font u-font-montserrat u-text u-text-5">Sample text. Click to select the text box.
+                Click again or double click to start editing the text.</p>
+              <a href="#"
+                class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-2">Learn
+                more</a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
+              <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-6">People</h4>
+              <p class="u-custom-font u-font-montserrat u-text u-text-7">Sample text. Click to select the text box.
+                Click again or double click to start editing the text.</p>
+              <a href="#"
+                class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-3">Learn
+                more</a>
+            </div>
+          </div>
+          <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
+            <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
+              <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-8">Ecology</h4>
+              <p class="u-custom-font u-font-montserrat u-text u-text-9">Sample text. Click to select the text box.
+                Click again or double click to start editing the text.</p>
+              <a href="#"
+                class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-4">Learn
+                more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="u-text u-text-body-alt-color u-text-10">Image from <a href="https://www.freepik.com/photos/vintage"
+          class="u-active-none u-border-1 u-border-active-grey-5 u-border-hover-grey-5 u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-5">Freepik</a>
+      </p>
+    </div>
+  </section>
+  <section class="u-clearfix u-section-9" id="carousel_597b">
+    <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
+      <div
+        class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-30 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-col">
+            <div class="u-size-30">
+              <div class="u-layout-row">
+                <div class="u-container-style u-image u-layout-cell u-left-cell u-size-33 u-image-1">
+                  <div class="u-container-layout"></div>
+                </div>
+                <div class="u-container-style u-grey-5 u-layout-cell u-right-cell u-size-27 u-layout-cell-2">
+                  <div class="u-container-layout u-container-layout-2">
+                    <h4 class="u-text u-text-1"> The Most Beautiful Forests</h4>
+                    <div class="u-border-7 u-border-palette-4-base u-line u-line-horizontal u-line-1"></div>
+                    <p class="u-text u-text-2">“I declare this world is so beautiful that I can hardly believe it
+                      exists.” The beauty of nature can have a profound effect upon our senses, those gateways from the
+                      outer world to the inner, whether it results in
+                      disbelief...<br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="u-size-30">
+              <div class="u-layout-row">
+                <div
+                  class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-21 u-layout-cell-3">
+                  <div
+                    class="u-border-3 u-border-palette-4-base u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-3">
+                    <span class="u-icon u-icon-circle u-text-grey-15 u-icon-1"><svg class="u-svg-link"
+                        preserveAspectRatio="xMidYMin slice" viewBox="0 0 95.333 95.332" style="undefined">
+                        <use xlink:href="#svg-dab8"></use>
+                      </svg><svg class="u-svg-content" viewBox="0 0 95.333 95.332" x="0px" y="0px" id="svg-dab8"
+                        style="enable-background:new 0 0 95.333 95.332;">
+                        <g>
+                          <g>
+                            <path
+                              d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z">
+                            </path>
+                            <path
+                              d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z">
+                            </path>
+                          </g>
+                        </g>
+                      </svg></span>
+                    <h3 class="u-text u-text-3">I declare this world is so beautiful that I can hardly believe it exists
+                    </h3>
+                  </div>
+                </div>
+                <div class="u-container-style u-image u-layout-cell u-right-cell u-size-39 u-image-2">
+                  <div class="u-container-layout"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-10" id="carousel_9ea7"
+    data-image-width="1620" data-image-height="1080">
+    <div class="u-clearfix u-sheet u-sheet-1">
+      <h6 class="u-text u-text-1"> Four simple steps to keeping you and your dog safe in the forest</h6>
+      <p class="u-text u-text-2"> Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Luctus venenatis lectus
+        magna fringilla urna porttitor rhoncus. Vitae suscipit tellus mauris a. Urna neque viverra justo nec ultrices
+        dui sapien. Dictum fusce ut placerat orci. </p>
+      <div class="u-social-icons u-spacing-42 u-social-icons-1">
+        <a class="u-social-url" target="_blank" href=""><span
+            class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              <use xlink:href="#svg-07dd"></use>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-07dd">
+              <path
+                d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z">
+              </path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href=""><span
+            class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              <use xlink:href="#svg-7cca"></use>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-7cca">
+              <path
+                d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z">
+              </path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href=""><span
+            class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              <use xlink:href="#svg-9553"></use>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-9553">
+              <path
+                d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z">
+              </path>
+              <path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path>
+              <path
+                d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z">
+              </path>
+            </svg></span>
+        </a>
+        <a class="u-social-url" target="_blank" href="#"><span
+            class="u-icon u-icon-circle u-social-dribbble u-social-icon u-icon-4"><svg class="u-svg-link"
+              preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+              <use xlink:href="#svg-6295"></use>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+              xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-6295">
+              <path
+                d="M56.1,11.1c-24.8,0-45,20.2-45,45s20.2,45,45,45s45-20.2,45-45C101.1,31.3,80.9,11.1,56.1,11.1z M56.1,18.1 c9.6,0,18.3,3.7,25.1,9.5c-1.2,1.5-6.8,8.7-19.7,13.5C55.6,30.2,49,21.2,47.5,19C50.3,18.4,53.2,18.1,56.1,18.1z M39.9,21.7 c1.3,1.9,7.8,11,13.9,21.7c-16.4,4.3-31,4.7-34.3,4.5h-0.3C21.5,36.3,29.3,26.8,39.9,21.7z M18.2,56.1c0-0.2,0-0.6,0-0.9 c0.2,0,0.6,0,1,0c4.6,0,21.1-0.3,37.9-5.5c1,2,2,4.1,2.9,6c-0.3,0.1-0.9,0.2-1.3,0.3c-19,6.3-29.6,22.7-31.1,25.1 C21.8,74.6,18.2,65.8,18.2,56.1z M56.1,94.4c-8.7,0-16.8-3-23.2-8c1.2-2.1,8.9-16.4,29.8-23.6l0,0l0,0c5.3,13.6,7.5,25,8.1,28.7 C66.3,93.3,61.3,94.4,56.1,94.4z M77.7,87.5c-0.5-2.9-2.7-13.6-7.3-26.7c2.7-0.3,5.2-0.6,7.7-0.6c8,0,14.3,1.6,15.7,2.1 C91.9,72.7,86,81.8,77.7,87.5z M76.5,53.7c-2.8,0-5.8,0.1-8.7,0.5c-0.2-0.5-0.5-1.2-0.8-1.7c-0.8-1.7-1.5-3.5-2.4-5.3 c13.2-5.5,19.7-13,21-15c5.2,6.4,8.4,14.5,8.5,23.3C92.4,55.1,85.2,53.7,76.5,53.7z">
+              </path>
+            </svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <section class="u-clearfix u-section-11" id="sec-480e">
+    <div class="u-clearfix u-sheet u-sheet-1"></div>
+  </section>
 
-    
-            <div class="u-container-style u-layout-cell u-right-cell u-shape-rectangle u-size-18 u-layout-cell-2">
-              <div class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs u-container-layout-3">
-                <!-- <img class="u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-image u-image-default u-image-2" src="images/pexels-photo-9789963.jpeg" alt="" data-image-width="500" data-image-height="750"> -->
-              <div class="u-expanded-width-lg u-expanded-width-md u-expanded-width-xl u-image u-image-default u-image-2">
-                <h3>Description</h3>
-                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-42 u</p>
-                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-42 u</p>
-                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-42 u</p>
-                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-42 u</p>
-                <p>Lorem ipsum u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-42 u</p>
-              
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="u-align-center">
-      <h3>Conversion of Financial Flow to Energy Generation per capita</h3>
-      </div>
-      <div class="tableau-container">
-        <div class="tableauPlaceholder" id="viz1733041649651" style="position: relative">
-          <noscript>
-            <a href="#"><img alt="Dashboard 3" src="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1_rss.png" style="border: none" /></a>
-          </noscript>
-          <object class="tableauViz" style="display:none;">
-            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-            <param name="embed_code_version" value="3" />
-            <param name="site_root" value="" />
-            <param name="name" value="DVPProjectfinancial/Dashboard3" />
-            <param name="tabs" value="no" />
-            <param name="toolbar" value="yes" />
-            <param name="static_image" value="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1.png" />
-            <param name="animate_transition" value="yes" />
-            <param name="display_static_image" value="yes" />
-            <param name="display_spinner" value="yes" />
-            <param name="display_overlay" value="yes" />
-            <param name="display_count" value="yes" />
-            <param name="language" value="en-US" />
-            <param name="filter" value="publish=yes" />
-          </object>
-        </div>
-      </div>
-    </section>
 
-    <section class="u-clearfix u-section-7" id="carousel_02d0">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-size-25-lg u-size-25-xl u-size-29-sm u-size-29-xs u-size-60-md">
-                <div class="u-layout-col">
-                  <div class="u-size-60">
-                    <div class="u-layout-row">
-                      <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-right-cell u-size-60 u-white u-layout-cell-1">
-                        <div class="u-container-layout u-valign-middle u-container-layout-1">
-                          <img class="u-expanded-width u-image u-image-default u-image-1" src="images/pexels-photo-9730582.jpeg" alt="" data-image-width="600" data-image-height="750">
-                          <h3 class="u-text u-text-default u-text-1"> monitoring the state of large carnivore populations</h3>
-                          <a href="#" class="u-active-none u-align-center u-border-2 u-border-active-palette-1-light-1 u-border-black u-border-hover-palette-1-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-1">more</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-31-sm u-size-31-xs u-size-35-lg u-size-35-xl u-size-60-md">
-                <div class="u-layout-col">
-                  <div class="u-size-40">
-                    <div class="u-layout-row">
-                      <div class="u-align-center u-container-align-center u-container-style u-layout-cell u-left-cell u-opacity u-opacity-35 u-palette-5-light-2 u-shape-rectangle u-size-60 u-layout-cell-2">
-                        <div class="u-container-layout u-valign-bottom u-container-layout-2">
-                          <h2 class="u-text u-text-2"> Forest wildlife<br>and hunting&nbsp;
-                          </h2>
-                          <p class="u-text u-text-3"> Fringilla ut morbi tincidunt augue interdum velit euismod in. Vel pharetra vel turpis nunc eget. Vel pretium lectus quam id leo in vitae turpis massa. Nulla facilisi cras fermentum odio eu feugiat pretium. At tellus at.</p>
-                          <a href="#" class="u-active-none u-align-center u-border-1 u-border-active-palette-1-light-1 u-border-black u-border-hover-palette-1-light-1 u-btn u-button-style u-hover-none u-none u-text-body-color u-btn-2">more</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="u-size-20">
-                    <div class="u-layout-row">
-                      <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-size-30 u-layout-cell-3" src="">
-                        <div class="u-container-layout u-valign-middle u-container-layout-3">
-                          <h4 class="u-text u-text-4">Forest</h4>
-                          <p class="u-text u-text-5"> Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Sodales neque sodales ut etiam sit amet nisl.</p><span class="u-icon u-icon-circle u-text-black u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 487 487" style=""><use xlink:href="#svg-bf3c"></use></svg><svg class="u-svg-content" viewBox="0 0 487 487" x="0px" y="0px" id="svg-bf3c" style="enable-background:new 0 0 487 487;"><g><path d="M482,234.839l-116.5-67.261c-4.783-2.761-10.898-1.122-13.66,3.66c-2.762,4.783-1.122,10.898,3.66,13.66l84.213,48.62H10   c-5.523,0-10,4.478-10,10c0,5.521,4.477,10,10,10h429.646L355.5,302.101c-4.783,2.762-6.422,8.877-3.66,13.66   c1.853,3.208,5.213,5.002,8.669,5.002c1.696,0,3.416-0.434,4.991-1.342L482,252.159c3.094-1.786,5-5.088,5-8.66   C487,239.927,485.094,236.625,482,234.839z"></path>
-</g></svg></span>
-                        </div>
-                      </div>
-                      <div class="u-align-left u-container-align-left u-container-style u-image u-layout-cell u-left-cell u-size-30 u-image-2" data-image-width="500" data-image-height="750">
-                        <div class="u-container-layout u-container-layout-4"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-8" src="" data-image-width="1620" data-image-height="1080" id="carousel_d48d">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h2 class="u-text u-text-1"> Caring for forest to benefit nature and people</h2>
-        <div class="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-2"> Biosecurity</h4>
-                <p class="u-custom-font u-font-montserrat u-text u-text-3">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                <a href="#" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-1">learn more</a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-4"> Wildlife</h4>
-                <p class="u-custom-font u-font-montserrat u-text u-text-5">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                <a href="#" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-2">Learn more</a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-6">People</h4>
-                <p class="u-custom-font u-font-montserrat u-text u-text-7">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                <a href="#" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-3">Learn more</a>
-              </div>
-            </div>
-            <div class="u-align-center u-container-align-center u-container-style u-list-item u-repeater-item">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                <h4 class="u-custom-font u-font-montserrat u-text u-text-default u-text-8">Ecology</h4>
-                <p class="u-custom-font u-font-montserrat u-text u-text-9">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
-                <a href="#" class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-white u-palette-4-base u-radius-50 u-btn-4">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="u-text u-text-body-alt-color u-text-10">Image from <a href="https://www.freepik.com/photos/vintage" class="u-active-none u-border-1 u-border-active-grey-5 u-border-hover-grey-5 u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-5">Freepik</a>
-        </p>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-9" id="carousel_597b">
-      <div class="u-clearfix u-sheet u-valign-middle-lg u-valign-middle-xl u-sheet-1">
-        <div class="u-clearfix u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-gutter-30 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-col">
-              <div class="u-size-30">
-                <div class="u-layout-row">
-                  <div class="u-container-style u-image u-layout-cell u-left-cell u-size-33 u-image-1">
-                    <div class="u-container-layout"></div>
-                  </div>
-                  <div class="u-container-style u-grey-5 u-layout-cell u-right-cell u-size-27 u-layout-cell-2">
-                    <div class="u-container-layout u-container-layout-2">
-                      <h4 class="u-text u-text-1"> The Most Beautiful Forests</h4>
-                      <div class="u-border-7 u-border-palette-4-base u-line u-line-horizontal u-line-1"></div>
-                      <p class="u-text u-text-2">“I declare this world is so beautiful that I can hardly believe it exists.” The beauty of nature can have a profound effect upon our senses, those gateways from the outer world to the inner, whether it results in
-                                            disbelief...<br>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="u-size-30">
-                <div class="u-layout-row">
-                  <div class="u-align-left u-container-align-left u-container-style u-layout-cell u-left-cell u-size-21 u-layout-cell-3">
-                    <div class="u-border-3 u-border-palette-4-base u-container-layout u-valign-middle-md u-valign-middle-sm u-valign-middle-xl u-valign-middle-xs u-container-layout-3"><span class="u-icon u-icon-circle u-text-grey-15 u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 95.333 95.332" style="undefined"><use xlink:href="#svg-dab8"></use></svg><svg class="u-svg-content" viewBox="0 0 95.333 95.332" x="0px" y="0px" id="svg-dab8" style="enable-background:new 0 0 95.333 95.332;"><g><g><path d="M30.512,43.939c-2.348-0.676-4.696-1.019-6.98-1.019c-3.527,0-6.47,0.806-8.752,1.793    c2.2-8.054,7.485-21.951,18.013-23.516c0.975-0.145,1.774-0.85,2.04-1.799l2.301-8.23c0.194-0.696,0.079-1.441-0.318-2.045    s-1.035-1.007-1.75-1.105c-0.777-0.106-1.569-0.16-2.354-0.16c-12.637,0-25.152,13.19-30.433,32.076    c-3.1,11.08-4.009,27.738,3.627,38.223c4.273,5.867,10.507,9,18.529,9.313c0.033,0.001,0.065,0.002,0.098,0.002    c9.898,0,18.675-6.666,21.345-16.209c1.595-5.705,0.874-11.688-2.032-16.851C40.971,49.307,36.236,45.586,30.512,43.939z"></path><path d="M92.471,54.413c-2.875-5.106-7.61-8.827-13.334-10.474c-2.348-0.676-4.696-1.019-6.979-1.019    c-3.527,0-6.471,0.806-8.753,1.793c2.2-8.054,7.485-21.951,18.014-23.516c0.975-0.145,1.773-0.85,2.04-1.799l2.301-8.23    c0.194-0.696,0.079-1.441-0.318-2.045c-0.396-0.604-1.034-1.007-1.75-1.105c-0.776-0.106-1.568-0.16-2.354-0.16    c-12.637,0-25.152,13.19-30.434,32.076c-3.099,11.08-4.008,27.738,3.629,38.225c4.272,5.866,10.507,9,18.528,9.312    c0.033,0.001,0.065,0.002,0.099,0.002c9.897,0,18.675-6.666,21.345-16.209C96.098,65.559,95.376,59.575,92.471,54.413z"></path>
-</g>
-</g></svg></span>
-                      <h3 class="u-text u-text-3">I declare this world is so beautiful that I can hardly believe it exists</h3>
-                    </div>
-                  </div>
-                  <div class="u-container-style u-image u-layout-cell u-right-cell u-size-39 u-image-2">
-                    <div class="u-container-layout"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="u-align-center u-clearfix u-container-align-center u-image u-shading u-section-10" id="carousel_9ea7" data-image-width="1620" data-image-height="1080">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h6 class="u-text u-text-1"> Four simple steps to keeping you and your dog safe in the forest</h6>
-        <p class="u-text u-text-2"> Blandit libero volutpat sed cras ornare arcu dui vivamus arcu. Luctus venenatis lectus magna fringilla urna porttitor rhoncus. Vitae suscipit tellus mauris a. Urna neque viverra justo nec ultrices dui sapien. Dictum fusce ut placerat orci. </p>
-        <div class="u-social-icons u-spacing-42 u-social-icons-1">
-          <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-07dd"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-07dd"><path d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path></svg></span>
-          </a>
-          <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-7cca"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-7cca"><path d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path></svg></span>
-          </a>
-          <a class="u-social-url" target="_blank" href=""><span class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-9553"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-9553"><path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path><path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path><path d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path></svg></span>
-          </a>
-          <a class="u-social-url" target="_blank" href="#"><span class="u-icon u-icon-circle u-social-dribbble u-social-icon u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style=""><use xlink:href="#svg-6295"></use></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 112 112" x="0px" y="0px" id="svg-6295"><path d="M56.1,11.1c-24.8,0-45,20.2-45,45s20.2,45,45,45s45-20.2,45-45C101.1,31.3,80.9,11.1,56.1,11.1z M56.1,18.1 c9.6,0,18.3,3.7,25.1,9.5c-1.2,1.5-6.8,8.7-19.7,13.5C55.6,30.2,49,21.2,47.5,19C50.3,18.4,53.2,18.1,56.1,18.1z M39.9,21.7 c1.3,1.9,7.8,11,13.9,21.7c-16.4,4.3-31,4.7-34.3,4.5h-0.3C21.5,36.3,29.3,26.8,39.9,21.7z M18.2,56.1c0-0.2,0-0.6,0-0.9 c0.2,0,0.6,0,1,0c4.6,0,21.1-0.3,37.9-5.5c1,2,2,4.1,2.9,6c-0.3,0.1-0.9,0.2-1.3,0.3c-19,6.3-29.6,22.7-31.1,25.1 C21.8,74.6,18.2,65.8,18.2,56.1z M56.1,94.4c-8.7,0-16.8-3-23.2-8c1.2-2.1,8.9-16.4,29.8-23.6l0,0l0,0c5.3,13.6,7.5,25,8.1,28.7 C66.3,93.3,61.3,94.4,56.1,94.4z M77.7,87.5c-0.5-2.9-2.7-13.6-7.3-26.7c2.7-0.3,5.2-0.6,7.7-0.6c8,0,14.3,1.6,15.7,2.1 C91.9,72.7,86,81.8,77.7,87.5z M76.5,53.7c-2.8,0-5.8,0.1-8.7,0.5c-0.2-0.5-0.5-1.2-0.8-1.7c-0.8-1.7-1.5-3.5-2.4-5.3 c13.2-5.5,19.7-13,21-15c5.2,6.4,8.4,14.5,8.5,23.3C92.4,55.1,85.2,53.7,76.5,53.7z"></path></svg></span>
-          </a>
-        </div>
-      </div>
-    </section>
-    <section class="u-clearfix u-section-11" id="sec-480e">
-      <div class="u-clearfix u-sheet u-sheet-1"></div>
-    </section>
 
-    
-    
-    <!-- <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="sec-1b18"><div class="u-clearfix u-sheet u-sheet-1">
+  <!-- <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="sec-1b18"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the Text Element.</p>
       </div></footer> -->
-    <section class="u-backlink u-clearfix u-grey-80">
-      <p class="u-text">
-        <span>This site was created by Group 18</span>
-        <!-- <a class="u-link" href="https://nicepage.com/" target="_blank" rel="nofollow">
+  <section class="u-backlink u-clearfix u-grey-80">
+    <p class="u-text">
+      <span>This site was created by Group 18</span>
+      <!-- <a class="u-link" href="https://nicepage.com/" target="_blank" rel="nofollow">
           <span>Nicepage</span>
         </a> -->
-      </p>
-    </section>
-  
+    </p>
+  </section>
+
 
   <script>
     Highcharts.chart('sunburst-chart', {
       chart: {
-          type: 'sunburst',
-          height: 800
+        type: 'sunburst',
+        height: 800
       },
       title: {
-          text: 'Sunburst Chart - Financial Flows Top 8 countries'
+        text: 'Sunburst Chart - Financial Flows Top 8 countries'
       },
       colors: [
-          '#5B8FF9', '#5AD8A6', '#5D7092', '#F6BD16', '#6F5EF9',
-          '#6DC8EC', '#945FB9', '#FF9845', '#1E9493', '#FF99C3',
-          '#CDDDFD', '#CDF3E4', '#CED4DE', '#FFD591', '#D3CEFD',
-          '#D3F261', '#D9F7BE', '#FFF566', '#FFA39E', '#ADC6FF',
-          
+        '#5B8FF9', '#5AD8A6', '#5D7092', '#F6BD16', '#6F5EF9',
+        '#6DC8EC', '#945FB9', '#FF9845', '#1E9493', '#FF99C3',
+        '#CDDDFD', '#CDF3E4', '#CED4DE', '#FFD591', '#D3CEFD',
+        '#D3F261', '#D9F7BE', '#FFF566', '#FFA39E', '#ADC6FF',
+
       ], // Use a custom muted color palette
       series: [{
-          type: 'sunburst',
-          data: [
-              { id: 'India', parent: '', name: 'India', value: 18.23811 },
-              { id: 'India-Bioenergy', parent: 'India', name: 'Bioenergy', value: 0.14551 },
-              { id: 'India-Geothermal', parent: 'India', name: 'Geothermal', value: 0.13179 },
-              { id: 'India-Hydropower', parent: 'India', name: 'Hydropower', value: 3.6668 },
-              { id: 'India-Marine', parent: 'India', name: 'Marine', value: 0.54003 },
-              { id: 'India-Multiple Renewables', parent: 'India', name: 'Multiple Renewables', value: 6.00528 },
-              { id: 'India-Wind', parent: 'India', name: 'Wind', value: 6.49622 },
-              { id: 'Pakistan', parent: '', name: 'Pakistan', value: 9.49918 },
-              { id: 'Pakistan-Bioenergy', parent: 'Pakistan', name: 'Bioenergy', value: 0.02929 },
-              { id: 'Pakistan-Geothermal', parent: 'Pakistan', name: 'Geothermal', value: 0.27408 },
-              { id: 'Pakistan-Hydropower', parent: 'Pakistan', name: 'Hydropower', value: 6.59981 },
-              { id: 'Pakistan-Marine', parent: 'Pakistan', name: 'Marine', value: 0.08352 },
-              { id: 'Pakistan-Multiple Renewables', parent: 'Pakistan', name: 'Multiple Renewables', value: 0.73742 },
-              { id: 'Pakistan-Wind', parent: 'Pakistan', name: 'Wind', value: 0.69646 },
-              { id: 'Türkiye', parent: '', name: 'Türkiye', value: 8.77109 },
-              { id: 'Türkiye-Bioenergy', parent: 'Türkiye', name: 'Bioenergy', value: 0.00455 },
-              { id: 'Türkiye-Geothermal', parent: 'Türkiye', name: 'Geothermal', value: 0.47006 },
-              { id: 'Türkiye-Hydropower', parent: 'Türkiye', name: 'Hydropower', value: 0.01272 },
-              { id: 'Türkiye-Marine', parent: 'Türkiye', name: 'Marine', value: 0.1424 },
-              { id: 'Türkiye-Multiple Renewables', parent: 'Türkiye', name: 'Multiple Renewables', value: 6.53983 },
-              { id: 'Türkiye-Wind', parent: 'Türkiye', name: 'Wind', value: 1.21432 },
-              { id: 'South Africa', parent: '', name: 'South Africa', value: 7.76615 },
-              { id: 'South Africa-Bioenergy', parent: 'South Africa', name: 'Bioenergy', value: 0.01889 },
-              { id: 'South Africa-Geothermal', parent: 'South Africa', name: 'Geothermal', value: 0.00137 },
-              { id: 'South Africa-Hydropower', parent: 'South Africa', name: 'Hydropower', value: 2.32271 },
-              { id: 'South Africa-Marine', parent: 'South Africa', name: 'Marine', value: 0.00775 },
-              { id: 'South Africa-Multiple Renewables', parent: 'South Africa', name: 'Multiple Renewables', value: 2.57308 },
-              { id: 'South Africa-Wind', parent: 'South Africa', name: 'Wind', value: 2.50343 },
-              { id: 'Indonesia', parent: '', name: 'Indonesia', value: 7.06734 },
-              { id: 'Indonesia-Bioenergy', parent: 'Indonesia', name: 'Bioenergy', value: 0.02503 },
-              { id: 'Indonesia-Geothermal', parent: 'Indonesia', name: 'Geothermal', value: 3.13048 },
-              { id: 'Indonesia-Hydropower', parent: 'Indonesia', name: 'Hydropower', value: 2.34325 },
-              { id: 'Indonesia-Marine', parent: 'Indonesia', name: 'Marine', value: 0.2261 },
-              { id: 'Indonesia-Multiple Renewables', parent: 'Indonesia', name: 'Multiple Renewables', value: 0.44361 },
-              { id: 'Indonesia-Wind', parent: 'Indonesia', name: 'Wind', value: 0.66411 },
-              { id: 'Egypt', parent: '', name: 'Egypt', value: 6.61353 },
-              { id: 'Egypt-Bioenergy', parent: 'Egypt', name: 'Bioenergy', value: 0.00113 },
-              { id: 'Egypt-Geothermal', parent: 'Egypt', name: 'Geothermal', value: 0.06051 },
-              { id: 'Egypt-Hydropower', parent: 'Egypt', name: 'Hydropower', value: 0.18628 },
-              { id: 'Egypt-Marine', parent: 'Egypt', name: 'Marine', value: 0.01143 },
-              { id: 'Egypt-Multiple Renewables', parent: 'Egypt', name: 'Multiple Renewables', value: 2.21802 },
-              { id: 'Egypt-Wind', parent: 'Egypt', name: 'Wind', value: 2.69876 },
-              { id: 'Brazil', parent: '', name: 'Brazil', value: 6.48679 },
-              { id: 'Brazil-Bioenergy', parent: 'Brazil', name: 'Bioenergy', value: 0.5048 },
-              { id: 'Brazil-Geothermal', parent: 'Brazil', name: 'Geothermal', value: 0.40355 },
-              { id: 'Brazil-Hydropower', parent: 'Brazil', name: 'Hydropower', value: 0.19573 },
-              { id: 'Brazil-Marine', parent: 'Brazil', name: 'Marine', value: 0.04919 },
-              { id: 'Brazil-Multiple Renewables', parent: 'Brazil', name: 'Multiple Renewables', value: 2.75342 },
-              { id: 'Brazil-Wind', parent: 'Brazil', name: 'Wind', value: 2.01552 },
-              { id: 'Argentina', parent: '', name: 'Argentina', value: 5.39596 },
-              { id: 'Argentina-Bioenergy', parent: 'Argentina', name: 'Bioenergy', value: 0.19085 },
-              { id: 'Argentina-Geothermal', parent: 'Argentina', name: 'Geothermal', value: 0.00001 },
-              { id: 'Argentina-Hydropower', parent: 'Argentina', name: 'Hydropower', value: 3.03283 },
-              { id: 'Argentina-Marine', parent: 'Argentina', name: 'Marine', value: 0.0 },
-              { id: 'Argentina-Multiple Renewables', parent: 'Argentina', name: 'Multiple Renewables', value: 0.55514 },
-              { id: 'Argentina-Wind', parent: 'Argentina', name: 'Wind', value: 0.84826 }
-          ],
-          allowDrillToNode: true,
-          cursor: 'pointer',
+        type: 'sunburst',
+        data: [
+          { id: 'India', parent: '', name: 'India', value: 18.23811 },
+          { id: 'India-Bioenergy', parent: 'India', name: 'Bioenergy', value: 0.14551 },
+          { id: 'India-Geothermal', parent: 'India', name: 'Geothermal', value: 0.13179 },
+          { id: 'India-Hydropower', parent: 'India', name: 'Hydropower', value: 3.6668 },
+          { id: 'India-Marine', parent: 'India', name: 'Marine', value: 0.54003 },
+          { id: 'India-Multiple Renewables', parent: 'India', name: 'Multiple Renewables', value: 6.00528 },
+          { id: 'India-Wind', parent: 'India', name: 'Wind', value: 6.49622 },
+          { id: 'Pakistan', parent: '', name: 'Pakistan', value: 9.49918 },
+          { id: 'Pakistan-Bioenergy', parent: 'Pakistan', name: 'Bioenergy', value: 0.02929 },
+          { id: 'Pakistan-Geothermal', parent: 'Pakistan', name: 'Geothermal', value: 0.27408 },
+          { id: 'Pakistan-Hydropower', parent: 'Pakistan', name: 'Hydropower', value: 6.59981 },
+          { id: 'Pakistan-Marine', parent: 'Pakistan', name: 'Marine', value: 0.08352 },
+          { id: 'Pakistan-Multiple Renewables', parent: 'Pakistan', name: 'Multiple Renewables', value: 0.73742 },
+          { id: 'Pakistan-Wind', parent: 'Pakistan', name: 'Wind', value: 0.69646 },
+          { id: 'Türkiye', parent: '', name: 'Türkiye', value: 8.77109 },
+          { id: 'Türkiye-Bioenergy', parent: 'Türkiye', name: 'Bioenergy', value: 0.00455 },
+          { id: 'Türkiye-Geothermal', parent: 'Türkiye', name: 'Geothermal', value: 0.47006 },
+          { id: 'Türkiye-Hydropower', parent: 'Türkiye', name: 'Hydropower', value: 0.01272 },
+          { id: 'Türkiye-Marine', parent: 'Türkiye', name: 'Marine', value: 0.1424 },
+          { id: 'Türkiye-Multiple Renewables', parent: 'Türkiye', name: 'Multiple Renewables', value: 6.53983 },
+          { id: 'Türkiye-Wind', parent: 'Türkiye', name: 'Wind', value: 1.21432 },
+          { id: 'South Africa', parent: '', name: 'South Africa', value: 7.76615 },
+          { id: 'South Africa-Bioenergy', parent: 'South Africa', name: 'Bioenergy', value: 0.01889 },
+          { id: 'South Africa-Geothermal', parent: 'South Africa', name: 'Geothermal', value: 0.00137 },
+          { id: 'South Africa-Hydropower', parent: 'South Africa', name: 'Hydropower', value: 2.32271 },
+          { id: 'South Africa-Marine', parent: 'South Africa', name: 'Marine', value: 0.00775 },
+          { id: 'South Africa-Multiple Renewables', parent: 'South Africa', name: 'Multiple Renewables', value: 2.57308 },
+          { id: 'South Africa-Wind', parent: 'South Africa', name: 'Wind', value: 2.50343 },
+          { id: 'Indonesia', parent: '', name: 'Indonesia', value: 7.06734 },
+          { id: 'Indonesia-Bioenergy', parent: 'Indonesia', name: 'Bioenergy', value: 0.02503 },
+          { id: 'Indonesia-Geothermal', parent: 'Indonesia', name: 'Geothermal', value: 3.13048 },
+          { id: 'Indonesia-Hydropower', parent: 'Indonesia', name: 'Hydropower', value: 2.34325 },
+          { id: 'Indonesia-Marine', parent: 'Indonesia', name: 'Marine', value: 0.2261 },
+          { id: 'Indonesia-Multiple Renewables', parent: 'Indonesia', name: 'Multiple Renewables', value: 0.44361 },
+          { id: 'Indonesia-Wind', parent: 'Indonesia', name: 'Wind', value: 0.66411 },
+          { id: 'Egypt', parent: '', name: 'Egypt', value: 6.61353 },
+          { id: 'Egypt-Bioenergy', parent: 'Egypt', name: 'Bioenergy', value: 0.00113 },
+          { id: 'Egypt-Geothermal', parent: 'Egypt', name: 'Geothermal', value: 0.06051 },
+          { id: 'Egypt-Hydropower', parent: 'Egypt', name: 'Hydropower', value: 0.18628 },
+          { id: 'Egypt-Marine', parent: 'Egypt', name: 'Marine', value: 0.01143 },
+          { id: 'Egypt-Multiple Renewables', parent: 'Egypt', name: 'Multiple Renewables', value: 2.21802 },
+          { id: 'Egypt-Wind', parent: 'Egypt', name: 'Wind', value: 2.69876 },
+          { id: 'Brazil', parent: '', name: 'Brazil', value: 6.48679 },
+          { id: 'Brazil-Bioenergy', parent: 'Brazil', name: 'Bioenergy', value: 0.5048 },
+          { id: 'Brazil-Geothermal', parent: 'Brazil', name: 'Geothermal', value: 0.40355 },
+          { id: 'Brazil-Hydropower', parent: 'Brazil', name: 'Hydropower', value: 0.19573 },
+          { id: 'Brazil-Marine', parent: 'Brazil', name: 'Marine', value: 0.04919 },
+          { id: 'Brazil-Multiple Renewables', parent: 'Brazil', name: 'Multiple Renewables', value: 2.75342 },
+          { id: 'Brazil-Wind', parent: 'Brazil', name: 'Wind', value: 2.01552 },
+          { id: 'Argentina', parent: '', name: 'Argentina', value: 5.39596 },
+          { id: 'Argentina-Bioenergy', parent: 'Argentina', name: 'Bioenergy', value: 0.19085 },
+          { id: 'Argentina-Geothermal', parent: 'Argentina', name: 'Geothermal', value: 0.00001 },
+          { id: 'Argentina-Hydropower', parent: 'Argentina', name: 'Hydropower', value: 3.03283 },
+          { id: 'Argentina-Marine', parent: 'Argentina', name: 'Marine', value: 0.0 },
+          { id: 'Argentina-Multiple Renewables', parent: 'Argentina', name: 'Multiple Renewables', value: 0.55514 },
+          { id: 'Argentina-Wind', parent: 'Argentina', name: 'Wind', value: 0.84826 }
+        ],
+        allowDrillToNode: true,
+        cursor: 'pointer',
+        dataLabels: {
+          format: '{point.name}',
+          filter: {
+            property: 'innerArcLength',
+            operator: '>',
+            value: 16
+          }
+        },
+        levels: [{
+          level: 1,
+          levelIsConstant: false,
           dataLabels: {
-              format: '{point.name}',
-              filter: {
-                  property: 'innerArcLength',
-                  operator: '>',
-                  value: 16
-              }
+            filter: {
+              property: 'outerArcLength',
+              operator: '>',
+              value: 64
+            }
           },
-          levels: [{
-              level: 1,
-              levelIsConstant: false,
-              dataLabels: {
-                  filter: {
-                      property: 'outerArcLength',
-                      operator: '>',
-                      value: 64
-                  }
-              },
-              colorByPoint: true
-          }, {
-              level: 2,
-              colorVariation: {
-                  key: 'brightness',
-                  to: -0.4
-              }
-          }]
+          colorByPoint: true
+        }, {
+          level: 2,
+          colorVariation: {
+            key: 'brightness',
+            to: -0.4
+          }
+        }]
       }],
       tooltip: {
-          headerFormat: '',
-          pointFormat: '<b>{point.name}</b>: {point.value} Billion USD'
+        headerFormat: '',
+        pointFormat: '<b>{point.name}</b>: {point.value} Billion USD'
       }
-  });
-  
-  
-      // Glyph Chart
-      Highcharts.chart('glyph-chart', {
-          chart: {
-              polar: true,
-              type: 'column',
-              height: 800
-          },
-          title: {
-              text: 'Radial Chart - Financial Flows Energy Types'
-          },
-          pane: {
-              size: '100%'
-          },
-          xAxis: {
-              categories: ['Bioenergy', 'Geothermal', 'Hydropower', 'Marine', 'Multiple Renewables', 'Wind'],
-              tickmarkPlacement: 'on',
-              lineWidth: 0
-          },
-          yAxis: {
-              gridLineInterpolation: 'polygon',
-              lineWidth: 0,
-              min: 0,
-              max: 5, // Adjusted to fit the data range
-              title: {
-                  text: 'Financial Flows (Billion USD)'
-              }
-          },
-          tooltip: {
-              shared: true,
-              pointFormat: '<b>{series.name}</b>: {point.y} Billion USD<br>'
-          },
-          legend: {
-              enabled: true
-          },
-          series: [
-              {
-                  name: 'India',
-                  data: [0.14551, 0.13179, 3.6668, 0.54003, 6.00528, 6.49622],
-                  pointPlacement: 'on'
-              },
-              {
-                  name: 'Pakistan',
-                  data: [0.02929, 0.27408, 6.59981, 0.08352, 0.73742, 0.69646],
-                  pointPlacement: 'on'
-              },
-              {
-                  name: 'Türkiye',
-                  data: [0.00455, 0.47006, 0.01272, 0.1424, 6.53983, 1.21432],
-                  pointPlacement: 'on'
-              },
-              {
-                  name: 'South Africa',
-                  data: [0.01889, 0.00137, 2.32271, 0.00775, 2.57308, 2.50343],
-                  pointPlacement: 'on'
-              },
-              {
-                  name: 'Indonesia',
-                  data: [0.02503, 3.13048, 2.34325, 0.2261, 0.44361, 0.66411],
-                  pointPlacement: 'on'
-              },
-              {
-                  name: 'Egypt',
-                  data: [0.00113, 0.06051, 0.18628, 0.01143, 2.21802, 2.69876],
-                  pointPlacement: 'on'
-              },
-              {
-                  name: 'Brazil',
-                  data: [0.5048, 0.40355, 0.19573, 0.04919, 2.75342, 2.01552],
-                  pointPlacement: 'on'
-              },
-              {
-                  name: 'Argentina',
-                  data: [0.19085, 0.00001, 3.03283, 0.0, 0.55514, 0.84826],
-                  pointPlacement: 'on'
-              }
-          ]
-      });
+    });
+
+
+    // Glyph Chart
+    Highcharts.chart('glyph-chart', {
+      chart: {
+        polar: true,
+        type: 'column',
+        height: 800
+      },
+      title: {
+        text: 'Radial Chart - Financial Flows Energy Types'
+      },
+      pane: {
+        size: '100%'
+      },
+      xAxis: {
+        categories: ['Bioenergy', 'Geothermal', 'Hydropower', 'Marine', 'Multiple Renewables', 'Wind'],
+        tickmarkPlacement: 'on',
+        lineWidth: 0
+      },
+      yAxis: {
+        gridLineInterpolation: 'polygon',
+        lineWidth: 0,
+        min: 0,
+        max: 5, // Adjusted to fit the data range
+        title: {
+          text: 'Financial Flows (Billion USD)'
+        }
+      },
+      tooltip: {
+        shared: true,
+        pointFormat: '<b>{series.name}</b>: {point.y} Billion USD<br>'
+      },
+      legend: {
+        enabled: true
+      },
+      series: [
+        {
+          name: 'India',
+          data: [0.14551, 0.13179, 3.6668, 0.54003, 6.00528, 6.49622],
+          pointPlacement: 'on'
+        },
+        {
+          name: 'Pakistan',
+          data: [0.02929, 0.27408, 6.59981, 0.08352, 0.73742, 0.69646],
+          pointPlacement: 'on'
+        },
+        {
+          name: 'Türkiye',
+          data: [0.00455, 0.47006, 0.01272, 0.1424, 6.53983, 1.21432],
+          pointPlacement: 'on'
+        },
+        {
+          name: 'South Africa',
+          data: [0.01889, 0.00137, 2.32271, 0.00775, 2.57308, 2.50343],
+          pointPlacement: 'on'
+        },
+        {
+          name: 'Indonesia',
+          data: [0.02503, 3.13048, 2.34325, 0.2261, 0.44361, 0.66411],
+          pointPlacement: 'on'
+        },
+        {
+          name: 'Egypt',
+          data: [0.00113, 0.06051, 0.18628, 0.01143, 2.21802, 2.69876],
+          pointPlacement: 'on'
+        },
+        {
+          name: 'Brazil',
+          data: [0.5048, 0.40355, 0.19573, 0.04919, 2.75342, 2.01552],
+          pointPlacement: 'on'
+        },
+        {
+          name: 'Argentina',
+          data: [0.19085, 0.00001, 3.03283, 0.0, 0.55514, 0.84826],
+          pointPlacement: 'on'
+        }
+      ]
+    });
   </script>
   <script>
     let globalData = []; // Placeholder for JSON data
-        const countriesDropdown = document.getElementById('countries');
-        const defaultCountries = ['India', 'Pakistan', 'Brazil', 'Türkiye', 'South Africa', 'Argentina','Egypt','Indonesia'];
+    const countriesDropdown = document.getElementById('countries');
+    const defaultCountries = ['India', 'Pakistan', 'Brazil', 'Türkiye', 'South Africa', 'Argentina', 'Egypt', 'Indonesia'];
 
-        const energyTypeDropdown = document.getElementById('energyType');
+    const energyTypeDropdown = document.getElementById('energyType');
 
-      
-        let data=JSON.parse(`[{"country":"Angola","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2003,"All Renewables":0.05,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2004,"All Renewables":0.04,"Bioenergy":0,"Geothermal":0,"Hydropower":0.8,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2005,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.01,"Wind":0.24},{"country":"Angola","year":2006,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2007,"All Renewables":0.8,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Angola","year":2008,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2009,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2010,"All Renewables":0.02,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":42.96},{"country":"Angola","year":2011,"All Renewables":0.24,"Bioenergy":0,"Geothermal":0,"Hydropower":124.56,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2012,"All Renewables":0.01,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.12},{"country":"Angola","year":2013,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":4868.98,"Marine":0,"Multiple Renewables":0.01,"Wind":0.06},{"country":"Angola","year":2014,"All Renewables":124.56,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.03},{"country":"Angola","year":2015,"All Renewables":0.02,"Bioenergy":19.97,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.04,"Wind":0},{"country":"Angola","year":2016,"All Renewables":4951.88,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":41.41},{"country":"Angola","year":2017,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Angola","year":2018,"All Renewables":0.13,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2019,"All Renewables":0.06,"Bioenergy":0,"Geothermal":0,"Hydropower":41.41,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2020,"All Renewables":0.07,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2021,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.05,"Wind":0},{"country":"Angola","year":2022,"All Renewables":82.84,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Argentina","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.14,"Wind":0.12},{"country":"Argentina","year":2001,"All Renewables":4.21,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.36,"Wind":0.14},{"country":"Argentina","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":0.26,"Wind":0.22},{"country":"Argentina","year":2003,"All Renewables":0.06,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":24.68,"Wind":0.19},{"country":"Argentina","year":2004,"All Renewables":44.61,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":42.06,"Wind":0.21},{"country":"Argentina","year":2005,"All Renewables":0.31,"Bioenergy":0,"Geothermal":0,"Hydropower":0.05,"Marine":0,"Multiple Renewables":0.64,"Wind":0},{"country":"Argentina","year":2006,"All Renewables":0.49,"Bioenergy":0,"Geothermal":0,"Hydropower":0.1,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Argentina","year":2007,"All Renewables":0.41,"Bioenergy":0.1,"Geothermal":0,"Hydropower":0.11,"Marine":0,"Multiple Renewables":0,"Wind":11.26},{"country":"Argentina","year":2008,"All Renewables":25.05,"Bioenergy":0.33,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":0.05},{"country":"Argentina","year":2009,"All Renewables":42.69,"Bioenergy":0.2,"Geothermal":0,"Hydropower":235.07,"Marine":0,"Multiple Renewables":0.07,"Wind":8.69},{"country":"Argentina","year":2010,"All Renewables":1.16,"Bioenergy":75.64,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":115.75,"Wind":256.78},{"country":"Argentina","year":2011,"All Renewables":75.66,"Bioenergy":0,"Geothermal":0,"Hydropower":2780.37,"Marine":0,"Multiple Renewables":0,"Wind":382.56},{"country":"Argentina","year":2012,"All Renewables":286.71,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":70.3,"Wind":80.77},{"country":"Argentina","year":2013,"All Renewables":52.22,"Bioenergy":2.91,"Geothermal":0,"Hydropower":17.12,"Marine":0,"Multiple Renewables":127.78,"Wind":106.33},{"country":"Argentina","year":2014,"All Renewables":2783.41,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.53,"Wind":0.01},{"country":"Argentina","year":2015,"All Renewables":124.43,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":90.11,"Wind":0.92},{"country":"Argentina","year":2016,"All Renewables":273.9,"Bioenergy":0.93,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.08,"Wind":0.01},{"country":"Argentina","year":2017,"All Renewables":561.92,"Bioenergy":110.74,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":78.07,"Wind":0},{"country":"Argentina","year":2018,"All Renewables":427.78,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Argentina","year":2019,"All Renewables":506.21,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":4.21,"Wind":0},{"country":"Argentina","year":2020,"All Renewables":93.01,"Bioenergy":0,"Geothermal":0.01,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Argentina","year":2021,"All Renewables":2.9,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.06,"Wind":0},{"country":"Argentina","year":2022,"All Renewables":88.82,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Bangladesh","year":2000,"All Renewables":3.36,"Bioenergy":0,"Geothermal":0,"Hydropower":0.13,"Marine":0,"Multiple Renewables":43.37,"Wind":0},{"country":"Bangladesh","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Bangladesh","year":2002,"All Renewables":35.07,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":22.7,"Wind":0},{"country":"Bangladesh","year":2003,"All Renewables":50.87,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":16.94},{"country":"Bangladesh","year":2004,"All Renewables":18.7,"Bioenergy":0,"Geothermal":0,"Hydropower":20.1,"Marine":0,"Multiple Renewables":12.63,"Wind":0.18},{"country":"Bangladesh","year":2005,"All Renewables":43.38,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":0.01,"Wind":207.06},{"country":"Bangladesh","year":2006,"All Renewables":0.02,"Bioenergy":12.83,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":19.91,"Wind":160.09},{"country":"Bangladesh","year":2007,"All Renewables":55.64,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":2.82,"Wind":0},{"country":"Bangladesh","year":2008,"All Renewables":0.01,"Bioenergy":0.32,"Geothermal":0,"Hydropower":31.66,"Marine":0,"Multiple Renewables":113.08,"Wind":78.42},{"country":"Bangladesh","year":2009,"All Renewables":29.89,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":20.6,"Wind":0},{"country":"Bangladesh","year":2010,"All Renewables":0.19,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":8.54,"Wind":458.13},{"country":"Bangladesh","year":2011,"All Renewables":258.63,"Bioenergy":0.04,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":137.18},{"country":"Bangladesh","year":2012,"All Renewables":162.95,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":64.6,"Wind":97.87},{"country":"Bangladesh","year":2013,"All Renewables":113.08,"Bioenergy":0.26,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":161.02,"Wind":149.84},{"country":"Bangladesh","year":2014,"All Renewables":99.27,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.55,"Wind":20.82},{"country":"Bangladesh","year":2015,"All Renewables":8.54,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":4.65,"Wind":323.73},{"country":"Bangladesh","year":2016,"All Renewables":458.15,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.58},{"country":"Bangladesh","year":2017,"All Renewables":266.7,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":111.54,"Wind":0.05},{"country":"Bangladesh","year":2018,"All Renewables":258.88,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Bangladesh","year":2019,"All Renewables":150.39,"Bioenergy":0.11,"Geothermal":0,"Hydropower":0,"Marine":3.29,"Multiple Renewables":0,"Wind":0}
+
+    let data = JSON.parse(`[{"country":"Angola","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2003,"All Renewables":0.05,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2004,"All Renewables":0.04,"Bioenergy":0,"Geothermal":0,"Hydropower":0.8,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2005,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.01,"Wind":0.24},{"country":"Angola","year":2006,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2007,"All Renewables":0.8,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Angola","year":2008,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2009,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2010,"All Renewables":0.02,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":42.96},{"country":"Angola","year":2011,"All Renewables":0.24,"Bioenergy":0,"Geothermal":0,"Hydropower":124.56,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2012,"All Renewables":0.01,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.12},{"country":"Angola","year":2013,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":4868.98,"Marine":0,"Multiple Renewables":0.01,"Wind":0.06},{"country":"Angola","year":2014,"All Renewables":124.56,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.03},{"country":"Angola","year":2015,"All Renewables":0.02,"Bioenergy":19.97,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.04,"Wind":0},{"country":"Angola","year":2016,"All Renewables":4951.88,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":41.41},{"country":"Angola","year":2017,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Angola","year":2018,"All Renewables":0.13,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2019,"All Renewables":0.06,"Bioenergy":0,"Geothermal":0,"Hydropower":41.41,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2020,"All Renewables":0.07,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Angola","year":2021,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.05,"Wind":0},{"country":"Angola","year":2022,"All Renewables":82.84,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Argentina","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.14,"Wind":0.12},{"country":"Argentina","year":2001,"All Renewables":4.21,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.36,"Wind":0.14},{"country":"Argentina","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":0.26,"Wind":0.22},{"country":"Argentina","year":2003,"All Renewables":0.06,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":24.68,"Wind":0.19},{"country":"Argentina","year":2004,"All Renewables":44.61,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":42.06,"Wind":0.21},{"country":"Argentina","year":2005,"All Renewables":0.31,"Bioenergy":0,"Geothermal":0,"Hydropower":0.05,"Marine":0,"Multiple Renewables":0.64,"Wind":0},{"country":"Argentina","year":2006,"All Renewables":0.49,"Bioenergy":0,"Geothermal":0,"Hydropower":0.1,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Argentina","year":2007,"All Renewables":0.41,"Bioenergy":0.1,"Geothermal":0,"Hydropower":0.11,"Marine":0,"Multiple Renewables":0,"Wind":11.26},{"country":"Argentina","year":2008,"All Renewables":25.05,"Bioenergy":0.33,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":0.05},{"country":"Argentina","year":2009,"All Renewables":42.69,"Bioenergy":0.2,"Geothermal":0,"Hydropower":235.07,"Marine":0,"Multiple Renewables":0.07,"Wind":8.69},{"country":"Argentina","year":2010,"All Renewables":1.16,"Bioenergy":75.64,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":115.75,"Wind":256.78},{"country":"Argentina","year":2011,"All Renewables":75.66,"Bioenergy":0,"Geothermal":0,"Hydropower":2780.37,"Marine":0,"Multiple Renewables":0,"Wind":382.56},{"country":"Argentina","year":2012,"All Renewables":286.71,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":70.3,"Wind":80.77},{"country":"Argentina","year":2013,"All Renewables":52.22,"Bioenergy":2.91,"Geothermal":0,"Hydropower":17.12,"Marine":0,"Multiple Renewables":127.78,"Wind":106.33},{"country":"Argentina","year":2014,"All Renewables":2783.41,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.53,"Wind":0.01},{"country":"Argentina","year":2015,"All Renewables":124.43,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":90.11,"Wind":0.92},{"country":"Argentina","year":2016,"All Renewables":273.9,"Bioenergy":0.93,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.08,"Wind":0.01},{"country":"Argentina","year":2017,"All Renewables":561.92,"Bioenergy":110.74,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":78.07,"Wind":0},{"country":"Argentina","year":2018,"All Renewables":427.78,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Argentina","year":2019,"All Renewables":506.21,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":4.21,"Wind":0},{"country":"Argentina","year":2020,"All Renewables":93.01,"Bioenergy":0,"Geothermal":0.01,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Argentina","year":2021,"All Renewables":2.9,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.06,"Wind":0},{"country":"Argentina","year":2022,"All Renewables":88.82,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Bangladesh","year":2000,"All Renewables":3.36,"Bioenergy":0,"Geothermal":0,"Hydropower":0.13,"Marine":0,"Multiple Renewables":43.37,"Wind":0},{"country":"Bangladesh","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Bangladesh","year":2002,"All Renewables":35.07,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":22.7,"Wind":0},{"country":"Bangladesh","year":2003,"All Renewables":50.87,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":16.94},{"country":"Bangladesh","year":2004,"All Renewables":18.7,"Bioenergy":0,"Geothermal":0,"Hydropower":20.1,"Marine":0,"Multiple Renewables":12.63,"Wind":0.18},{"country":"Bangladesh","year":2005,"All Renewables":43.38,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":0.01,"Wind":207.06},{"country":"Bangladesh","year":2006,"All Renewables":0.02,"Bioenergy":12.83,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":19.91,"Wind":160.09},{"country":"Bangladesh","year":2007,"All Renewables":55.64,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":2.82,"Wind":0},{"country":"Bangladesh","year":2008,"All Renewables":0.01,"Bioenergy":0.32,"Geothermal":0,"Hydropower":31.66,"Marine":0,"Multiple Renewables":113.08,"Wind":78.42},{"country":"Bangladesh","year":2009,"All Renewables":29.89,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":20.6,"Wind":0},{"country":"Bangladesh","year":2010,"All Renewables":0.19,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":8.54,"Wind":458.13},{"country":"Bangladesh","year":2011,"All Renewables":258.63,"Bioenergy":0.04,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":137.18},{"country":"Bangladesh","year":2012,"All Renewables":162.95,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":64.6,"Wind":97.87},{"country":"Bangladesh","year":2013,"All Renewables":113.08,"Bioenergy":0.26,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":161.02,"Wind":149.84},{"country":"Bangladesh","year":2014,"All Renewables":99.27,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.55,"Wind":20.82},{"country":"Bangladesh","year":2015,"All Renewables":8.54,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":4.65,"Wind":323.73},{"country":"Bangladesh","year":2016,"All Renewables":458.15,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.58},{"country":"Bangladesh","year":2017,"All Renewables":266.7,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":111.54,"Wind":0.05},{"country":"Bangladesh","year":2018,"All Renewables":258.88,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Bangladesh","year":2019,"All Renewables":150.39,"Bioenergy":0.11,"Geothermal":0,"Hydropower":0,"Marine":3.29,"Multiple Renewables":0,"Wind":0}
         ,{"country":"Bangladesh","year":2020,"All Renewables":25.68,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":8.77,"Wind":0},{"country":"Bangladesh","year":2021,"All Renewables":323.73,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":26.3,"Multiple Renewables":0,"Wind":0},{"country":"Bangladesh","year":2022,"All Renewables":112.12,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":50.74,"Multiple Renewables":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2000,"All Renewables":0.1,"Bioenergy":0,"Geothermal":0,"Hydropower":0.07,"Marine":0,"Multiple Renewables":0.14,"Wind":0.37},{"country":"Bolivia (Plurinational State of)","year":2001,"All Renewables":0.85,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.09,"Wind":0.42},{"country":"Bolivia (Plurinational State of)","year":2002,"All Renewables":0.08,"Bioenergy":0.63,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.03,"Wind":0.19},{"country":"Bolivia (Plurinational State of)","year":2003,"All Renewables":17.81,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.35,"Wind":0.31},{"country":"Bolivia (Plurinational State of)","year":2004,"All Renewables":0.04,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":109.01,"Wind":4.31},{"country":"Bolivia (Plurinational State of)","year":2005,"All Renewables":0.16,"Bioenergy":0,"Geothermal":0,"Hydropower":0.38,"Marine":0,"Multiple Renewables":0.44,"Wind":0.04},{"country":"Bolivia (Plurinational State of)","year":2006,"All Renewables":0.46,"Bioenergy":0,"Geothermal":0,"Hydropower":0.38,"Marine":0,"Multiple Renewables":1.01,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2007,"All Renewables":0.45,"Bioenergy":0,"Geothermal":0,"Hydropower":0.41,"Marine":0,"Multiple Renewables":5.34,"Wind":5.51},{"country":"Bolivia (Plurinational State of)","year":2008,"All Renewables":0.92,"Bioenergy":0.02,"Geothermal":0.16,"Hydropower":0.31,"Marine":0,"Multiple Renewables":1.09,"Wind":0.01},{"country":"Bolivia (Plurinational State of)","year":2009,"All Renewables":109.72,"Bioenergy":0.01,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":15.6,"Wind":0.02},{"country":"Bolivia (Plurinational State of)","year":2010,"All Renewables":5.36,"Bioenergy":0,"Geothermal":0,"Hydropower":73.23,"Marine":0,"Multiple Renewables":0.83,"Wind":76.01},{"country":"Bolivia (Plurinational State of)","year":2011,"All Renewables":1.37,"Bioenergy":0,"Geothermal":0.49,"Hydropower":0.55,"Marine":0,"Multiple Renewables":5.55,"Wind":0.01},{"country":"Bolivia (Plurinational State of)","year":2012,"All Renewables":5.34,"Bioenergy":1.33,"Geothermal":23.45,"Hydropower":1.22,"Marine":0,"Multiple Renewables":0.77,"Wind":0.01},{"country":"Bolivia (Plurinational State of)","year":2013,"All Renewables":81.65,"Bioenergy":0,"Geothermal":0,"Hydropower":1182.83,"Marine":0,"Multiple Renewables":89.32,"Wind":0.01},{"country":"Bolivia (Plurinational State of)","year":2014,"All Renewables":39.61,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.71,"Wind":0.05},{"country":"Bolivia (Plurinational State of)","year":2015,"All Renewables":2.07,"Bioenergy":0.01,"Geothermal":563.92,"Hydropower":0,"Marine":0,"Multiple Renewables":3.29,"Wind":0.02},{"country":"Bolivia (Plurinational State of)","year":2016,"All Renewables":1264.51,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.24,"Wind":0.14},{"country":"Bolivia (Plurinational State of)","year":2017,"All Renewables":647.85,"Bioenergy":0,"Geothermal":0,"Hydropower":0.01,"Marine":0,"Multiple Renewables":3.57,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2018,"All Renewables":89.6,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2019,"All Renewables":0.95,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.85,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2020,"All Renewables":3.35,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.08,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2021,"All Renewables":0.26,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2022,"All Renewables":3.7,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":17.12,"Multiple Renewables":0.02,"Wind":0},{"country":"Brazil","year":2000,"All Renewables":137.61,"Bioenergy":0.07,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":12.75,"Wind":0},{"country":"Brazil","year":2001,"All Renewables":5.76,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":1.36,"Wind":0},{"country":"Brazil","year":2002,"All Renewables":36.37,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.85,"Wind":1.48},{"country":"Brazil","year":2003,"All Renewables":8.2,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":19.82,"Wind":0.64},{"country":"Brazil","year":2004,"All Renewables":1.26,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":146.68,"Wind":3.68},{"country":"Brazil","year":2005,"All Renewables":12.75,"Bioenergy":0,"Geothermal":0,"Hydropower":0.06,"Marine":0,"Multiple Renewables":75.66,"Wind":4.1},{"country":"Brazil","year":2006,"All Renewables":1.36,"Bioenergy":0.16,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":1.05,"Wind":15.73},{"country":"Brazil","year":2007,"All Renewables":1,"Bioenergy":0.36,"Geothermal":0,"Hydropower":13.05,"Marine":0,"Multiple Renewables":134.28,"Wind":12.41},{"country":"Brazil","year":2008,"All Renewables":21.72,"Bioenergy":2.86,"Geothermal":0,"Hydropower":182.62,"Marine":0,"Multiple Renewables":76.13,"Wind":0},{"country":"Brazil","year":2009,"All Renewables":193.36,"Bioenergy":12.6,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":335.92,"Wind":0.67},{"country":"Brazil","year":2010,"All Renewables":152.48,"Bioenergy":3.38,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.93,"Wind":175.53},{"country":"Brazil","year":2011,"All Renewables":191.21,"Bioenergy":47.32,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":19.01,"Wind":63.14},{"country":"Brazil","year":2012,"All Renewables":254.81,"Bioenergy":13.79,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":237.04,"Wind":214.89},{"country":"Brazil","year":2013,"All Renewables":102.34,"Bioenergy":0.58,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":97.4,"Wind":4.31},{"country":"Brazil","year":2014,"All Renewables":540.62,"Bioenergy":0.86,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":533.37,"Wind":141.66},{"country":"Brazil","year":2015,"All Renewables":2.46,"Bioenergy":0.43,"Geothermal":266.62,"Hydropower":0,"Marine":0,"Multiple Renewables":807.37,"Wind":474.32},{"country":"Brazil","year":2016,"All Renewables":194.98,"Bioenergy":65.76,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":18.55,"Wind":902.41},{"country":"Brazil","year":2017,"All Renewables":632.56,"Bioenergy":3.82,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":233.38,"Wind":0},{"country":"Brazil","year":2018,"All Renewables":316.11,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Brazil","year":2019,"All Renewables":537.68,"Bioenergy":212.66,"Geothermal":0,"Hydropower":0,"Marine":0.79,"Multiple Renewables":1.84,"Wind":0},{"country":"Brazil","year":2020,"All Renewables":1190.46,"Bioenergy":62.5,"Geothermal":0.11,"Hydropower":0,"Marine":3.85,"Multiple Renewables":0.03,"Wind":0},{"country":"Brazil","year":2021,"All Renewables":738.14,"Bioenergy":77.65,"Geothermal":136.82,"Hydropower":0,"Marine":36.35,"Multiple Renewables":0,"Wind":0.55},{"country":"Brazil","year":2022,"All Renewables":1213.55,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":8.2,"Multiple Renewables":0,"Wind":0},{"country":"Cameroon","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Cameroon","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":3.71,"Wind":0},{"country":"Cameroon","year":2002,"All Renewables":0.01,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Cameroon","year":2003,"All Renewables":0.01,"Bioenergy":0,"Geothermal":0,"Hydropower":8.46,"Marine":0,"Multiple Renewables":0.54,"Wind":0},{"country":"Cameroon","year":2004,"All Renewables":0.02,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.15,"Wind":0.21},{"country":"Cameroon","year":2005,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.53,"Wind":0},{"country":"Cameroon","year":2006,"All Renewables":12.17,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.17},{"country":"Cameroon","year":2007,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":69.43,"Marine":0,"Multiple Renewables":2.27,"Wind":0},{"country":"Cameroon","year":2008,"All Renewables":0.54,"Bioenergy":0.02,"Geothermal":0,"Hydropower":667.47,"Marine":0,"Multiple Renewables":0.02,"Wind":2.02},{"country":"Cameroon","year":2009,"All Renewables":0.17,"Bioenergy":0,"Geothermal":0,"Hydropower":331.29,"Marine":0,"Multiple Renewables":2.05,"Wind":102.38},{"country":"Cameroon","year":2010,"All Renewables":70.18,"Bioenergy":0.05,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":2.07,"Wind":84.7},{"country":"Cameroon","year":2011,"All Renewables":667.52,"Bioenergy":0.74,"Geothermal":0,"Hydropower":8.17,"Marine":0,"Multiple Renewables":0,"Wind":0.02},{"country":"Cameroon","year":2012,"All Renewables":334.47,"Bioenergy":0,"Geothermal":0,"Hydropower":
         0,"Marine":0,"Multiple Renewables":0,"Wind":32.48},{"country":"Cameroon","year":2013,"All Renewables":0.02,"Bioenergy":0,"Geothermal":0,"Hydropower":0.53,"Marine":0,"Multiple Renewables":12.78,
         "Wind":0.76},{"country":"Cameroon","year":2014,"All Renewables":12.23,"Bioenergy":0.04,"Geothermal":0,"Hydropower":191.6,"Marine":0,"Multiple Renewables":1.07,"Wind":39.21},{"country":
@@ -1009,147 +1303,148 @@
         "Wind":0.35},{"country":"Uganda","year":2002,"All Renewables":4.23,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Uganda","year":2003,"All Renewables":0.71,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":12.78,"Wind":33.71},{"country":"Uganda","year":2004,"All Renewables":0.04,"Bioenergy":0,"Geothermal":0,"Hydropower":563.68,"Marine":0,"Multiple Renewables":44.58,"Wind":0.18},{"country":"Uganda","year":2005,"All Renewables":0.08,"Bioenergy":0,"Geothermal":0,"Hydropower":9.37,"Marine":0,"Multiple Renewables":32.22,"Wind":0.07},{"country":"Uganda","year":2006,"All Renewables":0.07,"Bioenergy":0,"Geothermal":0,"Hydropower":3.39,"Marine":0,"Multiple Renewables":1.65,"Wind":0.11},{"country":"Uganda","year":2007,"All Renewables":564.05,"Bioenergy":0,"Geothermal":0,"Hydropower":0.1,"Marine":0,"Multiple Renewables":20.11,"Wind":4.44},{"country":"Uganda","year":2008,"All Renewables":22.16,"Bioenergy":0.11,"Geothermal":0,"Hydropower":28.16,"Marine":0,"Multiple Renewables":40.67,"Wind":0},{"country":"Uganda","year":2009,"All Renewables":81.79,"Bioenergy":0.26,"Geothermal":0,"Hydropower":0.44,"Marine":0,"Multiple Renewables":35.49,"Wind":19.03},{"country":"Uganda","year":2010,"All Renewables":32.76,"Bioenergy":0.04,"Geothermal":0,"Hydropower":0.29,"Marine":0,"Multiple Renewables":0.03,"Wind":31.78},{"country":"Uganda","year":2011,"All Renewables":29.93,"Bioenergy":5.88,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":76.2,"Wind":1.99},{"country":"Uganda","year":2012,"All Renewables":26.53,"Bioenergy":0.21,"Geothermal":0,"Hydropower":1647.81,"Marine":0,"Multiple Renewables":0,"Wind":3.3},{"country":"Uganda","year":2013,"All Renewables":45.6,"Bioenergy":0.55,"Geothermal":0,"Hydropower":98.78,"Marine":0,"Multiple Renewables":1.36,"Wind":4.12},{"country":"Uganda","year":2014,"All Renewables":36.03,"Bioenergy":0.04,"Geothermal":0,"Hydropower":99.8,"Marine":0,"Multiple Renewables":22.36,"Wind":13.39},{"country":"Uganda","year":2015,"All Renewables":1666.91,"Bioenergy":0.14,"Geothermal":0,"Hydropower":525.32,"Marine":0,"Multiple Renewables":8.58,"Wind":0.1},{"country":"Uganda","year":2016,"All Renewables":206.9,"Bioenergy":0.68,"Geothermal":0,"Hydropower":46.31,"Marine":0,"Multiple Renewables":3.59,"Wind":547.85},{"country":"Uganda","year":2017,"All Renewables":102.48,"Bioenergy":42.73,"Geothermal":0,"Hydropower":0.52,"Marine":0,"Multiple Renewables":18.08,"Wind":0},{"country":"Uganda","year":2018,"All Renewables":572.71,"Bioenergy":2.11,"Geothermal":0,"Hydropower":0.52,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Uganda","year":2019,"All Renewables":74.89,"Bioenergy":0.53,"Geothermal":0,"Hydropower":0.09,"Marine":24.81,"Multiple Renewables":0.18,"Wind":0},{"country":"Uganda","year":2020,"All Renewables":23.02,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":7.03,"Multiple Renewables":0.35,"Wind":0},{"country":"Uganda","year":2021,"All Renewables":4.22,"Bioenergy":0.01,"Geothermal":4.25,"Hydropower":0,"Marine":3,"Multiple Renewables":0.62,"Wind":0},{"country":"Uganda","year":2022,"All Renewables":566.03,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0.09,"Multiple Renewables":0.04,"Wind":0.06},{"country":"Ukraine","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":13.72,"Wind":0},{"country":"Ukraine","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Ukraine","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":126.06,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Ukraine","year":2003,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Ukraine","year":2004,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.19,"Wind":0},{"country":"Ukraine","year":2005,"All Renewables":139.78,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":1.32,"Wind":0},{"country":"Ukraine","year":2006,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":63.46,"Marine":0,"Multiple Renewables":4.34,"Wind":0.53},{"country":"Ukraine","year":2007,"All Renewables":0,"Bioenergy":0.25,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.05},{"country":"Ukraine","year":2008,"All Renewables":0.27,"Bioenergy":0,"Geothermal":0,"Hydropower":28.08,"Marine":0,"Multiple Renewables":51.06,"Wind":0},{"country":"Ukraine","year":2009,"All Renewables":63.65,"Bioenergy":0,"Geothermal":0,"Hydropower":5.04,"Marine":0,"Multiple Renewables":89.41,"Wind":0},{"country":"Ukraine","year":2010,"All Renewables":1.32,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":9.8,"Wind":0},{"country":"Ukraine","year":2011,"All Renewables":32.41,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":11.79,"Wind":0.39},{"country":"Ukraine","year":2012,"All Renewables":26.52,"Bioenergy":0.37,"Geothermal":0.09,"Hydropower":0,"Marine":0,"Multiple Renewables":22.07,"Wind":34.56},{"country":"Ukraine","year":2013,"All Renewables":51.48,"Bioenergy":0,"Geothermal":0.06,"Hydropower":256.78,"Marine":0,"Multiple Renewables":396.52,"Wind":39.65},{"country":"Ukraine","year":2014,"All Renewables":89.49,"Bioenergy":2.7,"Geothermal":0,"Hydropower":28.08,"Marine":0,"Multiple Renewables":251.59,"Wind":0},{"country":"Ukraine","year":2015,"All Renewables":12.56,"Bioenergy":0.07,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":44.64,"Wind":106.03},{"country":"Ukraine","year":2016,"All Renewables":268.64,"Bioenergy":31.73,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":90.29,"Wind":0.53},{"country":"Ukraine","year":2017,"All Renewables":82.27,"Bioenergy":86.43,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":65.68,"Wind":0},{"country":"Ukraine","year":2018,"All Renewables":679.14,"Bioenergy":52.55,"Geothermal":0,"Hydropower":88.5,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Ukraine","year":2019,"All Renewables":520.68,"Bioenergy":0.01,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Ukraine","year":2020,"All Renewables":44.65,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Ukraine","year":2021,"All Renewables":284.82,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Ukraine","year":2022,"All Renewables":66.21,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"United Republic of Tanzania (the)","year":2000,"All Renewables":0.23,"Bioenergy":0.18,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.03,"Wind":0.05},{"country":"United Republic of Tanzania (the)","year":2001,"All Renewables":2.68,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.09,"Wind":6.3},{"country":"United Republic of Tanzania (the)","year":2002,"All Renewables":1.83,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":13.28,"Wind":0.07},{"country":"United Republic of Tanzania (the)","year":2003,"All Renewables":4.36,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0.11},{"country":"United Republic of Tanzania (the)","year":2004,"All Renewables":0.09,"Bioenergy":0,"Geothermal":0,"Hydropower":2.41,"Marine":0,"Multiple Renewables":0.32,"Wind":1.39},{"country":"United Republic of Tanzania (the)","year":2005,"All Renewables":0.05,"Bioenergy":0,"Geothermal":0,"Hydropower":66.09,"Marine":0,"Multiple Renewables":3.11,"Wind":1.41},{"country":"United Republic of Tanzania (the)","year":2006,"All Renewables":0.14,"Bioenergy":0,"Geothermal":0,"Hydropower":0.02,"Marine":0,"Multiple Renewables":4,"Wind":0.16},{"country":"United Republic of Tanzania (the)","year":2007,"All Renewables":21.98,"Bioenergy":0,"Geothermal":0,"Hydropower":3.91,"Marine":0,"Multiple Renewables":0.26,"Wind":11.42},{"country":"United Republic of Tanzania (the)","year":2008,"All Renewables":66.17,"Bioenergy":0,"Geothermal":0,"Hydropower":3.9,"Marine":0,"Multiple Renewables":42.12,"Wind":7.93},{"country":"United Republic of Tanzania (the)","year":2009,"All Renewables":0.64,"Bioenergy":1.37,"Geothermal":0,"Hydropower":3.01,"Marine":0,"Multiple Renewables":1.81,"Wind":1.38},{"country":"United Republic of Tanzania (the)","year":2010,"All Renewables":9.77,"Bioenergy":0,"Geothermal":0.15,"Hydropower":111.42,"Marine":0,"Multiple Renewables":7.59,"Wind":0.32},{"country":"United Republic of Tanzania (the)","year":2011,"All Renewables":9.31,"Bioenergy":0.32,"Geothermal":0,"Hydropower":39.39,"Marine":0,"Multiple Renewables":165.97,"Wind":0.09},{"country":"United Republic of Tanzania (the)","year":2012,"All Renewables":3.9,"Bioenergy":16.04,"Geothermal":0,"Hydropower":0.11,"Marine":0,"Multiple Renewables":0.27,"Wind":21.33},{"country":"United Republic of Tanzania (the)","year":2013,"All Renewables":185.09,"Bioenergy":0.87,"Geothermal":0,"Hydropower":0.11,"Marine":0,"Multiple Renewables":0.61,"Wind":0.62},{"country":"United Republic of Tanzania (the)","year":2014,"All Renewables":49.99,"Bioenergy":31.13,"Geothermal":0,"Hydropower":0.77,"Marine":0,"Multiple Renewables":4.81,"Wind":1.85},{"country":"United Republic of Tanzania (the)","year":2015,"All Renewables":40.21,"Bioenergy":0.36,"Geothermal":27.37,"Hydropower":0.32,"Marine":0,"Multiple Renewables":100.65,"Wind":216.96},{"country":"United Republic of Tanzania (the)","year":2016,"All Renewables":166.76,"Bioenergy":0.24,"Geothermal":0.03,"Hydropower":0.66,"Marine":0,"Multiple Renewables":0.07,"Wind":0.04},{"country":"United Republic of Tanzania (the)","year":2017,"All Renewables":28.74,"Bioenergy":0.02,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":89.17,"Wind":0},
         {"country":"United Republic of Tanzania (the)","year":2018,"All Renewables":22.3,"Bioenergy":0,"Geothermal":0,"Hydropower":122.18,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"United Republic of Tanzania (the)","year":2019,"All Renewables":6.42,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0.13,"Multiple Renewables":0.01,"Wind":0},{"country":"United Republic of Tanzania (the)","year":2020,"All Renewables":103.47,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":2.44,"Multiple Renewables":0.01,"Wind":0},{"country":"United Republic of Tanzania (the)","year":2021,"All Renewables":339.21,"Bioenergy":0,"Geothermal":0.07,"Hydropower":0,"Marine":0.21,"Multiple Renewables":0.01,"Wind":0},{"country":"United Republic of Tanzania (the)","year":2022,"All Renewables":89.21,"Bioenergy":0,"Geothermal":0.06,"Hydropower":0,"Marine":4.35,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2001,"All Renewables":1.43,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.97,"Wind":0},{"country":"Uruguay","year":2003,"All Renewables":25.63,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":6.66},{"country":"Uruguay","year":2004,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.11,"Wind":0},{"country":"Uruguay","year":2005,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.15,"Wind":0},{"country":"Uruguay","year":2006,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":1.57,"Wind":0},{"country":"Uruguay","year":2007,"All Renewables":0.97,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":111.25,"Wind":0},{"country":"Uruguay","year":2008,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":90.51,"Wind":0},{"country":"Uruguay","year":2009,"All Renewables":6.77,"Bioenergy":1.07,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":41.74,"Wind":63.15},{"country":"Uruguay","year":2010,"All Renewables":1.22,"Bioenergy":6.92,"Geothermal":206.57,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2011,"All Renewables":8.49,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":76.49,"Wind":0},{"country":"Uruguay","year":2012,"All Renewables":317.82,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":13.42,"Wind":0},{"country":"Uruguay","year":2013,"All Renewables":227.93,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2014,"All Renewables":235.56,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.22,"Wind":0},{"country":"Uruguay","year":2015,"All Renewables":226.39,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2016,"All Renewables":76.49,"Bioenergy":6.59,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2017,"All Renewables":20.01,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2018,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2019,"All Renewables":0.22,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2020,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":1.43,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2021,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uruguay","year":2022,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":25.63,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2000,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2003,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2004,"All Renewables":0.25,"Bioenergy":0,"Geothermal":0,"Hydropower":28.7,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2005,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2006,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2007,"All Renewables":28.7,"Bioenergy":0,"Geothermal":0,"Hydropower":230.97,"Marine":0,"Multiple Renewables":0,"Wind":112.57},{"country":"Uzbekistan","year":2008,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2009,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":103.28,"Marine":0,"Multiple Renewables":0,"Wind":0.19},{"country":"Uzbekistan","year":2010,"All Renewables":230.97,"Bioenergy":0,"Geothermal":0,"Hydropower":102.34,"Marine":0,"Multiple Renewables":0.11,"Wind":0},{"country":"Uzbekistan","year":2011,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.19,"Wind":0},{"country":"Uzbekistan","year":2012,"All Renewables":103.28,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.17,"Wind":0},{"country":"Uzbekistan","year":2013,"All Renewables":214.91,"Bioenergy":0,"Geothermal":0,"Hydropower":0.57,"Marine":0,"Multiple Renewables":1.04,"Wind":0.02},{"country":"Uzbekistan","year":2014,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":67.51,"Marine":0,"Multiple Renewables":0,"Wind":32.17},{"country":"Uzbekistan","year":2015,"All Renewables":0.3,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":59.23,"Wind":76.09},{"country":"Uzbekistan","year":2016,"All Renewables":0.76,"Bioenergy":0,"Geothermal":0,"Hydropower":2.13,"Marine":0,"Multiple Renewables":25.86,"Wind":140.65},{"country":"Uzbekistan","year":2017,"All Renewables":67.68,"Bioenergy":0,"Geothermal":0,"Hydropower":130.98,"Marine":0,"Multiple Renewables":0.03,"Wind":0},{"country":"Uzbekistan","year":2018,"All Renewables":1.04,"Bioenergy":0,"Geothermal":0,"Hydropower":0.06,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2019,"All Renewables":2.15,"Bioenergy":5.08,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2020,"All Renewables":227.46,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2021,"All Renewables":102,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Uzbekistan","year":2022,"All Renewables":756.22,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.25,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2000,"All Renewables":0.91,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2003,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":883.75,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2004,"All Renewables":0.02,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.21,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2005,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.04,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2006,"All Renewables":883.85,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.24,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2007,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":1390.73,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2008,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":383.23,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2009,"All Renewables":0.21,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2010,"All Renewables":1390.76,"Bioenergy":0.01,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2011,"All Renewables":383.48,"Bioenergy":0,"Geothermal":0,"Hydropower":4.75,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2012,"All Renewables":0.01,"Bioenergy":0,"Geothermal":0,"Hydropower":0.39,"Marine":0,"Multiple Renewables":0,"Wind":0},
         {"country":"Venezuela (Bolivarian Republic of)","year":2013,"All Renewables":0.01,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2014,"All Renewables":4.76,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2015,"All Renewables":0.39,"Bioenergy":0,"Geothermal":0,"Hydropower":0.43,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2016,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2017,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2018,"All Renewables":0.43,"Bioenergy":0,"Geothermal":0,"Hydropower":0.04,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2019,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2020,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2021,"All Renewables":0.04,"Bioenergy":0,"Geothermal":0.91,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2022,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.02,"Wind":0},{"country":"Viet Nam","year":2000,"All Renewables":0.01,"Bioenergy":3.65,"Geothermal":0,"Hydropower":0.03,"Marine":0,"Multiple Renewables":0.16,"Wind":0},{"country":"Viet Nam","year":2001,"All Renewables":102.08,"Bioenergy":0,"Geothermal":0,"Hydropower":219.54,"Marine":0,"Multiple Renewables":0.06,"Wind":0},{"country":"Viet Nam","year":2002,"All Renewables":43.6,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.06,"Wind":0},{"country":"Viet Nam","year":2003,"All Renewables":0.17,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.81,"Wind":0.72},{"country":"Viet Nam","year":2004,"All Renewables":220.58,"Bioenergy":0.32,"Geothermal":0.01,"Hydropower":0,"Marine":0,"Multiple Renewables":479.22,"Wind":0.02},{"country":"Viet Nam","year":2005,"All Renewables":5.65,"Bioenergy":0,"Geothermal":0,"Hydropower":204.41,"Marine":0,"Multiple Renewables":18.72,"Wind":13.37},{"country":"Viet Nam","year":2006,"All Renewables":1.66,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":2.73,"Wind":0.14},{"country":"Viet Nam","year":2007,"All Renewables":0.06,"Bioenergy":2.71,"Geothermal":0,"Hydropower":92.98,"Marine":0,"Multiple Renewables":0.93,"Wind":0.78},{"country":"Viet Nam","year":2008,"All Renewables":209.95,"Bioenergy":0.32,"Geothermal":0,"Hydropower":279.56,"Marine":0,"Multiple Renewables":54,"Wind":0},{"country":"Viet Nam","year":2009,"All Renewables":480.28,"Bioenergy":0.36,"Geothermal":0,"Hydropower":0.19,"Marine":0,"Multiple Renewables":106.44,"Wind":0},{"country":"Viet Nam","year":2010,"All Renewables":112.87,"Bioenergy":0.17,"Geothermal":0,"Hydropower":0.77,"Marine":0,"Multiple Renewables":3.04,"Wind":308.25},{"country":"Viet Nam","year":2011,"All Renewables":295.84,"Bioenergy":0.21,"Geothermal":0,"Hydropower":139.68,"Marine":0,"Multiple Renewables":1.43,"Wind":0.28},{"country":"Viet Nam","year":2012,"All Renewables":1.48,"Bioenergy":44,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":25.37,"Wind":0.78},{"country":"Viet Nam","year":2013,"All Renewables":100.27,"Bioenergy":0.22,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":7.07,"Wind":49.08},{"country":"Viet Nam","year":2014,"All Renewables":260.56,"Bioenergy":1.83,"Geothermal":0,"Hydropower":2.53,"Marine":0,"Multiple Renewables":215.58,"Wind":48.01},{"country":"Viet Nam","year":2015,"All Renewables":6.84,"Bioenergy":20.54,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":75.92,"Wind":132},{"country":"Viet Nam","year":2016,"All Renewables":330.26,"Bioenergy":0.45,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":5.14,"Wind":71.75},{"country":"Viet Nam","year":2017,"All Renewables":29.68,"Bioenergy":107.65,"Geothermal":0,"Hydropower":48.34,"Marine":0,"Multiple Renewables":81.5,"Wind":0},{"country":"Viet Nam","year":2018,"All Renewables":115.87,"Bioenergy":0,"Geothermal":0,"Hydropower":218.62,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Viet Nam","year":2019,"All Renewables":264.67,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Viet Nam","year":2020,"All Renewables":183.07,"Bioenergy":0.01,"Geothermal":0,"Hydropower":0,"Marine":14.56,"Multiple Renewables":0.12,"Wind":0},{"country":"Viet Nam","year":2021,"All Renewables":447.45,"Bioenergy":7.25,"Geothermal":0,"Hydropower":0,"Marine":41.32,"Multiple Renewables":0,"Wind":0},{"country":"Viet Nam","year":2022,"All Renewables":186.38,"Bioenergy":0,"Geothermal":83.86,"Hydropower":0,"Marine":0.15,"Multiple Renewables":0,"Wind":0},{"country":"Zambia","year":2000,"All Renewables":0.01,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.03,"Wind":0.02},{"country":"Zambia","year":2001,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0.26,"Marine":0,"Multiple Renewables":0.08,"Wind":0.02},{"country":"Zambia","year":2002,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":11.3,"Marine":0,"Multiple Renewables":0.01,"Wind":5.85},{"country":"Zambia","year":2003,"All Renewables":0,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":9.63,"Wind":0},{"country":"Zambia","year":2004,"All Renewables":2.79,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.16,"Wind":3.64},{"country":"Zambia","year":2005,"All Renewables":11.34,"Bioenergy":0,"Geothermal":0,"Hydropower":487.89,"Marine":0,"Multiple Renewables":0.38,"Wind":0},{"country":"Zambia","year":2006,"All Renewables":0.1,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Zambia","year":2007,"All Renewables":0.03,"Bioenergy":0,"Geothermal":0,"Hydropower":3.73,"Marine":0,"Multiple Renewables":0.01,"Wind":0.01},{"country":"Zambia","year":2008,"All Renewables":503.37,"Bioenergy":0,"Geothermal":0,"Hydropower":86.94,"Marine":0,"Multiple Renewables":0.03,"Wind":0},{"country":"Zambia","year":2009,"All Renewables":0.16,"Bioenergy":0,"Geothermal":0,"Hydropower":8.74,"Marine":0,"Multiple Renewables":27.48,"Wind":0},{"country":"Zambia","year":2010,"All Renewables":7.74,"Bioenergy":0,"Geothermal":0,"Hydropower":207.68,"Marine":0,"Multiple Renewables":0.07,"Wind":28.75},{"country":"Zambia","year":2011,"All Renewables":86.95,"Bioenergy":0,"Geothermal":0,"Hydropower":230.95,"Marine":0,"Multiple Renewables":92.02,"Wind":65.38},{"country":"Zambia","year":2012,"All Renewables":8.75,"Bioenergy":0,"Geothermal":0,"Hydropower":80.05,"Marine":0,"Multiple Renewables":103.52,"Wind":0.5},{"country":"Zambia","year":2013,"All Renewables":207.72,"Bioenergy":0.01,"Geothermal":0,"Hydropower":0.11,"Marine":0,"Multiple Renewables":57.9,"Wind":12.48},{"country":"Zambia","year":2014,"All Renewables":258.44,"Bioenergy":5.86,"Geothermal":0,"Hydropower":1766.27,"Marine":0,"Multiple Renewables":25.47,"Wind":0.27},{"country":"Zambia","year":2015,"All Renewables":85.98,"Bioenergy":0,"Geothermal":0.82,"Hydropower":0,"Marine":0,"Multiple Renewables":0.22,"Wind":0.74},{"country":"Zambia","year":2016,"All Renewables":120.88,"Bioenergy":0,"Geothermal":0,"Hydropower":49.78,"Marine":0,"Multiple Renewables":10.52,"Wind":5.37},{"country":"Zambia","year":2017,"All Renewables":1937.16,"Bioenergy":0,"Geothermal":0,"Hydropower":13.28,"Marine":0,"Multiple Renewables":1.21,"Wind":0},{"country":"Zambia","year":2018,"All Renewables":58.4,"Bioenergy":0.24,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.01,"Wind":0},{"country":"Zambia","year":2019,"All Renewables":87.96,"Bioenergy":0,"Geothermal":0,"Hydropower":16.97,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Zambia","year":2020,"All Renewables":13.77,"Bioenergy":0.07,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Zambia","year":2021,"All Renewables":11.33,"Bioenergy":0.28,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0},{"country":"Zambia","year":2022,"All Renewables":23.82,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Wind":0}]`)
-        
-                 globalData = data;
-                // Filter out insignificant countries
-                const significantCountries = [...new Set(globalData.map(item => item.country))]
-                    .filter(country => {
-                        const countryData = globalData.filter(record => record.country === country);
-                        const totalEnergy = countryData.reduce((sum, record) => {
-                            const energyTypes = Object.keys(record).filter(key => 
-                                key !== 'country' && key !== 'year');
-                            const yearlySum = energyTypes.reduce((acc, type) => acc + (record[type] || 0), 0);
-                            return sum + yearlySum;
-                        }, 0);
-                        const averageEnergy = totalEnergy / countryData.length;
-                        return averageEnergy > 10; // Adjust threshold as needed
-                    });
-                console.log(significantCountries,'significant countires')
-                significantCountries.sort().forEach(country => {
-                    const option = document.createElement('option');
-                    option.value = country;
-                    option.text = country;
-                    if (defaultCountries.includes(country)) {
-                option.selected = true; // Preselect default countries
-            }
-                    countriesDropdown.appendChild(option);
-                });
 
-                // Apply Select2 for searchable dropdown
-                $(countriesDropdown).select2({
-                    placeholder: "Select countries",
-                    allowClear: true
-                });
+    globalData = data;
+    // Filter out insignificant countries
+    const significantCountries = [...new Set(globalData.map(item => item.country))]
+      .filter(country => {
+        const countryData = globalData.filter(record => record.country === country);
+        const totalEnergy = countryData.reduce((sum, record) => {
+          const energyTypes = Object.keys(record).filter(key =>
+            key !== 'country' && key !== 'year');
+          const yearlySum = energyTypes.reduce((acc, type) => acc + (record[type] || 0), 0);
+          return sum + yearlySum;
+        }, 0);
+        const averageEnergy = totalEnergy / countryData.length;
+        return averageEnergy > 10; // Adjust threshold as needed
+      });
+    console.log(significantCountries, 'significant countires')
+    significantCountries.sort().forEach(country => {
+      const option = document.createElement('option');
+      option.value = country;
+      option.text = country;
+      if (defaultCountries.includes(country)) {
+        option.selected = true; // Preselect default countries
+      }
+      countriesDropdown.appendChild(option);
+    });
 
-                // Initial chart rendering
-                updateCharts();
-            
+    // Apply Select2 for searchable dropdown
+    $(countriesDropdown).select2({
+      placeholder: "Select countries",
+      allowClear: true
+    });
 
-        // Event listeners for filters
-        $(countriesDropdown).on('change', updateCharts);
-        energyTypeDropdown.addEventListener('change', updateCharts);
+    // Initial chart rendering
+    updateCharts();
 
-        function updateCharts() {
-            const selectedCountries = $(countriesDropdown).val();
-            const selectedEnergyType = energyTypeDropdown.value;
 
-            // Ensure at least one country is selected
-            // if (!selectedCountries || selectedCountries.length === 0) {
-               
-            // }
+    // Event listeners for filters
+    $(countriesDropdown).on('change', updateCharts);
+    energyTypeDropdown.addEventListener('change', updateCharts);
 
-            const years = [...new Set(globalData.map(item => item.year))].sort();
+    function updateCharts() {
+      const selectedCountries = $(countriesDropdown).val();
+      const selectedEnergyType = energyTypeDropdown.value;
 
-            // Chart 1: Heatmap for a single energy type across multiple countries and years
-            const heatmapData = [];
-            selectedCountries.forEach((country, i) => {
-                years.forEach((year, j) => {
-                    const record = globalData.find(item => item.country === country && item.year === year);
-                    console.log(record,'recordd')
-                    const value = record ? record[selectedEnergyType] || 0 : 0;
-                    heatmapData.push([j, i, value]); // [x (year index), y (country index), value]
-                });
-            });
+      // Ensure at least one country is selected
+      // if (!selectedCountries || selectedCountries.length === 0) {
 
-            Highcharts.chart('chart1', {
-                chart: { type: 'heatmap' },
-                title: { text: `${selectedEnergyType} Heatmap Across Countries` },
-                xAxis: { categories: years, title: { text: 'Year' } },
-                yAxis: {
-                    categories: selectedCountries,
-                    title: { text: 'Country' },
-                    reversed: true // Flip Y-axis for better readability
-                },
-                colorAxis: {
-        min: 0,
-        stops: [
+      // }
+
+      const years = [...new Set(globalData.map(item => item.year))].sort();
+
+      // Chart 1: Heatmap for a single energy type across multiple countries and years
+      const heatmapData = [];
+      selectedCountries.forEach((country, i) => {
+        years.forEach((year, j) => {
+          const record = globalData.find(item => item.country === country && item.year === year);
+          console.log(record, 'recordd')
+          const value = record ? record[selectedEnergyType] || 0 : 0;
+          heatmapData.push([j, i, value]); // [x (year index), y (country index), value]
+        });
+      });
+
+      Highcharts.chart('chart1', {
+        chart: { type: 'heatmap' },
+        title: { text: `${selectedEnergyType} Heatmap Across Countries` },
+        xAxis: { categories: years, title: { text: 'Year' } },
+        yAxis: {
+          categories: selectedCountries,
+          title: { text: 'Country' },
+          reversed: true // Flip Y-axis for better readability
+        },
+        colorAxis: {
+          min: 0,
+          stops: [
             [0, '#e0f7e0'], // Light green for low values
             [0.5, '#4caf50'], // Medium green for mid values
             [1, '#1b5e20'] // Dark green for high values
-        ]
-    },
-                tooltip: {
-                    formatter: function () {
-                        return `<b>${this.series.yAxis.categories[this.point.y]}</b><br>
+          ]
+        },
+        tooltip: {
+          formatter: function () {
+            return `<b>${this.series.yAxis.categories[this.point.y]}</b><br>
                                 Year: <b>${this.series.xAxis.categories[this.point.x]}</b><br>
                                 Value: <b>${this.point.value} USD million</b>`;
-                    }
-                },
-                series: [{
-                    name: `${selectedEnergyType} Production`,
-                    borderWidth: 1,
-                    data: heatmapData
-                }]
-            });
+          }
+        },
+        series: [{
+          name: `${selectedEnergyType} Production`,
+          borderWidth: 1,
+          data: heatmapData
+        }]
+      });
 
-            // Chart 2: Stacked bar chart for multiple energy types
-            const energyTypes = ['All Renewables', 'Bioenergy', 'Geothermal', 'Hydropower', 'Marine', 'Multiple Renewables', 'Wind'];
-            const blueShades = [
-            '#15446d', // Darkest blue
-    '#1e5b83', // Slightly lighter blue
-    '#287b99', // Medium blue
-    '#2f9db0', // Lighter blue
-    '#4ab8d1', // Light blue
-    '#6cd8e5', // Very light blue
-    '#a3e4f7'  // Softest blue
+      // Chart 2: Stacked bar chart for multiple energy types
+      const energyTypes = ['All Renewables', 'Bioenergy', 'Geothermal', 'Hydropower', 'Marine', 'Multiple Renewables', 'Wind'];
+      const blueShades = [
+        '#15446d', // Darkest blue
+        '#1e5b83', // Slightly lighter blue
+        '#287b99', // Medium blue
+        '#2f9db0', // Lighter blue
+        '#4ab8d1', // Light blue
+        '#6cd8e5', // Very light blue
+        '#a3e4f7'  // Softest blue
 
-];
+      ];
 
-const chart2Series = energyTypes.map((type, index) => {
-    const values = years.map(year => {
-        const total = selectedCountries.reduce((sum, country) => {
+      const chart2Series = energyTypes.map((type, index) => {
+        const values = years.map(year => {
+          const total = selectedCountries.reduce((sum, country) => {
             const record = globalData.find(item => item.country === country && item.year === year);
             return Math.floor(sum + (record ? record[type] || 0 : 0));
-        }, 0);
-        return total;
-    });
-    return {
-        name: type,
-        data: values,
-        color: blueShades[index % blueShades.length] // Assign color based on index
-    };
-});
-            Highcharts.chart('chart2', {
-                chart: { type: 'column' },
-                title: { text: `Energy Types for Selected Countries` },
-                xAxis: { categories: years, title: { text: 'Year' } },
-                yAxis: { title: { text: 'Total Financial Flow in USD millions' }, stackLabels: { enabled: true } , allowDecimals: false },
-                tooltip: {
-                  shared: true,
-                  valueDecimals: 0, // This will ensure no decimal places are shown
-                  pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y} USD millions</b><br/>'
-                },
-                plotOptions: {
-                    column: {
-                        stacking: 'normal',
-                        dataLabels: { enabled: true }
-                    }
-                },
-                series: chart2Series
-            });
+          }, 0);
+          return total;
+        });
+        return {
+          name: type,
+          data: values,
+          color: blueShades[index % blueShades.length] // Assign color based on index
+        };
+      });
+      Highcharts.chart('chart2', {
+        chart: { type: 'column' },
+        title: { text: `Energy Types for Selected Countries` },
+        xAxis: { categories: years, title: { text: 'Year' } },
+        yAxis: { title: { text: 'Total Financial Flow in USD millions' }, stackLabels: { enabled: true }, allowDecimals: false },
+        tooltip: {
+          shared: true,
+          valueDecimals: 0, // This will ensure no decimal places are shown
+          pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y} USD millions</b><br/>'
+        },
+        plotOptions: {
+          column: {
+            stacking: 'normal',
+            dataLabels: { enabled: true }
           }
+        },
+        series: chart2Series
+      });
+    }
   </script>
-  <script type='text/javascript'>                    var divElement = document.getElementById('viz1733041649651');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1300px';vizElement.style.height='1000px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='1277px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  <script
+    type='text/javascript'>                    var divElement = document.getElementById('viz1733041649651'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1300px'; vizElement.style.height = '1000px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1277px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 </body>
 
 </html>
