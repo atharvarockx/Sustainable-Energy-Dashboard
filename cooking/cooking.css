@@ -1,9 +1,4 @@
-.content-segment{
-    display:flex;
-    padding:4rem;
-    font-size: 1.25rem;
-    line-height: 1.6;
-}
+
 div.content-segment:nth-of-type(odd) {
     background:#41807c;
     color:#efefef !important;

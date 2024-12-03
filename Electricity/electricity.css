@@ -19,7 +19,18 @@ div.content-segment:nth-of-type(odd) .explain{
 .content-segment .viz{
     flex:2;
 }
-
+.small-viz .explain{
+    flex:2;
+}
+.small-viz .viz{
+    flex:1;
+}
+.equal-viz .viz{
+    flex:2;
+}
+.equal-viz .explain{
+    flex:2;
+}
 .parallax-electricity-header {
     /* The image used */
     background-image: url('../images/electricity.png');
