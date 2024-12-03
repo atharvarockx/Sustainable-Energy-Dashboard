@@ -1,39 +1,58 @@
 <div id="cooking-data">
+    <h3 class="u-align-center">Cooking</h3>
     <div class="main-content">
-        <div>
-            To begin, we can see the trend of changes in the population with primary reliance on clean fuel and technology, from 2000 to 2022
-            <br>
-            <div class="container" style="width:346px;overflow:hidden;display:block;height:360px;margin-left:20px">
-                <video id="glass" width="640" height="360" autoplay style="margin-left:-147px">
+        <div class="content-segment">
+            <div class="explain">
+                To start, we observe the trend in the population's primary reliance on clean fuel and technology from 2000 to 2022. This time period reveals significant shifts, reflecting the efforts of various countries to transition towards cleaner energy sources and sustainable technologies. Tracking this progression provides valuable insights into the global advancements in energy accessibility and environmental sustainability.
+                As visible with the chart, the strides made by RURAL regions to increase their primary reliance to be on clean fuels and technology is commendable.
+            </div>
+            <div class="container viz" style="width:346px;overflow:hidden;display:block;height:360px">
+                <video id="glass" width="640" height="360" autoplay loop style="margin-left:-158px">
                     <source src="images/cooking pies fast.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
-        <div>
-            Lets take a look at which countries specifically have contributed a lot for RURAL regions develeopment 
-            <tableau-viz id="tableauViz"       
-            src='https://public.tableau.com/views/Cooking-dumbellfortopchangesrural/Sameaspreviousbutdumbell?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
-            </tableau-viz>
+        <div class="content-segment">
+            <div class="explain">
+                Now, let us examine the countries that have made substantial contributions to the development of RURAL regions. These nations have played a crucial role in improving access to essential infrastructure and services, particularly in enhancing energy access and promoting sustainable technologies in areas that often face the greatest challenges. Identifying these contributors allows us to appreciate the progress made and understand the strategies driving rural development.
+            </div>
+            <div class="viz">
+                <tableau-viz id="tableauViz"       
+                src='https://public.tableau.com/views/Cooking-dumbellfortopchangesrural/Sameaspreviousbutdumbell?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
+                </tableau-viz>
+            </div>
         </div>
-        <div> 
-            If we generalize this to more than RURAL areas, the top changes as a bump chart are:
-            <tableau-viz id="tableauViz"       
-            src='https://public.tableau.com/views/Cooking-Bumpchartfortopchanges/Rankingoffewcountriesover5yearwindows?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
-            </tableau-viz>
-            Where the maximum difference was for Vietnam.
+        <div class="content-segment"> 
+            <div class="explain">
+                Expanding the analysis beyond rural areas, the top contributors to change can be visualized through a bump chart. This chart highlights the countries that have made the most significant improvements, with Vietnam standing out as the nation with the maximum difference. Vietnam's remarkable progress underscores its effective strategies and investments in enhancing energy access and adopting sustainable technologies across both urban and rural areas.
+            </div>
+            <div class="viz">
+                <tableau-viz id="tableauViz"       
+                src='https://public.tableau.com/views/Cooking-Bumpchartfortopchanges/Rankingoffewcountriesover5yearwindows?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
+                </tableau-viz>
+            </div>
         </div>
-        <div> 
-            Additionally, for a few countries, the proportion of population that relies on clean fuel and technology has decreased with time:
-            <tableau-viz id="tableauViz"       
-            src='https://public.tableau.com/views/Cooking-Countrieswhereitdecreased/Countrywiseregionsplitofprimaryreliance?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
-            </tableau-viz>
+        <div class="content-segment"> 
+            <div class="explain">
+                Interestingly, for some countries, the proportion of the population relying on clean fuel and technology has decreased over time. This counterintuitive trend may be attributed to various factors, such as rapid population growth outpacing infrastructure development, economic constraints limiting access to clean energy sources, or increased reliance on traditional fuels due to affordability or accessibility issues. These cases highlight the complexity of achieving sustainable energy transitions and underscore the need for targeted interventions to reverse such declines.
+            </div>
+            <div class="viz">
+                <tableau-viz id="tableauViz"       
+                src='https://public.tableau.com/views/Cooking-Countrieswhereitdecreased/Countrywiseregionsplitofprimaryreliance?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
+                </tableau-viz>
+            </div>
         </div>
-        <div> 
-            For Palau specifically, the rate of drop has been quite high. All three regions have been falling, except URBAN that increased for a small amount from 2000 - 2003. 
-            <tableau-viz id="tableauViz"       
-            src='https://public.tableau.com/views/Cooking-Palauchanges/Sheet19?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
-            </tableau-viz>
-            The rate at which it is falling is also increasing (indicated by yellow line). This is a concerning trend but is thankfully only isolated to Palau.
+        <div class="content-segment"> 
+            <div class="explain">
+                In the case of Palau, the decline in the proportion of the population relying on clean fuel and technology has been particularly pronounced. All three regions—urban, rural, and overall—have shown a downward trend, with the exception of a brief increase in urban reliance between 2000 and 2003. 
+                <br/><br/>
+                Notably, the rate of decline has been accelerating, as indicated by the steepening yellow line. While this concerning trend warrants attention, it is reassuring to note that it appears to be isolated to Palau, underscoring the need for localized interventions to address this specific issue.
+            </div>
+            <div class="viz">
+                <tableau-viz id="tableauViz"       
+                src='https://public.tableau.com/views/Cooking-Palauchanges/Sheet19?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link'>
+                </tableau-viz>
+            </div>
         </div>
     </div>
 </div>
