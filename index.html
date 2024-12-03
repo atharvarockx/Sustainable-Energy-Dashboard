@@ -70,6 +70,8 @@
     </style>
   </head>
   <link rel="stylesheet" href="index.css" media="screen">
+  <link rel="stylesheet" href="cooking/cooking.css" media="screen">
+  <link rel="stylesheet" href="Electricity/electricity.css" media="screen">
   <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
   <script type="text/javascript" src="main.js" defer=""></script>
   <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
@@ -100,39 +102,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-  <!-- <header class="u-clearfix u-header u-header" id="sec-ea65"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <a href="#" class="u-image u-logo u-image-1">
-          <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
-        </a>
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
-          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
-            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-hamburger-link u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xlink:href="#menu-hamburger"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="menu-hamburger" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-</g></svg>
-            </a>
-          </div>
-          <div class="u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="./" style="padding: 10px 20px;">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 20px;">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px 20px;">Contact</a>
-</li></ul>
-          </div>
-          <div class="u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-              <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="./">Home</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html">About</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
-</li></ul>
-              </div>
-            </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-          </div>
-        </nav>
-      </div></header> -->
-  <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1" src="images/bg.mp4"
+  
+  <section id="header" class="u-align-center u-clearfix u-container-align-center u-image u-section-1" src="images/bg.mp4"
     id="carousel_30e5">
     <video autoplay muted loop id="myVideo">
       <source src="images/bg.mp4" type="video/mp4">
@@ -150,9 +121,6 @@
           style="text-transform: none; font-size: 100px;  color: #021100 ;text-shadow: 2px 2px #ffffff;">Sustainable
           Energy </h1>
       </div>
-      <!-- <h1 class="u-color-scheme-u10 u-color-style-multicolor-1 u-text u-text-body-alt-color u-title u-text-2">TOWARDS </h1>
-        <h1 class="u-color-scheme-u10 u-color-style-multicolor-1 u-text u-text-body-alt-color u-title u-text-2">SUSTAINABLE ENERGY </h1>
-        <p class="u-text u-text-body-alt-color u-text-3">Image from <a href="https://freepik.com/photos/forest" class="u-active-none u-border-1 u-border-active-grey-5 u-border-hover-grey-5 u-border-no-left u-border-no-right u-border-no-top u-border-white u-btn u-button-link u-button-style u-hover-none u-none u-text-body-alt-color u-btn-1">Freepik </a> -->
       </p>
     </div>
   </section>
@@ -179,6 +147,8 @@
         more</a>
     </div>
   </section>
+  <button  type="button" onclick="openContent(event,'electricity-data')">open electricity data</button>
+  <button  type="button" onclick="openContent(event,'cooking-data')">open cooking data</button>
 
   <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1"
     style="background-color: #41807c; padding-top:40px;">
@@ -290,122 +260,10 @@
       </div>
     </div>
   </section>
-
-  <!-- <section class="u-align-center u-clearfix u-container-align-center u-palette-4-base u-section-4" id="carousel_10ca">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <h3 class="u-text u-text-2 m-10"> SDG 7 is characterized by 5 targets. Each target has a list of indicators to track for measuring progress.</h3>
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-align-left u-container-align-left u-container-style u-list-item u-radius-28 u-repeater-item u-shape-round u-white u-list-item-1">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xl u-container-layout-1"><span class="u-icon u-icon-circle u-text-black u-white u-icon-1"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 496.011 496.011" style=""><use xlink:href="#svg-9007"></use></svg><svg class="u-svg-content" viewBox="0 0 496.011 496.011" x="0px" y="0px" id="svg-9007" style="enable-background:new 0 0 496.011 496.011;"><g><g><g><path d="M408,180.107c-4.418,0-8,3.582-8,8v263.904H16v-384h320c4.418,0,8-3.582,8-8s-3.582-8-8-8H8c-4.418,0-8,3.582-8,8v400     c0,4.418,3.582,8,8,8h400c4.418,0,8-3.582,8-8V188.107C416,183.688,412.418,180.107,408,180.107z"></path><path d="M493.728,30.411c-3.093-3.163-8.165-3.221-11.328-0.128L168.464,336.387L62.016,214.747     c-2.684-3.51-7.704-4.18-11.214-1.496s-4.18,7.704-1.496,11.214c0.218,0.286,0.456,0.556,0.711,0.81l112,128     c1.435,1.647,3.482,2.636,5.664,2.736H168c2.092,0.004,4.102-0.812,5.6-2.272l320-312     C496.763,38.646,496.821,33.574,493.728,30.411z"></path>
-</g>
-</g>
-</g></svg></span>
-                <p class="u-text u-text-2"> 
-                  <b>Target 7.1</b> - By 2030, ensure universal access to affordable, reliable and modern energy services
-                  <div>
-                    <ul>
-                      <li>
-                        Proportion of population with access to electricity
-                      </li>
-                      <li>
-                        Proportion of population with primary reliance on clean fuels and technology
-                      </li>
-                    </ul>
-                  </div>
-                </p>
-            </div>
-            </div>
-            <div class="u-align-left u-container-align-left u-container-style u-list-item u-radius-28 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xl u-container-layout-2"><span class="u-icon u-icon-circle u-text-black u-white u-icon-2"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 496.011 496.011" style=""><use xlink:href="#svg-19a9"></use></svg><svg class="u-svg-content" viewBox="0 0 496.011 496.011" x="0px" y="0px" id="svg-19a9" style="enable-background:new 0 0 496.011 496.011;"><g><g><g><path d="M408,180.107c-4.418,0-8,3.582-8,8v263.904H16v-384h320c4.418,0,8-3.582,8-8s-3.582-8-8-8H8c-4.418,0-8,3.582-8,8v400     c0,4.418,3.582,8,8,8h400c4.418,0,8-3.582,8-8V188.107C416,183.688,412.418,180.107,408,180.107z"></path><path d="M493.728,30.411c-3.093-3.163-8.165-3.221-11.328-0.128L168.464,336.387L62.016,214.747     c-2.684-3.51-7.704-4.18-11.214-1.496s-4.18,7.704-1.496,11.214c0.218,0.286,0.456,0.556,0.711,0.81l112,128     c1.435,1.647,3.482,2.636,5.664,2.736H168c2.092,0.004,4.102-0.812,5.6-2.272l320-312     C496.763,38.646,496.821,33.574,493.728,30.411z"></path>
-</g>
-</g>
-</g></svg></span>
-                <p class="u-text u-text-3"> 
-                  <b>Target 7.2</b> - By 2030, increase substantially the share of renewable energy in the global energy mix
-                  <div>
-                    <ul>
-                      <li>
-                        Renewable energy share in the total final energy consumption
-                      </li>
-            
-                    </ul>
-                  </div>
-                </p>              </div>
-            </div>
-            <div class="u-align-left u-container-align-left u-container-style u-list-item u-radius-28 u-repeater-item u-shape-round u-video-cover u-white u-list-item-3">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xl u-container-layout-3"><span class="u-icon u-icon-circle u-text-black u-white u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 496.011 496.011" style=""><use xlink:href="#svg-a5b2"></use></svg><svg class="u-svg-content" viewBox="0 0 496.011 496.011" x="0px" y="0px" id="svg-a5b2" style="enable-background:new 0 0 496.011 496.011;"><g><g><g><path d="M408,180.107c-4.418,0-8,3.582-8,8v263.904H16v-384h320c4.418,0,8-3.582,8-8s-3.582-8-8-8H8c-4.418,0-8,3.582-8,8v400     c0,4.418,3.582,8,8,8h400c4.418,0,8-3.582,8-8V188.107C416,183.688,412.418,180.107,408,180.107z"></path><path d="M493.728,30.411c-3.093-3.163-8.165-3.221-11.328-0.128L168.464,336.387L62.016,214.747     c-2.684-3.51-7.704-4.18-11.214-1.496s-4.18,7.704-1.496,11.214c0.218,0.286,0.456,0.556,0.711,0.81l112,128     c1.435,1.647,3.482,2.636,5.664,2.736H168c2.092,0.004,4.102-0.812,5.6-2.272l320-312     C496.763,38.646,496.821,33.574,493.728,30.411z"></path>
-</g>
-</g>
-</g></svg></span>
-                <p class="u-text u-text-4"> 
-                  <b>Target 7.3</b> - By 2030, double the global rate of improvement in energy efficiency
-                  <div>
-                    <ul>
-                      <li>
-                        Energy intensity measured in terms of primary energy and GDP
-                      </li>
-            
-                    </ul>
-                  </div>
-                </p>
-              </div>
-            </div>
-            <div class="u-align-left u-container-align-left u-container-style u-list-item u-radius-28 u-repeater-item u-shape-round u-video-cover u-white u-list-item-4">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xl u-container-layout-4"><span class="u-icon u-icon-circle u-text-black u-white u-icon-4"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 496.011 496.011" style=""><use xlink:href="#svg-d9e9"></use></svg><svg class="u-svg-content" viewBox="0 0 496.011 496.011" x="0px" y="0px" id="svg-d9e9" style="enable-background:new 0 0 496.011 496.011;"><g><g><g><path d="M408,180.107c-4.418,0-8,3.582-8,8v263.904H16v-384h320c4.418,0,8-3.582,8-8s-3.582-8-8-8H8c-4.418,0-8,3.582-8,8v400     c0,4.418,3.582,8,8,8h400c4.418,0,8-3.582,8-8V188.107C416,183.688,412.418,180.107,408,180.107z"></path><path d="M493.728,30.411c-3.093-3.163-8.165-3.221-11.328-0.128L168.464,336.387L62.016,214.747     c-2.684-3.51-7.704-4.18-11.214-1.496s-4.18,7.704-1.496,11.214c0.218,0.286,0.456,0.556,0.711,0.81l112,128     c1.435,1.647,3.482,2.636,5.664,2.736H168c2.092,0.004,4.102-0.812,5.6-2.272l320-312     C496.763,38.646,496.821,33.574,493.728,30.411z"></path>
-</g>
-</g>
-</g></svg></span>
-                <p class="u-text u-text-5"> 
-                  <b>Target 7.a</b> - By 2030, enhance international cooperation to facilitate access to clean energy research and technology, including renewable energy, energy efficiency and advanced and cleaner fossil-fuel technology, and promote investment in energy infrastructure and clean energy technology
-                  <div>
-                    <ul>
-                      <li>
-                        International financial flows to developing countries in support of clean energy research and development and renewable energy production, including in hybrid systems
-                      </li>
-            
-                    </ul>
-                  </div>
-                </p>
-              </div>
-            </div>
-            <div class="u-align-left u-container-align-left u-container-style u-list-item u-radius-28 u-repeater-item u-shape-round u-video-cover u-white u-list-item-5">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xl u-container-layout-5"><span class="u-icon u-icon-circle u-text-black u-white u-icon-5"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 496.011 496.011" style=""><use xlink:href="#svg-e95b"></use></svg><svg class="u-svg-content" viewBox="0 0 496.011 496.011" x="0px" y="0px" id="svg-e95b" style="enable-background:new 0 0 496.011 496.011;"><g><g><g><path d="M408,180.107c-4.418,0-8,3.582-8,8v263.904H16v-384h320c4.418,0,8-3.582,8-8s-3.582-8-8-8H8c-4.418,0-8,3.582-8,8v400     c0,4.418,3.582,8,8,8h400c4.418,0,8-3.582,8-8V188.107C416,183.688,412.418,180.107,408,180.107z"></path><path d="M493.728,30.411c-3.093-3.163-8.165-3.221-11.328-0.128L168.464,336.387L62.016,214.747     c-2.684-3.51-7.704-4.18-11.214-1.496s-4.18,7.704-1.496,11.214c0.218,0.286,0.456,0.556,0.711,0.81l112,128     c1.435,1.647,3.482,2.636,5.664,2.736H168c2.092,0.004,4.102-0.812,5.6-2.272l320-312     C496.763,38.646,496.821,33.574,493.728,30.411z"></path>
-</g>
-</g>
-</g></svg></span>
-                <p class="u-text u-text-6"> 
-                  <b>Target 7.b</b> - By 2030, expand infrastructure and upgrade technology for supplying modern and sustainable energy services for all in developing countries, in particular least developed countries, small island developing States, and land-locked developing countries, in accordance with their respective programmes of support
-                  <div>
-                    <ul>
-                      <li>
-                        Installed renewable energy-generating capacity in developing and developed countries (in watts per capita)
-                      </li>
-            
-                    </ul>
-                  </div>
-                </p>
-              </div>
-            </div>
-            <div class="u-align-left u-container-align-left u-container-style u-list-item u-radius-28 u-repeater-item u-shape-round u-video-cover u-white u-list-item-6">
-              <div class="u-container-layout u-similar-container u-valign-bottom-xl u-container-layout-6"><span class="u-icon u-icon-circle u-text-black u-white u-icon-6"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 496.011 496.011" style=""><use xlink:href="#svg-6917"></use></svg><svg class="u-svg-content" viewBox="0 0 496.011 496.011" x="0px" y="0px" id="svg-6917" style="enable-background:new 0 0 496.011 496.011;"><g><g><g><path d="M408,180.107c-4.418,0-8,3.582-8,8v263.904H16v-384h320c4.418,0,8-3.582,8-8s-3.582-8-8-8H8c-4.418,0-8,3.582-8,8v400     c0,4.418,3.582,8,8,8h400c4.418,0,8-3.582,8-8V188.107C416,183.688,412.418,180.107,408,180.107z"></path><path d="M493.728,30.411c-3.093-3.163-8.165-3.221-11.328-0.128L168.464,336.387L62.016,214.747     c-2.684-3.51-7.704-4.18-11.214-1.496s-4.18,7.704-1.496,11.214c0.218,0.286,0.456,0.556,0.711,0.81l112,128     c1.435,1.647,3.482,2.636,5.664,2.736H168c2.092,0.004,4.102-0.812,5.6-2.272l320-312     C496.763,38.646,496.821,33.574,493.728,30.411z"></path>
-</g>
-</g>
-</g></svg></span>
-                <p class="u-text u-text-7"> Mi sit amet mauris commodo quis imperdiet massa tincidunt nunc. Dui ut ornare lectus sit. Tincidunt lobortis feugiat vivamus at augue eget arcu. Vulputate mi sit amet mauris commodo</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    -->
-
-    <section id="electricity-data">
-    </section>
-    <section id="cooking-data">
-    </section>
+  <section id="electricity-data" style="display:none">
+  </section>
+  <section id="cooking-data" style="display:none">
+  </section>
   <section>
     <div>
       <h3 class="u-align-center">Renewable Energy Share</h3>
@@ -1073,11 +931,6 @@
     <div class="u-clearfix u-sheet u-sheet-1"></div>
   </section>
 
-
-
-  <!-- <footer class="u-align-center u-clearfix u-container-align-center u-footer u-grey-80 u-footer" id="sec-1b18"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Sample text. Click to select the Text Element.</p>
-      </div></footer> -->
   <section class="u-backlink u-clearfix u-grey-80">
     <p class="u-text">
       <span>This site was created by Group 18</span>
