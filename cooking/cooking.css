@@ -38,3 +38,27 @@ div.content-segment:nth-of-type(even) .explain{
     margin-bottom:0px;
     background:rgba(0,0,0,0.5);
 }
+.parallax-renewable-header{
+    background-image: url('../images/renewable\ energy\ header.png');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax-improve-energy-header{
+    background-image: url('../images/energy\ efficiency.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
