@@ -13,7 +13,11 @@ fetch('Renewable-Energy/renewable-energy-share.html')
 .then(data => {
     document.getElementById('renewable-energy-share').innerHTML = data;
 });
-
+fetch('Financial-Flow/financial-flow.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('financial-flow').innerHTML = data;
+});
 //handling tabs:
 // function openContent(evt, idname) {
 //     var all_sections = document.getElementsByTagName("section");
