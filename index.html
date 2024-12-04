@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
     <style>
        .charts-container {
         display: flex;
@@ -415,8 +416,8 @@
   </section>
   <section id="cooking-data">
   </section>
-  <!-- <section id="renewable-energy-share">
-  </section> -->
+  <section id="renewable-energy-share">
+  </section>
 
   <!-- <section class="u-align-center u-clearfix u-container-align-center u-grey-5 u-section-2" id="carousel_f1a4">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -453,10 +454,10 @@
   </section>
   <section id="cooking-data" style="display:none">
   </section>
-  <!-- <section id="renewable-energy-share" style="display:none">
-  </section> -->
+  <section id="renewable-energy-share" style="display:none">
+  </section>
 
-  <section>
+  <!-- <section>
     <div class="pch">
         <h3 class="u-align-center header-text">SDG 7.2 - Increase Renewable Energy Share</h3>
     </div>
@@ -464,7 +465,7 @@
 
   <section>
     <div class="row" style="background-color:#41807c; color:#efefef;">
-      <!-- <h3 class="u-align-center">The Evolving Story of Renewable Energy: A Tale of Two Trends</h3> -->
+      <h3 class="u-align-center">The Evolving Story of Renewable Energy: A Tale of Two Trends</h3>
       <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
         <p>
           As the world accelerates its efforts toward achieving Sustainable Development Goal 7 (SDG 7), the journey of renewable energy adoption reveals contrasting narratives between developed and developing nations.  
@@ -555,7 +556,7 @@
        </script>
       </div>
       <div class="col-md-4 col-lg-3">
-        <!-- <h4>Diving Deeper: The Sectoral Story of Renewable Energy</h4> -->
+        <h4>Diving Deeper: The Sectoral Story of Renewable Energy</h4>
         <p style="font-size: 16px;">
           While the global renewable energy narrative offers a broad view, sector-specific trends highlight the
           transition's complexity. A heatmap of renewable energy use across transport, heat, and electricity reveals
@@ -573,7 +574,7 @@
           systems face competition from traditional alternatives.
         </p>
         
-        <!-- <h4>Connecting the Stories: Holistic Action Across Sectors</h4> -->
+        <h4>Connecting the Stories: Holistic Action Across Sectors</h4>
         <p style="font-size: 16px;">
           Sectoral insights highlight progress and challenges in achieving SDG 7, emphasizing the need for balanced
           renewable energy growth across all key areas.
@@ -593,7 +594,7 @@
 
   <section style="background-color: #41807c; color:#efefef">
     <div class="row">
-      <!-- <h3 class="u-align-center">Renewable Energy Mix: A Global Ranking of Progress</h3> -->
+      <h3 class="u-align-center">Renewable Energy Mix: A Global Ranking of Progress</h3>
       <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
 
         <p>
@@ -609,7 +610,7 @@
       </div>
     </div>
     <div class="row">
-      <!-- <h3 class="u-align-center">Broadening the Renewable Energy Story</h3> -->
+      <h3 class="u-align-center">Broadening the Renewable Energy Story</h3>
       <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
         <p>
           Global renewable energy rankings highlight that sustainability requires tailored solutions based on each
@@ -675,13 +676,13 @@
         
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3">
-        <!-- <h4>The Efficiency Challenge: Energy Use in a Growing Economy</h4> -->
+        <h4>The Efficiency Challenge: Energy Use in a Growing Economy</h4>
         <p style="font-size: 16px;">
           The global energy landscape faces a critical challenge: declining energy efficiency. Despite clean energy
           advancements, the energy needed to generate economic value is rising, hindering progress toward SDG 7,
           particularly Target 7.3, which seeks to double energy efficiency improvements by 2030.
         </p>
-        <!-- <h4>Understanding the Decline</h4> -->
+        <h4>Understanding the Decline</h4>
         <p style="font-size: 16px;">
           This global decline in energy efficiency can be attributed to several factors:
           <ul style="font-size: 16px;">
@@ -692,7 +693,7 @@
             <li> Energy-Intensive Sectors: Growth in industries like heavy manufacturing exacerbates inefficiency.
           </ul>
         </p>
-        <!-- <h4>A Call for Action</h4> -->
+        <h4>A Call for Action</h4>
         <p style="font-size: 16px;">
           This decline undermines renewable energy gains and heightens environmental pressures. Addressing it demands
           immediate actions like technology upgrades and policy reforms to ensure energy efficiency complements
@@ -700,7 +701,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section>
     <div class="pch-2">
@@ -1251,6 +1252,16 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
       title: {
         text: 'Financial Flows - Energy Type split per country'
       },
+      legend: {
+        enabled: true, // Enable the legend
+        layout: 'vertical', // Arrange items vertically
+        align: 'right', // Align the legend to the right
+        verticalAlign: 'middle', // Center the legend vertically
+        itemMarginBottom: 10, // Add spacing between legend items
+        title: {
+            text: 'Countries and Energy Types' // Add a title to the legend
+        }
+    },
       colors:[
       '#1E90FF', // Bright Blue (India)
   '#32CD32', // Lime Green (Türkiye)
@@ -1399,7 +1410,11 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
       tooltip: {
         headerFormat: '',
         pointFormat: '<b>{point.name}</b>: {point.value} Billion USD'
-      }
+      },
+      legend: {
+    enabled: true,
+   
+  }
   });
   
   
@@ -1426,7 +1441,7 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
         min: 0,
         max: 50, // Adjusted maximum based on updated data range
         title: {
-            text: 'Installation Capacity (Watt/Capita)'
+            // text: 'Installation Capacity (Watt/Capita)'
         }
     },
     tooltip: {
