@@ -1,0 +1,54 @@
+
+div.content-segment:nth-of-type(odd) {
+    background:#41807c;
+    color:#efefef !important;
+    flex-direction:row-reverse;
+}
+div.content-segment:nth-of-type(odd) .explain{
+    margin-left:20px;
+}
+div.content-segment:nth-of-type(even) .explain{
+    margin-right:20px;
+}
+.content-segment .explain{
+    flex:1;
+    align-content: center;
+}
+.content-segment .viz{
+    flex:2;
+}
+.parallax-cooking-header {
+    /* The image used */
+    background-image: url('../images/cooking.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-cooking-header-1 {
+    /* The image used */
+    background-image: url('../images/cooking.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-text{
+    height:20rem;
+    color:#efefef;
+    align-content:center;
+    font-size:3rem;
+    margin-bottom:0px;
+}

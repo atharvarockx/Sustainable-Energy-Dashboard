@@ -8,6 +8,11 @@ fetch('cooking/cooking.html')
 .then(data => {
     document.getElementById('cooking-data').innerHTML = data;
 });
+fetch('Renewable-Energy/renewable-energy-share.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('renewable-energy-share').innerHTML = data;
+});
 
 //handling tabs:
 // function openContent(evt, idname) {

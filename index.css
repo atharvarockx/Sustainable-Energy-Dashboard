@@ -10,6 +10,34 @@
   transform: translate(-50%, -50%); */
 }
 
+.pch {
+  /* The image used */
+  background-image: url('../images/cooking.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pch-1 {
+  /* The image used */
+  background-image: url('../images/cooking.jpg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #myVideo {
   position: absolute;
   background-position: 50% 50%;
