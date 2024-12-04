@@ -1,9 +1,4 @@
-.content-segment{
-    display:flex;
-    padding:4rem;
-    font-size: 1.25rem;
-    line-height: 1.6;
-}
+
 div.content-segment:nth-of-type(odd) {
     background:#41807c;
     color:#efefef !important;
@@ -21,4 +16,24 @@ div.content-segment:nth-of-type(even) .explain{
 }
 .content-segment .viz{
     flex:2;
+}
+.parallax-cooking-header {
+    /* The image used */
+    background-image: url('../images/cooking.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-text{
+    height:20rem;
+    color:#efefef;
+    align-content:center;
+    font-size:3rem;
+    margin-bottom:0px;
 }
