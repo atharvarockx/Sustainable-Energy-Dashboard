@@ -2,6 +2,7 @@
   /* background-image: url("images/background.webp"); */
   background-position: 50% 50%;
   opacity: 0.9;
+  padding:4rem;
 }
 .bg-rect {
   /* position: relat;
@@ -12,7 +13,7 @@
 
 .pch {
   /* The image used */
-  background-image: url('../images/cooking.jpg');
+  background-image: url('./images/renewable\ energy\ header.png');
 
   /* Full height */
   height: 100%; 
@@ -26,7 +27,7 @@
 
 .pch-1 {
   /* The image used */
-  background-image: url('../images/cooking.jpg');
+  background-image: url('./images/energy\ efficiency.jpg');
 
   /* Full height */
   height: 100%; 
@@ -40,7 +41,7 @@
 
 .pch-2 {
   /* The image used */
-  background-image: url('../images/cooking.jpg');
+  background-image: url('./images/global\ energy.jpg');
 
   /* Full height */
   height: 100%; 
@@ -54,7 +55,7 @@
 
 .pch-3 {
   /* The image used */
-  background-image: url('../images/cooking.jpg');
+  background-image: url('./images/developing\ energy.jpg');
 
   /* Full height */
   height: 100%; 

@@ -11,13 +11,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-  
-    
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/highcharts-more.js"></script>
-    <script src="https://code.highcharts.com/modules/sunburst.js"></script>
-    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-    <script src="https://code.highcharts.com/modules/waterfall.js"></script>
 
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
@@ -40,75 +33,95 @@
         padding-bottom: 130px;
       }
     #charts {
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* Space between chart-text pairs */
-  align-items: center; /* Center align the content */
-}
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      /* Space between chart-text pairs */
+      align-items: center;
+      /* Center align the content */
+    }
 
-.chart-wrapper {
-  display: flex;
-  align-items: flex-start; /* Align items to the top */
-  gap: 20px;
-  width: 90%; /* Ensure proper spacing within the page */
-  flex-direction: row; /* Default direction */
-}
+    .chart-wrapper {
+      display: flex;
+      align-items: flex-start;
+      /* Align items to the top */
+      gap: 20px;
+      width: 90%;
+      /* Ensure proper spacing within the page */
+      flex-direction: row;
+      /* Default direction */
+    }
 
-/* Alternate flex direction for even chart-wrapper elements */
-.chart-wrapper:nth-child(even) {
-  flex-direction: row-reverse;
-}
+    /* Alternate flex direction for even chart-wrapper elements */
+    .chart-wrapper:nth-child(even) {
+      flex-direction: row-reverse;
+    }
 
-.chart-container {
-  flex: 2; /* Slightly reduced to allocate more space to text */
-  height: 500px; /* Increased height */
-  background-color: #f5f5f5; /* Placeholder background for charts */
-  border-radius: 8px;
-}
+    .chart-container {
+      flex: 2;
+      /* Slightly reduced to allocate more space to text */
+      height: 500px;
+      /* Increased height */
+      background-color: #f5f5f5;
+      /* Placeholder background for charts */
+      border-radius: 8px;
+    }
 
-.chart-text {
-  flex: 1.7; /* Increased flex ratio for more width */
-  height: 500px; /* Increased height */
-  resize: vertical; /* Allow vertical resizing if needed */
-  padding: 15px; /* Increased padding for better readability */
-  font-size: 16px; /* Larger font size */
-  border-radius: 8px;
-  box-sizing: border-box; /* Ensure padding is included in width/height */
-  text-decoration: none;
-}
+    .chart-text {
+      flex: 1.7;
+      /* Increased flex ratio for more width */
+      height: 500px;
+      /* Increased height */
+      resize: vertical;
+      /* Allow vertical resizing if needed */
+      padding: 15px;
+      /* Increased padding for better readability */
+      font-size: 16px;
+      /* Larger font size */
+      border-radius: 8px;
+      box-sizing: border-box;
+      /* Ensure padding is included in width/height */
+      text-decoration: none;
+    }
 
-      .tableau-container {
-        display: flex;
-        /* Enable flexbox */
-        justify-content: center;
-        /* Center horizontally */
-        align-items: center;
-        /* Center vertically */
-        /* height: 100vh;  */
-        /* Full viewport height */
-        margin-left: 10%;
-      }
+    .tableau-container {
+      display: flex;
+      /* Enable flexbox */
+      justify-content: center;
+      /* Center horizontally */
+      align-items: center;
+      /* Center vertically */
+      /* height: 100vh;  */
+      /* Full viewport height */
+      margin-left: 10%;
+    }
 
-      .tableauPlaceholder {
-        max-width: 80%;
-        /* Optional: Limit the width of the visualization */
-        max-height: 80%;
-        /* Optional: Limit the height of the visualization */
-      }
-      .charts-container-cap {
-  display: flex;
-  flex-direction: column; /* Stack charts vertically */
-  gap: 20px; /* Add spacing between charts */
-}
+    .tableauPlaceholder {
+      max-width: 80%;
+      /* Optional: Limit the width of the visualization */
+      max-height: 80%;
+      /* Optional: Limit the height of the visualization */
+    }
 
-.chart-boxx {
-  height: 600px; /* Define uniform chart height */
-  padding-left:30px;
-  background-color: #f5f5f5; /* Placeholder background for charts */
-  border: 1px solid #ccc; /* Optional border for visualization */
-}
-    </style>
- 
+    .charts-container-cap {
+      display: flex;
+      flex-direction: column;
+      /* Stack charts vertically */
+      gap: 20px;
+      /* Add spacing between charts */
+    }
+
+    .chart-boxx {
+      height: 600px;
+      /* Define uniform chart height */
+      padding-left: 30px;
+      background-color: #f5f5f5;
+      /* Placeholder background for charts */
+      border: 1px solid #ccc;
+      /* Optional border for visualization */
+    }
+  </style>
+
   <link rel="stylesheet" href="index.css" media="screen">
   <link rel="stylesheet" href="cooking/cooking.css" media="screen">
   <link rel="stylesheet" href="Electricity/electricity.css" media="screen">
@@ -142,9 +155,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
-  
-  <section id="header" class="u-align-center u-clearfix u-container-align-center u-image u-section-1" src="images/bg.mp4"
-    id="carousel_30e5">
+
+  <section id="header" class="u-align-center u-clearfix u-container-align-center u-image u-section-1"
+    src="images/bg.mp4" id="carousel_30e5">
     <video autoplay muted loop id="myVideo">
       <source src="images/bg.mp4" type="video/mp4">
     </video>
@@ -179,25 +192,21 @@
         well-being.
 
       </p>
-      <h5 style="text-align: center;margin-bottom:60px;" class="u-text u-text-default u-text-2"> Let's look at how far we have progressed
-        towards SDG 7. 
+      <h5 style="text-align: center;margin-bottom:60px;" class="u-text u-text-default u-text-2"> Let's look at how far
+        we have progressed
+        towards SDG 7.
       </h5>
-
-      <!-- <a href="#"
-        class="u-active-palette-4-dark-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-4-dark-1 u-palette-4-base u-radius-50 u-btn-1">read
-        more</a> -->
     </div>
   </section>
-  <!-- <button  type="button" onclick="openContent(event,'electricity-data')">open electricity data</button>
-  <button  type="button" onclick="openContent(event,'cooking-data')">open cooking data</button> -->
 
   <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1"
     style="background-color: #41807c; padding-top:40px;">
     <div class="text-center mt-3 my-4">
       <h2 style="color: #ffffff;">Targets of SDG 7</h2>
-      <p style="color: #ffffff;">Sustainable Development Goal 7 is built on ambitious yet vital targets aimed at transforming the global energy
-      landscape. These targets focus on ensuring universal access to clean and sustainable energy while improving
-      efficiency and encouraging renewable solutions.</p>
+      <p style="color: #ffffff;">Sustainable Development Goal 7 is built on ambitious yet vital targets aimed at
+        transforming the global energy
+        landscape. These targets focus on ensuring universal access to clean and sustainable energy while improving
+        efficiency and encouraging renewable solutions.</p>
     </div>
     <div class="card-deck card-deck-container" style="margin-bottom:60px;">
       <div class="row">
@@ -457,9 +466,322 @@
   <section id="renewable-energy-share" style="display:none">
   </section>
 
+  <!-- <section>
+    <div class="pch">
+      <h3 class="u-align-center header-text">SDG 7.2 - Increase Renewable Energy Share</h3>
+    </div>
+    <div class="main-content">
+      <div class="content-segment">
+        <div class="explain">
+          As the world accelerates its efforts toward achieving Sustainable Development Goal 7 (SDG 7), the journey of
+          renewable energy adoption reveals contrasting narratives between developed and developing nations.
+          </br>
+          In developed countries, stable energy demand reflects mature economies, with a growing share of renewables
+          driven by clean energy investments, supportive policies, and public awareness. This steady transition marks
+          significant progress toward sustainability.
+          </br>
+          Conversely, in developing nations, rapid economic and population growth fuels rising energy demand. While
+          renewable energy production is increasing through international collaborations and local initiatives, it lags
+          behind surging consumption, reducing its share in the overall energy mix and underscoring sustainability
+          challenges.
+
+  <section>
+    <div class="row" style="background-color:#41807c; color:#efefef;">
+      <h3 class="u-align-center">The Evolving Story of Renewable Energy: A Tale of Two Trends</h3>
+      <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
+        <p>
+          As the world accelerates its efforts toward achieving Sustainable Development Goal 7 (SDG 7), the journey of renewable energy adoption reveals contrasting narratives between developed and developing nations.  
+        </br>
+        In developed countries, stable energy demand reflects mature economies, with a growing share of renewables driven by clean energy investments, supportive policies, and public awareness. This steady transition marks significant progress toward sustainability.
+        </br>
+        Conversely, in developing nations, rapid economic and population growth fuels rising energy demand. While renewable energy production is increasing through international collaborations and local initiatives, it lags behind surging consumption, reducing its share in the overall energy mix and underscoring sustainability challenges.
+        </p>
+      </div>
+    </div>
+    <div class="u-align-center row d-flex" style="background-color:#41807c; color:#efefef;">
+      <div class="col-md-12 d-flex justify-content-center" style="margin:0 auto;">
+        <div class='tableauPlaceholder' id='viz1733006071822' style='position: relative'>
+          <noscript><a href='#'><img alt='Dashboard 1 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1_rss.png'
+                style='border: none' /></a></noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='path' value='shared&#47;M4BYJ73MS' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+          </object>
+        </div>
+        <div class="viz">
+          <div class="u-align-center row d-flex" style="background-color:#41807c; color:#efefef;">
+            <div class="col-md-12 d-flex justify-content-center" style="margin:0 auto;">
+              <div class='tableauPlaceholder' id='viz1733006071822' style='position: relative'>
+                <noscript><a href='#'><img alt='Dashboard 1 '
+                      src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1_rss.png'
+                      style='border: none' /></a></noscript>
+                <object class='tableauViz' style='display:none;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='path' value='shared&#47;M4BYJ73MS' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image'
+                    value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-US' />
+                  <param name='filter' value='publish=yes' />
+                </object>
+              </div>
+              <script type='text/javascript'>
+                var divElement = document.getElementById('viz1733006071822');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) {
+                  vizElement.style.width = '1000px';
+                  vizElement.style.height = '827px';
+                } else if (divElement.offsetWidth > 500) {
+                  vizElement.style.width = '1000px';
+                  vizElement.style.height = '827px';
+                } else {
+                  vizElement.style.width = '100%';
+                  vizElement.style.height = '727px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #f2f2f2; color:#111111">
+    <div class="row d-flex justify-content-center" style="margin:0 20px;">
+      <div class="col-md-8 col-lg-9 d-flex align-items-center justify-content-center">
+        <div class='tableauPlaceholder' id='viz1733278411659' style='position: relative'>
+          <noscript><a href='#'><img alt='Dashboard 2 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyUsageinHeatTransportandElectricty&#47;Dashboard2&#47;1_rss.png'
+                style='border: none' /></a></noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='EnergyUsageinHeatTransportandElectricty&#47;Dashboard2' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyUsageinHeatTransportandElectricty&#47;Dashboard2&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+       </div>
+       <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1733198973761');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='650px';vizElement.style.height='727px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='650px';vizElement.style.height='727px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+       </script>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <h4>Diving Deeper: The Sectoral Story of Renewable Energy</h4>
+        <p style="font-size: 16px;">
+          While the global renewable energy narrative offers a broad view, sector-specific trends highlight the
+          transition's complexity. A heatmap of renewable energy use across transport, heat, and electricity reveals
+          varying national priorities.
+          In China, renewable energy use in heating has declined due to reliance on coal and natural gas for industrial
+          and residential needs. However, renewable electricity generation is rising, driven by significant investments
+          in solar and wind, aligning with the country's ambitious clean energy goals.
+          These trends show that progress is uneven. Electricity leads the transition with rapid adoption of
+          technologies like solar and wind, while transport and heating lag due to technological, policy, and cost
+          barriers. For example, EVs and biofuels are growing but require robust incentives, and renewable heating
+          systems face competition from traditional alternatives.
+        </p>
+        
+        <h4>Connecting the Stories: Holistic Action Across Sectors</h4>
+        <p style="font-size: 16px;">
+          Sectoral insights highlight progress and challenges in achieving SDG 7, emphasizing the need for balanced
+          renewable energy growth across all key areas.
+          This transition requires tailored strategies: developed nations can focus on decarbonizing sectors like
+          transport and heat, while developing countries need support to build renewable systems that meet their
+          expanding energy demands.
+          Aligning global, national, and sectoral efforts can transform renewable energy adoption into a comprehensive
+          narrative that drives sustainable economic growth and secures a greener future for the planet.
+        </div>
+        <div class="viz">
+          <div class='tableauPlaceholder' id='viz1733278411659' style='position: relative'>
+            <noscript><a href='#'><img alt='Dashboard 2 '
+                  src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyUsageinHeatTransportandElectricty&#47;Dashboard2&#47;1_rss.png'
+                  style='border: none' /></a></noscript>
+            <object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='EnergyUsageinHeatTransportandElectricty&#47;Dashboard2' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyUsageinHeatTransportandElectricty&#47;Dashboard2&#47;1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-US' />
+            </object>
+          </div>
+          <script type='text/javascript'>
+            var divElement = document.getElementById('viz1733198973761');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if (divElement.offsetWidth > 800) { vizElement.style.width = '650px'; vizElement.style.height = '727px'; }
+            else if (divElement.offsetWidth > 500) { vizElement.style.width = '650px'; vizElement.style.height = '727px'; }
+            else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; }
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+          </script>
+        </div>
+      </div>
+      <div class="content-segment">
+        <div class="explain">
+          <div class="row">
+            <h3 class="u-align-center">Renewable Energy Mix: A Global Ranking of Progress</h3>
+            <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
+
+  <section style="background-color: #41807c; color:#efefef">
+    <div class="row">
+      <h3 class="u-align-center">Renewable Energy Mix: A Global Ranking of Progress</h3>
+      <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
+
+        <p>
+          The renewable energy landscape gains depth when examining the contributions of wind, hydro, solar, and other
+          sources across nations. A global ranking shows rising renewable energy percentages, though growth rates vary
+          by source, revealing key opportunities and challenges.
+          <br>
+          Countries like Denmark and Germany excel in wind energy due to abundant resources and infrastructure. Norway
+          and Brazil lead in hydroelectric power, leveraging water abundance, while solar energy thrives in sunny
+          regions like Australia and the Middle East.
+          <br>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <h3 class="u-align-center">Broadening the Renewable Energy Story</h3>
+      <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
+        <p>
+          Global renewable energy rankings highlight that sustainability requires tailored solutions based on each
+          country's unique resources and needs. Slower-growing renewables present opportunities for innovation and
+          investment.
+          <br>
+          As efforts toward SDG 7 advance, embracing diverse energy sources, leveraging local strengths, and tackling
+          challenges can ensure meaningful contributions from all renewables, paving the way for a cleaner, sustainable
+          future.
+        </p>
+        
+      </div>
+    </div>
+    <div class="u-align-center row d-flex">
+      <div class="flourish-embed col-md-9" style="margin:0 auto;" data-src="story/2742285">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="10%"
+            alt="visualization" /></noscript>
+      </div>
+    </div>
+  </section>
+
   <section>
     <div class="pch-1">
-        <h3 class="u-align-center header-text">SDG 7.A - Enhance International Cooperation and Technology Access</h3>
+      <h3 class="u-align-center header-text">SDG 7.3 - Increase Energy Efficiency</h3>
+    </div>
+  </section>
+
+  <section style="background-color: #f2f2f2; color:#111111">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-6 col-lg-8 col-xl-9 d-flex align-items-center justify-content-center">
+        <div class='tableauPlaceholder' id='viz1733274935069' style='position: relative'>
+          <noscript><a href='#'><img alt='Dashboard 2 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyEfficiencyTrends&#47;Dashboard2&#47;1_rss.png'
+                style='border: none' /></a></noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='EnergyEfficiencyTrends&#47;Dashboard2' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyEfficiencyTrends&#47;Dashboard2&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+        </div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1733274935069');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          if (divElement.offsetWidth > 800) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; }
+          else if (divElement.offsetWidth > 500) { vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; }
+          else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; }
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+      </div>
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        <h4>The Efficiency Challenge: Energy Use in a Growing Economy</h4>
+        <p style="font-size: 16px;">
+          The global energy landscape faces a critical challenge: declining energy efficiency. Despite clean energy
+          advancements, the energy needed to generate economic value is rising, hindering progress toward SDG 7,
+          particularly Target 7.3, which seeks to double energy efficiency improvements by 2030.
+        </p>
+        <h4>Understanding the Decline</h4>
+        <p style="font-size: 16px;">
+          This global decline in energy efficiency can be attributed to several factors:
+        <ul style="font-size: 16px;">
+          <li> Rapid Growth in Developing Nations: Industrialization prioritizes energy expansion over efficiency,
+            increasing energy supply relative to GDP.
+          <li> Rising Energy Demand: Growing economies demand more energy-intensive goods and services.
+          <li> Technological Gaps: Outdated, inefficient technologies dominate in many regions.
+          <li> Energy-Intensive Sectors: Growth in industries like heavy manufacturing exacerbates inefficiency.
+        </ul>
+        </p>
+        <h4>A Call for Action</h4>
+        <p style="font-size: 16px;">
+          This decline undermines renewable energy gains and heightens environmental pressures. Addressing it demands
+          immediate actions like technology upgrades and policy reforms to ensure energy efficiency complements
+          renewable energy progress.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+  <section>
+    <div class="pch-2">
+      <h3 class="u-align-center header-text">SDG 7.A - Enhance International Cooperation and Technology Access</h3>
     </div>
   </section>
 
@@ -475,11 +797,11 @@
       Tracking financial flows is essential for understanding the global push toward renewable energy, particularly in developing nations. The uneven distribution of funds highlights both opportunities and challenges in scaling clean energy adoption.
     </div> -->
 
-    <div class="u-align-center" style="width: 100%; padding-top:50px; padding-bottom:50px;">
+    <div class="u-align-center" style="width: 100%; margin-top: 50px; padding-top:50px; padding-bottom:50px;">
       <div id="filters" style="text-align: center; margin-bottom: 20px;color:#111111">
         <label for="countries" style="color:#efefef">Select Countries:</label>
         <select id="countries" multiple></select>
-    
+
         <label for="energyType" style="color:#efefef">Select Energy Type:</label>
         <select id="energyType">
           <option value="All Renewables">All Renewables</option>
@@ -492,18 +814,29 @@
           <option value="Wind">Wind</option>
         </select>
       </div>
-    
+
       <div id="charts">
         <!-- First Chart -->
         <div class="chart-wrapper">
           <div id="chart1" class="chart-container"></div>
           <div class="chart-text" placeholder="Enter notes for Chart 1" style="text-align:justify;">
             <h3>Mapping the Global Flow of Renewable Energy Investments</h3>
-            The evolution of financial flows for renewable energy investments highlights how developing nations have prioritized transitioning to sustainable energy systems. Since the early 2007s, countries like India, Indonesia, and Pakistan have consistently attracted substantial financial support, reflecting their growing populations and urgent energy demands. A remarkable surge in funding is observed around 2014, with a peak in 2016 driven by large-scale hydropower projects. China stands out, receiving steady funding for bioenergy projects, likely driven by its vast agricultural waste resources and focus on waste-to-energy technologies. Traditional technologies like wind and hydropower have remained dominant, forming the backbone of renewable energy transitions in these regions. 
-            However, diversification into emerging technologies like marine energy began around 2022, signaling innovation in the sector. Indonesia’s consistent funding for geothermal energy underscores how regional geographies influence energy strategies, leveraging abundant natural resources. These patterns reflect a global focus on scalable, reliable, and geographically advantageous renewable technologies while gradually embracing innovation.
-            </div>
+            The evolution of financial flows for renewable energy investments highlights how developing nations have
+            prioritized transitioning to sustainable energy systems. Since the early 2007s, countries like India,
+            Indonesia, and Pakistan have consistently attracted substantial financial support, reflecting their growing
+            populations and urgent energy demands. A remarkable surge in funding is observed around 2014, with a peak in
+            2016 driven by large-scale hydropower projects. China stands out, receiving steady funding for bioenergy
+            projects, likely driven by its vast agricultural waste resources and focus on waste-to-energy technologies.
+            Traditional technologies like wind and hydropower have remained dominant, forming the backbone of renewable
+            energy transitions in these regions.
+            However, diversification into emerging technologies like marine energy began around 2022, signaling
+            innovation in the sector. Indonesia’s consistent funding for geothermal energy underscores how regional
+            geographies influence energy strategies, leveraging abundant natural resources. These patterns reflect a
+            global focus on scalable, reliable, and geographically advantageous renewable technologies while gradually
+            embracing innovation.
+          </div>
         </div>
-    
+
         <!-- Second Chart -->
         <div class="chart-wrapper">
           <div id="chart2" class="chart-container"></div>
@@ -524,14 +857,34 @@
             <p>
               <strong>Technology Focus:</strong> The data emphasizes a preference for established technologies like hydropower and wind, with limited diversification into emerging renewable technologies.
             </p> -->
-            Over the past decade, the share of energy investments in hydropower has declined, while funding for solar energy and multiple/other technologies has grown. This reflects a shift toward diversification, with smaller financial commitments and multi-purpose instruments like green bonds and investment funds gaining prominence. Large-scale hydropower projects, once dominant, are now less frequent, as donors increasingly favor smaller, flexible grants and loans targeting energy efficiency, electrification programs, and renewable infrastructure. The rise in the multiple technologies category, encompassing non-specific entries and broad-based commitments, underscores a growing focus on adaptable financial mechanisms and decentralized energy solutions. This trend is likely to persist, with occasional large hydropower investments and a growing emphasis on emerging technologies like marine and hydrogen energy, alongside advanced storage solutions. These evolving patterns highlight a future driven by innovation and inclusivity, ensuring energy investments meet both sustainability goals and global equity needs.
+            Over the past decade, the share of energy investments in hydropower has declined, while funding for solar
+            energy and multiple/other technologies has grown. This reflects a shift toward diversification, with smaller
+            financial commitments and multi-purpose instruments like green bonds and investment funds gaining
+            prominence. Large-scale hydropower projects, once dominant, are now less frequent, as donors increasingly
+            favor smaller, flexible grants and loans targeting energy efficiency, electrification programs, and
+            renewable infrastructure. The rise in the multiple technologies category, encompassing non-specific entries
+            and broad-based commitments, underscores a growing focus on adaptable financial mechanisms and decentralized
+            energy solutions. This trend is likely to persist, with occasional large hydropower investments and a
+            growing emphasis on emerging technologies like marine and hydrogen energy, alongside advanced storage
+            solutions. These evolving patterns highlight a future driven by innovation and inclusivity, ensuring energy
+            investments meet both sustainability goals and global equity needs.
           </div>
         </div>
-    
+
         <!-- Third Chart -->
-       
+
         <div style="margin:0 50px; text-align:justify;">
-          The trends in renewable energy investments over the past decade reflect a significant shift toward diversification and adaptability. With declining investments in hydropower and rising commitments to solar energy and multiple technologies, donors are demonstrating a clear preference for scalable, flexible solutions. Instruments like green bonds, decentralized energy systems, and multi-purpose funds have become key drivers of this transformation, enabling smaller yet impactful projects targeting energy efficiency, electrification, and sustainable infrastructure. The growing prominence of emerging technologies such as marine and hydrogen energy, along with advanced storage systems, points to a future focused on innovation and resilience. These patterns highlight not only the changing priorities of financial flows but also their alignment with evolving global energy demands and climate goals. As the renewable energy landscape continues to adapt, financial strategies will play a pivotal role in bridging the gap between investment and tangible energy infrastructure development.
+          The trends in renewable energy investments over the past decade reflect a significant shift toward
+          diversification and adaptability. With declining investments in hydropower and rising commitments to solar
+          energy and multiple technologies, donors are demonstrating a clear preference for scalable, flexible
+          solutions. Instruments like green bonds, decentralized energy systems, and multi-purpose funds have become key
+          drivers of this transformation, enabling smaller yet impactful projects targeting energy efficiency,
+          electrification, and sustainable infrastructure. The growing prominence of emerging technologies such as
+          marine and hydrogen energy, along with advanced storage systems, points to a future focused on innovation and
+          resilience. These patterns highlight not only the changing priorities of financial flows but also their
+          alignment with evolving global energy demands and climate goals. As the renewable energy landscape continues
+          to adapt, financial strategies will play a pivotal role in bridging the gap between investment and tangible
+          energy infrastructure development.
         </div>
       </div>
     </div>
@@ -595,11 +948,12 @@
 
   <section>
     <div class="pch-3">
-        <h3 class="u-align-center header-text">SDG 7.B - Expand Energy Infrastructure for Developing Nations</h3>
+      <h3 class="u-align-center header-text">SDG 7.B - Expand Energy Infrastructure for Developing Nations</h3>
     </div>
   </section>
 
-  <section class="u-clearfix u-section-6" id="carousel_28cc" style="background-color:#f2f2f2; color:#111111; padding-top:50px; padding-bottom:50px;padding-right:30px;">
+  <section class="u-clearfix u-section-6" id="carousel_28cc"
+    style="background-color:#f2f2f2; color:#111111; padding-top:50px; padding-bottom:50px;padding-right:30px;">
     <!-- <div style="text-align:center; margin-top:40px">
       <h3>
         Examining Financial Support and Renewable Energy Installations
@@ -612,36 +966,45 @@
       <div class="u-layout">
         <div class="u-layout-row">
           <!-- Left Column: Charts stacked vertically -->
-          <div
-            class="d-flex justify-content-center u-container-style u-layout-cell u-left-cell u-size-42 charts-column"
+          <div class="d-flex justify-content-center u-container-style u-layout-cell u-left-cell u-size-42 charts-column"
             data-image-width="1500" data-image-height="1000">
             <div id="sunburst-chart" class="chart-box"></div>
             <div id="glyph-chart" class="chart-box"></div>
           </div>
-    
+
           <!-- Right Column: Text -->
           <div class="u-container-style u-layout-cell u-right-cell u-shape-rectangle u-size-18">
             <div style="text-align: justify; padding-left:30px;"
               class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs">
               <h3>Mapping Financial Flow to Renewable Energy Capacity </h3>
-              <p>Financial flows often translate into increased renewable energy capacity, as seen in countries like India, Brazil, and Indonesia, where significant investments in hydropower, solar, and wind align with high energy installations per capita. India exemplifies this with diverse funding translating into substantial infrastructure growth, while Brazil leverages wind and hydropower investments effectively. Similarly, Indonesia’s focus on hydropower and geothermal funding reflects efficient outcomes.</p>
+              <p>Financial flows often translate into increased renewable energy capacity, as seen in countries like
+                India, Brazil, and Indonesia, where significant investments in hydropower, solar, and wind align with
+                high energy installations per capita. India exemplifies this with diverse funding translating into
+                substantial infrastructure growth, while Brazil leverages wind and hydropower investments effectively.
+                Similarly, Indonesia’s focus on hydropower and geothermal funding reflects efficient outcomes.</p>
 
-              <p>However, not all financial commitments yield proportional results. Countries like Egypt and Turkey show financial inflows that lag in installation capacity, indicating inefficiencies or delays. The multiple renewables category highlights broader funding mechanisms, such as green bonds, which often lack clear links to specific outcomes.</p>
+              <p>However, not all financial commitments yield proportional results. Countries like Egypt and Turkey show
+                financial inflows that lag in installation capacity, indicating inefficiencies or delays. The multiple
+                renewables category highlights broader funding mechanisms, such as green bonds, which often lack clear
+                links to specific outcomes.</p>
 
-              <p>As investments expand into emerging technologies like marine and hydrogen energy, ensuring alignment between financial flows and on-ground infrastructure will be critical. Addressing inefficiencies will enable equitable and impactful energy transitions globally.</p>
+              <p>As investments expand into emerging technologies like marine and hydrogen energy, ensuring alignment
+                between financial flows and on-ground infrastructure will be critical. Addressing inefficiencies will
+                enable equitable and impactful energy transitions globally.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="u-clearfix u-section-6" id="carousel_28cc" style="background-color:#41807c; color:#efefef; padding-bottom:50px;">
+  <section class="u-clearfix u-section-6" id="carousel_28cc"
+    style="background-color:#41807c; color:#efefef; padding-bottom:50px;">
 
     <div class="u-align-center" style="width: 100%; margin-top: 50px;">
       <div id="filters" style="text-align: center; margin-bottom: 20px;color:#111111">
         <label for="countries2" style="color:#efefef">Select Countries:</label>
         <select id="countries2" multiple></select>
-    
+
         <label for="energyType2" style="color:#efefef">Select Energy Type:</label>
         <select id="energyType2">
           <option value="All Renewables">All Renewables</option>
@@ -654,77 +1017,105 @@
           <option value="Wind">Wind</option>
         </select>
       </div>
-    
+
       <div class="chart-wrapper" style="margin-left:50px;">
         <div id="chart3" class="chart-container"></div>
-      
-          <div class="chart-text" placeholder="Enter notes for Chart 3" style="text-align:justify">
-            <h3>Countrywise Growth in Renewable Energy Generation</h3>
-            The average yearly changes in renewable energy capacity reveal stark disparities among developing countries. Overall China and Turkey lead the way, with China leveraging large-scale solar and wind investments supported by cost-efficient manufacturing, while Turkey benefits from strategic hydropower expansion and energy independence policies.
 
-            In contrast, Uganda and Egypt lag significantly, with Uganda constrained by limited financial resources and small-scale projects, and Egypt facing delays in implementing large-scale initiatives. India and Indonesia perform near the average, driven by steady investments in solar, wind, and geothermal energy aligned with growing domestic needs. South Africa reflects moderate progress as it transitions from coal dependency amidst policy and grid challenges.
-            
-            These disparities underscore the need for effective implementation mechanisms to ensure financial investments translate into infrastructure growth, especially in underperforming nations. Addressing these gaps will be critical for achieving equitable and sustainable energy transitions globally.
-          </div>
+        <div class="chart-text" placeholder="Enter notes for Chart 3" style="text-align:justify">
+          <h3>Countrywise Growth in Renewable Energy Generation</h3>
+          The average yearly changes in renewable energy capacity reveal stark disparities among developing countries.
+          Overall China and Turkey lead the way, with China leveraging large-scale solar and wind investments supported
+          by cost-efficient manufacturing, while Turkey benefits from strategic hydropower expansion and energy
+          independence policies.
+
+          In contrast, Uganda and Egypt lag significantly, with Uganda constrained by limited financial resources and
+          small-scale projects, and Egypt facing delays in implementing large-scale initiatives. India and Indonesia
+          perform near the average, driven by steady investments in solar, wind, and geothermal energy aligned with
+          growing domestic needs. South Africa reflects moderate progress as it transitions from coal dependency amidst
+          policy and grid challenges.
+
+          These disparities underscore the need for effective implementation mechanisms to ensure financial investments
+          translate into infrastructure growth, especially in underperforming nations. Addressing these gaps will be
+          critical for achieving equitable and sustainable energy transitions globally.
         </div>
-      
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+
+  <section style="background-color: #f2f2f2;color:#111111; padding-bottom:50px;">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-9 d-flex align-items-center ">
+        <div class="tableauPlaceholder" id="viz1733041649651" style="position: relative;">
+          <noscript>
+            <a href="#"><img alt="Dashboard 3"
+                src="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1_rss.png"
+                style="border: none" /></a>
+          </noscript>
+          <object class="tableauViz" style="display:none;">
+            <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+            <param name="embed_code_version" value="3" />
+            <param name="site_root" value="" />
+            <param name="name" value="DVPProjectfinancial/Dashboard3" />
+            <param name="tabs" value="no" />
+            <param name="toolbar" value="yes" />
+            <param name="static_image"
+              value="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1.png" />
+            <param name="animate_transition" value="yes" />
+            <param name="display_static_image" value="yes" />
+            <param name="display_spinner" value="yes" />
+            <param name="display_overlay" value="yes" />
+            <param name="display_count" value="yes" />
+            <param name="language" value="en-US" />
+            <param name="filter" value="publish=yes" />
+          </object>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <div>
+          <h3>Correlating Financial Flow with Energy Generation Per Capita</h3>
+          The relationship between financial flows and energy capacity generation reveals that initial funding spikes
+          often drive sustained growth even with reduced subsequent investments. In hydropower and wind, peaks in
+          funding, such as in 2011 and 2010 respectively, resulted in long-term capacity increases with minimal
+          additional financial input. Geothermal energy shows a consistent correlation, particularly in countries like
+          Indonesia, where steady investments align with sustained growth. Bioenergy, despite smaller financial flows,
+          highlights efficiency improvements contributing to capacity gains and suggests a growing role for
+          technology-driven advancements.
+
+          These patterns emphasize the critical importance of strategic initial investments to establish infrastructure
+          and unlock potential for future growth. As renewable technologies mature, the focus is shifting toward
+          efficiency gains, technological innovations, and better resource utilization, enabling more output from fewer
+          financial inputs. This trend reflects a sector transitioning from reliance on capital-intensive funding to one
+          increasingly characterized by sustainable returns. Aligning investments with these dynamics will be vital for
+          accelerating global energy transitions and meeting ambitious climate goals.
+        </div>
       </div>
     </div>
-    </section>
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10">
+        <h3>Advancing Targets 7.a and 7.b for Global Energy Transition</h3>
 
+        The journey toward achieving SDG 7 targets highlights the critical role of international cooperation (7.a) and
+        infrastructure expansion (7.b) in advancing global energy transitions. Financial flows to developing countries
+        have driven clean energy research, technology transfer, and renewable production, with nations like India,
+        Indonesia, and China showcasing significant progress. However, disparities in converting financial investments
+        into energy capacity, particularly in less developed and landlocked nations, reveal the need for targeted
+        support and efficiency improvements.
 
-    <section style="background-color: #f2f2f2;color:#111111; padding-bottom:50px;">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-9 d-flex align-items-center ">
-          <div class="tableauPlaceholder" id="viz1733041649651" style="position: relative;">
-            <noscript>
-              <a href="#"><img alt="Dashboard 3"
-                  src="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1_rss.png"
-                  style="border: none" /></a>
-            </noscript>
-            <object class="tableauViz" style="display:none;">
-              <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-              <param name="embed_code_version" value="3" />
-              <param name="site_root" value="" />
-              <param name="name" value="DVPProjectfinancial/Dashboard3" />
-              <param name="tabs" value="no" />
-              <param name="toolbar" value="yes" />
-              <param name="static_image"
-                value="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1.png" />
-              <param name="animate_transition" value="yes" />
-              <param name="display_static_image" value="yes" />
-              <param name="display_spinner" value="yes" />
-              <param name="display_overlay" value="yes" />
-              <param name="display_count" value="yes" />
-              <param name="language" value="en-US" />
-              <param name="filter" value="publish=yes" />
-            </object>
-          </div>
-         
-        </div>
-        <div class="col-md-3">
-          <div>
-            <h3>Correlating Financial Flow with Energy Generation Per Capita</h3>
-            The relationship between financial flows and energy capacity generation reveals that initial funding spikes often drive sustained growth even with reduced subsequent investments. In hydropower and wind, peaks in funding, such as in 2011 and 2010 respectively, resulted in long-term capacity increases with minimal additional financial input. Geothermal energy shows a consistent correlation, particularly in countries like Indonesia, where steady investments align with sustained growth. Bioenergy, despite smaller financial flows, highlights efficiency improvements contributing to capacity gains and suggests a growing role for technology-driven advancements.
-    
-            These patterns emphasize the critical importance of strategic initial investments to establish infrastructure and unlock potential for future growth. As renewable technologies mature, the focus is shifting toward efficiency gains, technological innovations, and better resource utilization, enabling more output from fewer financial inputs. This trend reflects a sector transitioning from reliance on capital-intensive funding to one increasingly characterized by sustainable returns. Aligning investments with these dynamics will be vital for accelerating global energy transitions and meeting ambitious climate goals.
-          </div>
-        </div>
+        As renewable capacity per capita grows in some regions, leveraging decentralized solutions, green bonds, and
+        emerging technologies like marine energy will be key to bridging gaps. Aligning financial strategies with
+        tailored infrastructure plans and fostering innovation will ensure equitable, efficient, and sustainable energy
+        transitions, achieving the ambitious goals of SDG 7.
+
       </div>
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-10">
-          <h3>Advancing Targets 7.a and 7.b for Global Energy Transition</h3>
 
-          The journey toward achieving SDG 7 targets highlights the critical role of international cooperation (7.a) and infrastructure expansion (7.b) in advancing global energy transitions. Financial flows to developing countries have driven clean energy research, technology transfer, and renewable production, with nations like India, Indonesia, and China showcasing significant progress. However, disparities in converting financial investments into energy capacity, particularly in less developed and landlocked nations, reveal the need for targeted support and efficiency improvements.
+    </div>
+  </section>
 
-          As renewable capacity per capita grows in some regions, leveraging decentralized solutions, green bonds, and emerging technologies like marine energy will be key to bridging gaps. Aligning financial strategies with tailored infrastructure plans and fostering innovation will ensure equitable, efficient, and sustainable energy transitions, achieving the ambitious goals of SDG 7.
-    
-        </div>
-        
-      </div>
-    </section>
-
-    <!-- <div>
+  <!-- <div>
       <h3>Advancing Targets 7.a and 7.b for Global Energy Transition</h3>
 
       The journey toward achieving SDG 7 targets highlights the critical role of international cooperation (7.a) and infrastructure expansion (7.b) in advancing global energy transitions. Financial flows to developing countries have driven clean energy research, technology transfer, and renewable production, with nations like India, Indonesia, and China showcasing significant progress. However, disparities in converting financial investments into energy capacity, particularly in less developed and landlocked nations, reveal the need for targeted support and efficiency improvements.
@@ -1034,105 +1425,107 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
  
   '#92A8D1', '#955251', '#B565A7', '#009B77', '#DD4124',
 
-  '#C3447A', '#D4A5A5', '#DFCFBE', '#DAA520', '#B0C4DE',
-  '#8B4513', '#FA8072', '#FFD700', '#7FFF00', '#40E0D0',
-  '#6495ED', '#DC143C', '#8A2BE2', '#FF7F50', '#5F9EA0'  // Clouds,
+        '#92A8D1', '#955251', '#B565A7', '#009B77', '#DD4124',
 
-]
-, // Use a custom muted color palette
+        '#C3447A', '#D4A5A5', '#DFCFBE', '#DAA520', '#B0C4DE',
+        '#8B4513', '#FA8072', '#FFD700', '#7FFF00', '#40E0D0',
+        '#6495ED', '#DC143C', '#8A2BE2', '#FF7F50', '#5F9EA0'  // Clouds,
+
+      ]
+      , // Use a custom muted color palette
       series: [{
         type: 'sunburst',
         data: [
-        { id: 'India', parent: '', name: 'India', value: 18.23811 },
-  { id: 'India-Bioenergy', parent: 'India', name: 'Bioenergy', value: 0.14551 },
-  { id: 'India-Geothermal', parent: 'India', name: 'Geothermal', value: 0.13179 },
-  { id: 'India-Hydropower', parent: 'India', name: 'Hydropower', value: 3.6668 },
-  { id: 'India-Marine', parent: 'India', name: 'Marine', value: 0.54003 },
-  { id: 'India-Multiple Renewables', parent: 'India', name: 'Multiple Renewables', value: 6.00528 },
-  { id: 'India-Wind', parent: 'India', name: 'Wind', value: 6.49622 },
-  { id: 'India-Solar', parent: 'India', name: 'Solar', value: 1.25248 },
-  { id: 'Pakistan', parent: '', name: 'Pakistan', value: 9.49918 },
-  { id: 'Pakistan-Bioenergy', parent: 'Pakistan', name: 'Bioenergy', value: 0.02929 },
-  { id: 'Pakistan-Geothermal', parent: 'Pakistan', name: 'Geothermal', value: 0.27408 },
-  { id: 'Pakistan-Hydropower', parent: 'Pakistan', name: 'Hydropower', value: 6.59981 },
-  { id: 'Pakistan-Marine', parent: 'Pakistan', name: 'Marine', value: 0.08352 },
-  { id: 'Pakistan-Multiple Renewables', parent: 'Pakistan', name: 'Multiple Renewables', value: 0.73742 },
-  { id: 'Pakistan-Wind', parent: 'Pakistan', name: 'Wind', value: 0.69646 },
-  { id: 'Pakistan-Solar', parent: 'Pakistan', name: 'Solar', value: 1.0782 },
-  { id: 'Türkiye', parent: '', name: 'Türkiye', value: 8.77109 },
-  { id: 'Türkiye-Bioenergy', parent: 'Türkiye', name: 'Bioenergy', value: 0.00455 },
-  { id: 'Türkiye-Geothermal', parent: 'Türkiye', name: 'Geothermal', value: 0.47006 },
-  { id: 'Türkiye-Hydropower', parent: 'Türkiye', name: 'Hydropower', value: 0.01272 },
-  { id: 'Türkiye-Marine', parent: 'Türkiye', name: 'Marine', value: 0.1424 },
-  { id: 'Türkiye-Multiple Renewables', parent: 'Türkiye', name: 'Multiple Renewables', value: 6.53983 },
-  { id: 'Türkiye-Wind', parent: 'Türkiye', name: 'Wind', value: 1.21432 },
-  { id: 'Türkiye-Solar', parent: 'Türkiye', name: 'Solar', value: 0.3876 },
-  { id: 'South Africa', parent: '', name: 'South Africa', value: 7.76615 },
-  { id: 'South Africa-Bioenergy', parent: 'South Africa', name: 'Bioenergy', value: 0.01889 },
-  { id: 'South Africa-Geothermal', parent: 'South Africa', name: 'Geothermal', value: 0.00137 },
-  { id: 'South Africa-Hydropower', parent: 'South Africa', name: 'Hydropower', value: 2.32271 },
-  { id: 'South Africa-Marine', parent: 'South Africa', name: 'Marine', value: 0.00775 },
-  { id: 'South Africa-Multiple Renewables', parent: 'South Africa', name: 'Multiple Renewables', value: 2.57308 },
-  { id: 'South Africa-Wind', parent: 'South Africa', name: 'Wind', value: 2.50343 },
-  { id: 'South Africa-Solar', parent: 'South Africa', name: 'Solar', value: 0.33892 },
-  { id: 'Indonesia', parent: '', name: 'Indonesia', value: 7.06734 },
-  { id: 'Indonesia-Bioenergy', parent: 'Indonesia', name: 'Bioenergy', value: 0.02503 },
-  { id: 'Indonesia-Geothermal', parent: 'Indonesia', name: 'Geothermal', value: 3.13048 },
-  { id: 'Indonesia-Hydropower', parent: 'Indonesia', name: 'Hydropower', value: 2.34325 },
-  { id: 'Indonesia-Marine', parent: 'Indonesia', name: 'Marine', value: 0.2261 },
-  { id: 'Indonesia-Multiple Renewables', parent: 'Indonesia', name: 'Multiple Renewables', value: 0.44361 },
-  { id: 'Indonesia-Wind', parent: 'Indonesia', name: 'Wind', value: 0.66411 },
-  { id: 'Indonesia-Solar', parent: 'Indonesia', name: 'Solar', value: 0.23476 },
-  { id: 'Brazil', parent: '', name: 'Brazil', value: 6.48679 },
-  { id: 'Brazil-Bioenergy', parent: 'Brazil', name: 'Bioenergy', value: 0.5048 },
-  { id: 'Brazil-Geothermal', parent: 'Brazil', name: 'Geothermal', value: 0.40355 },
-  { id: 'Brazil-Hydropower', parent: 'Brazil', name: 'Hydropower', value: 0.19573 },
-  { id: 'Brazil-Marine', parent: 'Brazil', name: 'Marine', value: 0.04919 },
-  { id: 'Brazil-Multiple Renewables', parent: 'Brazil', name: 'Multiple Renewables', value: 2.75342 },
-  { id: 'Brazil-Wind', parent: 'Brazil', name: 'Wind', value: 2.01552 },
-  { id: 'Brazil-Solar', parent: 'Brazil', name: 'Solar', value: 0.56458 },
-  { id: 'Argentina', parent: '', name: 'Arg', value: 5.39596 },
-  { id: 'Argentina-Bioenergy', parent: 'Argentina', name: 'Bioenergy', value: 0.19085 },
-  { id: 'Argentina-Geothermal', parent: 'Argentina', name: 'Geothermal', value: 0.00001 },
-  { id: 'Argentina-Hydropower', parent: 'Argentina', name: 'Hydropower', value: 3.03283 },
-  { id: 'Argentina-Marine', parent: 'Argentina', name: 'Marine', value: 0.0 },
-  { id: 'Argentina-Multiple Renewables', parent: 'Argentina', name: 'Multiple Renewables', value: 0.55514 },
-  { id: 'Argentina-Wind', parent: 'Argentina', name: 'Wind', value: 0.84826 },
-  { id: 'Argentina-Solar', parent: 'Argentina', name: 'Solar', value: 0.76987 },
-  { id: 'Uganda', parent: '', name: 'Uganda', value: 4.50678 },
-  { id: 'Uganda-Bioenergy', parent: 'Uganda', name: 'Bioenergy', value: 0.00115 },
-  { id: 'Uganda-Geothermal', parent: 'Uganda', name: 'Geothermal', value: 0.03421 },
-  { id: 'Uganda-Hydropower', parent: 'Uganda', name: 'Hydropower', value: 3.50678 },
-  { id: 'Uganda-Marine', parent: 'Uganda', name: 'Marine', value: 0.00567 },
-  { id: 'Uganda-Multiple Renewables', parent: 'Uganda', name: 'Multiple Renewables', value: 0.6782 },
-  { id: 'Uganda-Wind', parent: 'Uganda', name: 'Wind', value: 0.10258 },
-  { id: 'Uganda-Solar', parent: 'Uganda', name: 'Solar', value: 0.17859 },
-  { id: 'Angola', parent: '', name: 'Angola', value: 3.25984 },
-  { id: 'Angola-Bioenergy', parent: 'Angola', name: 'Bioenergy', value: 0.02345 },
-  { id: 'Angola-Geothermal', parent: 'Angola', name: 'Geothermal', value: 0.00078 },
-  { id: 'Angola-Hydropower', parent: 'Angola', name: 'Hydropower', value: 2.75984 },
-  { id: 'Angola-Marine', parent: 'Angola', name: 'Marine', value: 0.0 },
-  { id: 'Angola-Multiple Renewables', parent: 'Angola', name: 'Multiple Renewables', value: 0.33456 },
-  { id: 'Angola-Multiple Renewables', parent: 'Angola', name: 'Multiple Renewables', value: 0.33456 },
-  { id: 'Angola-Wind', parent: 'Angola', name: 'Wind', value: 0.12849 },
-  { id: 'Angola-Solar', parent: 'Angola', name: 'Solar', value: 0.11272 },
-  { id: 'Egypt', parent: '', name: 'Egypt', value: 6.61353 },
-  { id: 'Egypt-Bioenergy', parent: 'Egypt', name: 'Bioenergy', value: 0.00113 },
-  { id: 'Egypt-Geothermal', parent: 'Egypt', name: 'Geothermal', value: 0.06051 },
-  { id: 'Egypt-Hydropower', parent: 'Egypt', name: 'Hydropower', value: 0.18628 },
-  { id: 'Egypt-Marine', parent: 'Egypt', name: 'Marine', value: 0.01143 },
-  { id: 'Egypt-Multiple Renewables', parent: 'Egypt', name: 'Multiple Renewables', value: 2.21802 },
-  { id: 'Egypt-Wind', parent: 'Egypt', name: 'Wind', value: 2.69876 },
-  { id: 'Egypt-Solar', parent: 'Egypt', name: 'Solar', value: 1.4374 }
+          { id: 'India', parent: '', name: 'India', value: 18.23811 },
+          { id: 'India-Bioenergy', parent: 'India', name: 'Bioenergy', value: 0.14551 },
+          { id: 'India-Geothermal', parent: 'India', name: 'Geothermal', value: 0.13179 },
+          { id: 'India-Hydropower', parent: 'India', name: 'Hydropower', value: 3.6668 },
+          { id: 'India-Marine', parent: 'India', name: 'Marine', value: 0.54003 },
+          { id: 'India-Multiple Renewables', parent: 'India', name: 'Multiple Renewables', value: 6.00528 },
+          { id: 'India-Wind', parent: 'India', name: 'Wind', value: 6.49622 },
+          { id: 'India-Solar', parent: 'India', name: 'Solar', value: 1.25248 },
+          { id: 'Pakistan', parent: '', name: 'Pakistan', value: 9.49918 },
+          { id: 'Pakistan-Bioenergy', parent: 'Pakistan', name: 'Bioenergy', value: 0.02929 },
+          { id: 'Pakistan-Geothermal', parent: 'Pakistan', name: 'Geothermal', value: 0.27408 },
+          { id: 'Pakistan-Hydropower', parent: 'Pakistan', name: 'Hydropower', value: 6.59981 },
+          { id: 'Pakistan-Marine', parent: 'Pakistan', name: 'Marine', value: 0.08352 },
+          { id: 'Pakistan-Multiple Renewables', parent: 'Pakistan', name: 'Multiple Renewables', value: 0.73742 },
+          { id: 'Pakistan-Wind', parent: 'Pakistan', name: 'Wind', value: 0.69646 },
+          { id: 'Pakistan-Solar', parent: 'Pakistan', name: 'Solar', value: 1.0782 },
+          { id: 'Türkiye', parent: '', name: 'Türkiye', value: 8.77109 },
+          { id: 'Türkiye-Bioenergy', parent: 'Türkiye', name: 'Bioenergy', value: 0.00455 },
+          { id: 'Türkiye-Geothermal', parent: 'Türkiye', name: 'Geothermal', value: 0.47006 },
+          { id: 'Türkiye-Hydropower', parent: 'Türkiye', name: 'Hydropower', value: 0.01272 },
+          { id: 'Türkiye-Marine', parent: 'Türkiye', name: 'Marine', value: 0.1424 },
+          { id: 'Türkiye-Multiple Renewables', parent: 'Türkiye', name: 'Multiple Renewables', value: 6.53983 },
+          { id: 'Türkiye-Wind', parent: 'Türkiye', name: 'Wind', value: 1.21432 },
+          { id: 'Türkiye-Solar', parent: 'Türkiye', name: 'Solar', value: 0.3876 },
+          { id: 'South Africa', parent: '', name: 'South Africa', value: 7.76615 },
+          { id: 'South Africa-Bioenergy', parent: 'South Africa', name: 'Bioenergy', value: 0.01889 },
+          { id: 'South Africa-Geothermal', parent: 'South Africa', name: 'Geothermal', value: 0.00137 },
+          { id: 'South Africa-Hydropower', parent: 'South Africa', name: 'Hydropower', value: 2.32271 },
+          { id: 'South Africa-Marine', parent: 'South Africa', name: 'Marine', value: 0.00775 },
+          { id: 'South Africa-Multiple Renewables', parent: 'South Africa', name: 'Multiple Renewables', value: 2.57308 },
+          { id: 'South Africa-Wind', parent: 'South Africa', name: 'Wind', value: 2.50343 },
+          { id: 'South Africa-Solar', parent: 'South Africa', name: 'Solar', value: 0.33892 },
+          { id: 'Indonesia', parent: '', name: 'Indonesia', value: 7.06734 },
+          { id: 'Indonesia-Bioenergy', parent: 'Indonesia', name: 'Bioenergy', value: 0.02503 },
+          { id: 'Indonesia-Geothermal', parent: 'Indonesia', name: 'Geothermal', value: 3.13048 },
+          { id: 'Indonesia-Hydropower', parent: 'Indonesia', name: 'Hydropower', value: 2.34325 },
+          { id: 'Indonesia-Marine', parent: 'Indonesia', name: 'Marine', value: 0.2261 },
+          { id: 'Indonesia-Multiple Renewables', parent: 'Indonesia', name: 'Multiple Renewables', value: 0.44361 },
+          { id: 'Indonesia-Wind', parent: 'Indonesia', name: 'Wind', value: 0.66411 },
+          { id: 'Indonesia-Solar', parent: 'Indonesia', name: 'Solar', value: 0.23476 },
+          { id: 'Brazil', parent: '', name: 'Brazil', value: 6.48679 },
+          { id: 'Brazil-Bioenergy', parent: 'Brazil', name: 'Bioenergy', value: 0.5048 },
+          { id: 'Brazil-Geothermal', parent: 'Brazil', name: 'Geothermal', value: 0.40355 },
+          { id: 'Brazil-Hydropower', parent: 'Brazil', name: 'Hydropower', value: 0.19573 },
+          { id: 'Brazil-Marine', parent: 'Brazil', name: 'Marine', value: 0.04919 },
+          { id: 'Brazil-Multiple Renewables', parent: 'Brazil', name: 'Multiple Renewables', value: 2.75342 },
+          { id: 'Brazil-Wind', parent: 'Brazil', name: 'Wind', value: 2.01552 },
+          { id: 'Brazil-Solar', parent: 'Brazil', name: 'Solar', value: 0.56458 },
+          { id: 'Argentina', parent: '', name: 'Arg', value: 5.39596 },
+          { id: 'Argentina-Bioenergy', parent: 'Argentina', name: 'Bioenergy', value: 0.19085 },
+          { id: 'Argentina-Geothermal', parent: 'Argentina', name: 'Geothermal', value: 0.00001 },
+          { id: 'Argentina-Hydropower', parent: 'Argentina', name: 'Hydropower', value: 3.03283 },
+          { id: 'Argentina-Marine', parent: 'Argentina', name: 'Marine', value: 0.0 },
+          { id: 'Argentina-Multiple Renewables', parent: 'Argentina', name: 'Multiple Renewables', value: 0.55514 },
+          { id: 'Argentina-Wind', parent: 'Argentina', name: 'Wind', value: 0.84826 },
+          { id: 'Argentina-Solar', parent: 'Argentina', name: 'Solar', value: 0.76987 },
+          { id: 'Uganda', parent: '', name: 'Uganda', value: 4.50678 },
+          { id: 'Uganda-Bioenergy', parent: 'Uganda', name: 'Bioenergy', value: 0.00115 },
+          { id: 'Uganda-Geothermal', parent: 'Uganda', name: 'Geothermal', value: 0.03421 },
+          { id: 'Uganda-Hydropower', parent: 'Uganda', name: 'Hydropower', value: 3.50678 },
+          { id: 'Uganda-Marine', parent: 'Uganda', name: 'Marine', value: 0.00567 },
+          { id: 'Uganda-Multiple Renewables', parent: 'Uganda', name: 'Multiple Renewables', value: 0.6782 },
+          { id: 'Uganda-Wind', parent: 'Uganda', name: 'Wind', value: 0.10258 },
+          { id: 'Uganda-Solar', parent: 'Uganda', name: 'Solar', value: 0.17859 },
+          { id: 'Angola', parent: '', name: 'Angola', value: 3.25984 },
+          { id: 'Angola-Bioenergy', parent: 'Angola', name: 'Bioenergy', value: 0.02345 },
+          { id: 'Angola-Geothermal', parent: 'Angola', name: 'Geothermal', value: 0.00078 },
+          { id: 'Angola-Hydropower', parent: 'Angola', name: 'Hydropower', value: 2.75984 },
+          { id: 'Angola-Marine', parent: 'Angola', name: 'Marine', value: 0.0 },
+          { id: 'Angola-Multiple Renewables', parent: 'Angola', name: 'Multiple Renewables', value: 0.33456 },
+          { id: 'Angola-Multiple Renewables', parent: 'Angola', name: 'Multiple Renewables', value: 0.33456 },
+          { id: 'Angola-Wind', parent: 'Angola', name: 'Wind', value: 0.12849 },
+          { id: 'Angola-Solar', parent: 'Angola', name: 'Solar', value: 0.11272 },
+          { id: 'Egypt', parent: '', name: 'Egypt', value: 6.61353 },
+          { id: 'Egypt-Bioenergy', parent: 'Egypt', name: 'Bioenergy', value: 0.00113 },
+          { id: 'Egypt-Geothermal', parent: 'Egypt', name: 'Geothermal', value: 0.06051 },
+          { id: 'Egypt-Hydropower', parent: 'Egypt', name: 'Hydropower', value: 0.18628 },
+          { id: 'Egypt-Marine', parent: 'Egypt', name: 'Marine', value: 0.01143 },
+          { id: 'Egypt-Multiple Renewables', parent: 'Egypt', name: 'Multiple Renewables', value: 2.21802 },
+          { id: 'Egypt-Wind', parent: 'Egypt', name: 'Wind', value: 2.69876 },
+          { id: 'Egypt-Solar', parent: 'Egypt', name: 'Solar', value: 1.4374 }
         ],
         allowDrillToNode: true,
         cursor: 'pointer',
         dataLabels: {
           format: '{point.name}',
           style: {
-    fontSize: '12px', // Slightly smaller font for better fit
-    textOutline: 'none', // Improve readability by removing text outline
-  },
+            fontSize: '12px', // Slightly smaller font for better fit
+            textOutline: 'none', // Improve readability by removing text outline
+          },
           filter: {
             property: 'innerArcLength',
             operator: '>',
@@ -1148,9 +1541,9 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
               operator: '>',
               value: 50
             },
-    style: {
-      fontSize: '10px', // Ensure all names fit
-    }
+            style: {
+              fontSize: '10px', // Ensure all names fit
+            }
           },
           colorByPoint: true
         }, {
@@ -1177,19 +1570,19 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
         polar: true,
         type: 'column',
         height: 800
-    },
-    title: {
+      },
+      title: {
         text: 'Renewable Energy Installation (Watt/Capita)'
-    },
-    pane: {
+      },
+      pane: {
         size: '85%'
-    },
-    xAxis: {
+      },
+      xAxis: {
         categories: ['Bioenergy', 'Geothermal', 'Hydropower', 'Multiple Renewables', 'Wind', 'Solar'],
         tickmarkPlacement: 'on',
         lineWidth: 0
-    },
-    yAxis: {
+      },
+      yAxis: {
         gridLineInterpolation: 'polygon',
         lineWidth: 0,
         min: 0,
@@ -1197,76 +1590,76 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
         title: {
             // text: 'Installation Capacity (Watt/Capita)'
         }
-    },
-    tooltip: {
+      },
+      tooltip: {
         shared: true,
         pointFormat: '<b>{series.name}</b>: {point.y} W/Capita<br>'
-    },
-    legend: {
+      },
+      legend: {
         enabled: true,
         align: 'center',
         verticalAlign: 'bottom'
-    },
-    series: [
-       
-    {
-        "name": "India",
-        "data": [5, 1, 40, 20, 30, 15],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Pakistan",
-        "data": [2, 2, 50, 10, 20, 10],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Türkiye",
-        "data": [1, 5, 25, 15, 35, 10],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "South Africa",
-        "data": [2, 0.5, 30, 10, 25, 5],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Indonesia",
-        "data": [3, 25, 20, 8, 15, 5],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Egypt",
-        "data": [1, 1, 35, 15, 25, 20],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Brazil",
-        "data": [20, 3, 60, 40, 50, 25],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Argentina",
-        "data": [3, 0.1, 55, 10, 30, 10],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Uganda",
-        "data": [0.5, 0.5, 20, 5, 15, 5],
-        "pointPlacement": "on"
-    },
-    {
-        "name": "Angola",
-        "data": [1, 0.5, 25, 8, 20, 5],
-        "pointPlacement": "on"
-    }
-    ]
-});
+      },
+      series: [
+
+        {
+          "name": "India",
+          "data": [5, 1, 40, 20, 30, 15],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Pakistan",
+          "data": [2, 2, 50, 10, 20, 10],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Türkiye",
+          "data": [1, 5, 25, 15, 35, 10],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "South Africa",
+          "data": [2, 0.5, 30, 10, 25, 5],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Indonesia",
+          "data": [3, 25, 20, 8, 15, 5],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Egypt",
+          "data": [1, 1, 35, 15, 25, 20],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Brazil",
+          "data": [20, 3, 60, 40, 50, 25],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Argentina",
+          "data": [3, 0.1, 55, 10, 30, 10],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Uganda",
+          "data": [0.5, 0.5, 20, 5, 15, 5],
+          "pointPlacement": "on"
+        },
+        {
+          "name": "Angola",
+          "data": [1, 0.5, 25, 8, 20, 5],
+          "pointPlacement": "on"
+        }
+      ]
+    });
   </script>
   <script>
     let globalData = []; // Placeholder for JSON data
-        const countriesDropdown = document.getElementById('countries');
-        const countriesDropdown2 = document.getElementById('countries2')
-        const defaultCountries = ['India', 'Pakistan', 'Türkiye', 'South Africa', 'Argentina','Egypt','Indonesia','China','Uganda','Ethiopia','Angola'];
+    const countriesDropdown = document.getElementById('countries');
+    const countriesDropdown2 = document.getElementById('countries2')
+    const defaultCountries = ['India', 'Pakistan', 'Türkiye', 'South Africa', 'Argentina', 'Egypt', 'Indonesia', 'China', 'Uganda', 'Ethiopia', 'Angola'];
 
     const energyTypeDropdown = document.getElementById('energyType');
     const energyTypeDropdown2 = document.getElementById('energyType2');
@@ -1293,7 +1686,7 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
     "Hydropower":207.68,"Marine":0,"Multiple Renewables":0.07,"Solar":28.75,"Wind":1.16},{"country":"Zambia","year":2014,"All Renewables":86.95,"Bioenergy":0,"Geothermal":0,"Hydropower":230.95,"Marine":0,"Multiple Renewables":92.02,"Solar":65.38,"Wind":0},{"country":"Zambia","year":2015,"All Renewables":8.75,"Bioenergy":0,"Geothermal":0,"Hydropower":80.05,"Marine":0,"Multiple Renewables":103.52,"Solar":0.5,"Wind":0},{"country":"Zambia","year":2016,"All Renewables":207.72,"Bioenergy":0.01,"Geothermal":0,"Hydropower":0.11,"Marine":0,"Multiple Renewables":57.9,"Solar":12.48,"Wind":0},{"country":"Zambia","year":2017,"All Renewables":258.44,"Bioenergy":5.86,"Geothermal":0,"Hydropower":1766.27,"Marine":0,"Multiple Renewables":25.47,"Solar":0.27,"Wind":0},{"country":"Zambia","year":2018,"All Renewables":85.98,"Bioenergy":0,"Geothermal":0.82,"Hydropower":0,"Marine":0,"Multiple Renewables":0.22,"Solar":0.74,"Wind":0},{"country":"Zambia","year":2019,"All Renewables":120.88,"Bioenergy":0,"Geothermal":0,"Hydropower":49.78,"Marine":0,"Multiple Renewables":10.52,"Solar":5.37,"Wind":0},{"country":"Zambia","year":2020,"All Renewables":1937.16,"Bioenergy":0,"Geothermal":0,"Hydropower":13.28,"Marine":0,"Multiple Renewables":1.21,"Solar":0,"Wind":0},{"country":"Zambia","year":2021,"All Renewables":58.4,"Bioenergy":0.24,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.01,"Solar":0,"Wind":0},{"country":"Zambia","year":2022,"All Renewables":87.96,"Bioenergy":0,"Geothermal":0,"Hydropower":16.97,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2023,"All Renewables":13.77,"Bioenergy":0.07,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2024,"All Renewables":11.33,"Bioenergy":0.28,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2025,"All Renewables":23.82,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0}]`)
 
 
-    let energy_install=JSON.parse(`[{"country":"Angola","year":2003,"All Renewables":14,"Bioenergy":0,"Geothermal":0,"Hydropower":13,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2004,"All Renewables":14,"Bioenergy":0,"Geothermal":0,"Hydropower":26,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2005,"All Renewables":13,"Bioenergy":0,"Geothermal":0,"Hydropower":25,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2006,"All Renewables":13,"Bioenergy":0,"Geothermal":0,"Hydropower":25,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2007,"All Renewables":26,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2008,"All Renewables":25,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2009,"All Renewables":25,"Bioenergy":0,"Geothermal":0,"Hydropower":35,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2010,"All Renewables":36,"Bioenergy":0,"Geothermal":0,"Hydropower":34,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2011,"All Renewables":36,"Bioenergy":0,"Geothermal":0,"Hydropower":32,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2012,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":35,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2013,"All Renewables":34,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2014,"All Renewables":32,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2015,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":34,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2016,"All Renewables":36,"Bioenergy":1.9,"Geothermal":0,"Hydropower":58,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2017,"All Renewables":38,"Bioenergy":1.8,"Geothermal":0,"Hydropower":79,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2018,"All Renewables":36,"Bioenergy":1.7,"Geothermal":0,"Hydropower":98,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2019,"All Renewables":60,"Bioenergy":1.7,"Geothermal":0,"Hydropower":105,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2020,"All Renewables":81,"Bioenergy":1.6,"Geothermal":0,"Hydropower":112,"Marine":0,"Multiple Renewables":8,"Solar":0,"Wind":0},{"country":"Angola","year":2021,"All Renewables":100,"Bioenergy":1.6,"Geothermal":0,"Hydropower":108,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2022,"All Renewables":107,"Bioenergy":1.5,"Geothermal":0,"Hydropower":105,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2023,"All Renewables":113,"Bioenergy":1.5,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2024,"All Renewables":110,"Bioenergy":1.4,"Geothermal":14,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2025,"All Renewables":114,"Bioenergy":0,"Geothermal":14,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Argentina","year":2003,"All Renewables":235,"Bioenergy":1.7,"Geothermal":0,"Hydropower":230,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2004,"All Renewables":233,"Bioenergy":2.1,"Geothermal":0,"Hydropower":231,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2005,"All Renewables":235,"Bioenergy":2.7,"Geothermal":0,"Hydropower":229,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2006,"All Renewables":234,"Bioenergy":3,"Geothermal":0,"Hydropower":227,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2007,"All Renewables":235,"Bioenergy":3.3,"Geothermal":0,"Hydropower":230,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2008,"All Renewables":233,"Bioenergy":4.1,"Geothermal":0,"Hydropower":228,"Marine":0,"Multiple Renewables":0,"Solar":1.4,"Wind":0},{"country":"Argentina","year":2009,"All Renewables":232,"Bioenergy":4.9,"Geothermal":0,"Hydropower":235,"Marine":0,"Multiple Renewables":0.1,"Solar":3.3,"Wind":0},{"country":"Argentina","year":2010,"All Renewables":236,"Bioenergy":5.1,"Geothermal":0,"Hydropower":233,"Marine":0,"Multiple Renewables":0.2,"Solar":4.5,"Wind":0},{"country":"Argentina","year":2011,"All Renewables":234,"Bioenergy":4.9,"Geothermal":0,"Hydropower":243,"Marine":0,"Multiple Renewables":0.3,"Solar":5,"Wind":0},{"country":"Argentina","year":2012,"All Renewables":241,"Bioenergy":5.6,"Geothermal":0,"Hydropower":242,"Marine":0,"Multiple Renewables":0.3,"Solar":4.3,"Wind":0},{"country":"Argentina","year":2013,"All Renewables":239,"Bioenergy":5.6,"Geothermal":0,"Hydropower":239,"Marine":0,"Multiple Renewables":0.3,"Solar":4.3,"Wind":0},{"country":"Argentina","year":2014,"All Renewables":250,"Bioenergy":6.1,"Geothermal":0,"Hydropower":237,"Marine":0,"Multiple Renewables":0.2,"Solar":5.1,"Wind":0},{"country":"Argentina","year":2015,"All Renewables":251,"Bioenergy":6.2,"Geothermal":0,"Hydropower":236,"Marine":0,"Multiple Renewables":0.2,"Solar":17,"Wind":0},{"country":"Argentina","year":2016,"All Renewables":250,"Bioenergy":5.4,"Geothermal":0,"Hydropower":235,"Marine":0,"Multiple Renewables":4.4,"Solar":36,"Wind":0},{"country":"Argentina","year":2017,"All Renewables":247,"Bioenergy":6,"Geothermal":0,"Hydropower":233,"Marine":0,"Multiple Renewables":9.9,"Solar":58,"Wind":0},{"country":"Argentina","year":2018,"All Renewables":247,"Bioenergy":5.7,"Geothermal":0,"Hydropower":232,"Marine":0,"Multiple Renewables":17,"Solar":73,"Wind":0},{"country":"Argentina","year":2019,"All Renewables":245,"Bioenergy":5.6,"Geothermal":0,"Hydropower":231,"Marine":0,"Multiple Renewables":24,"Solar":73,"Wind":0},{"country":"Argentina","year":2020,"All Renewables":244,"Bioenergy":5,"Geothermal":0,"Hydropower":230,"Marine":0,"Multiple Renewables":24,"Solar":0,"Wind":0},{"country":"Argentina","year":2021,"All Renewables":259,"Bioenergy":6.7,"Geothermal":0,"Hydropower":229,"Marine":0,"Multiple Renewables":0.4,"Solar":0,"Wind":0},{"country":"Argentina","year":2022,"All Renewables":284,"Bioenergy":6.8,"Geothermal":0,"Hydropower":228,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Argentina","year":2023,"All Renewables":312,"Bioenergy":6.2,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Argentina","year":2024,"All Renewables":332,"Bioenergy":6.3,"Geothermal":232,"Hydropower":0,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Argentina","year":2025,"All Renewables":332,"Bioenergy":0,"Geothermal":230,"Hydropower":0,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2003,"All Renewables":1.8,"Bioenergy":0,"Geothermal":0,"Hydropower":1.7,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2004,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.7,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2005,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2006,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2007,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2008,"All Renewables":1.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.2,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2009,"All Renewables":1.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.6,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2010,"All Renewables":1.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2011,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":0.9,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2012,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":1.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2013,"All Renewables":1.8,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":1.2,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2014,"All Renewables":2.1,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2015,"All Renewables":2.2,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":1.3,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2016,"All Renewables":2.5,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":1.5,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2017,"All Renewables":2.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":1.7,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2018,"All Renewables":2.8,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":2.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2019,"All Renewables":2.5,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":3,"Solar":0,"Wind":0},{"country":
+    let energy_install = JSON.parse(`[{"country":"Angola","year":2003,"All Renewables":14,"Bioenergy":0,"Geothermal":0,"Hydropower":13,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2004,"All Renewables":14,"Bioenergy":0,"Geothermal":0,"Hydropower":26,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2005,"All Renewables":13,"Bioenergy":0,"Geothermal":0,"Hydropower":25,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2006,"All Renewables":13,"Bioenergy":0,"Geothermal":0,"Hydropower":25,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2007,"All Renewables":26,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2008,"All Renewables":25,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2009,"All Renewables":25,"Bioenergy":0,"Geothermal":0,"Hydropower":35,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2010,"All Renewables":36,"Bioenergy":0,"Geothermal":0,"Hydropower":34,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2011,"All Renewables":36,"Bioenergy":0,"Geothermal":0,"Hydropower":32,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2012,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":35,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2013,"All Renewables":34,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2014,"All Renewables":32,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2015,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":34,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2016,"All Renewables":36,"Bioenergy":1.9,"Geothermal":0,"Hydropower":58,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2017,"All Renewables":38,"Bioenergy":1.8,"Geothermal":0,"Hydropower":79,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2018,"All Renewables":36,"Bioenergy":1.7,"Geothermal":0,"Hydropower":98,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2019,"All Renewables":60,"Bioenergy":1.7,"Geothermal":0,"Hydropower":105,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2020,"All Renewables":81,"Bioenergy":1.6,"Geothermal":0,"Hydropower":112,"Marine":0,"Multiple Renewables":8,"Solar":0,"Wind":0},{"country":"Angola","year":2021,"All Renewables":100,"Bioenergy":1.6,"Geothermal":0,"Hydropower":108,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2022,"All Renewables":107,"Bioenergy":1.5,"Geothermal":0,"Hydropower":105,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2023,"All Renewables":113,"Bioenergy":1.5,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2024,"All Renewables":110,"Bioenergy":1.4,"Geothermal":14,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Angola","year":2025,"All Renewables":114,"Bioenergy":0,"Geothermal":14,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Argentina","year":2003,"All Renewables":235,"Bioenergy":1.7,"Geothermal":0,"Hydropower":230,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2004,"All Renewables":233,"Bioenergy":2.1,"Geothermal":0,"Hydropower":231,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2005,"All Renewables":235,"Bioenergy":2.7,"Geothermal":0,"Hydropower":229,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2006,"All Renewables":234,"Bioenergy":3,"Geothermal":0,"Hydropower":227,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2007,"All Renewables":235,"Bioenergy":3.3,"Geothermal":0,"Hydropower":230,"Marine":0,"Multiple Renewables":0,"Solar":0.7,"Wind":0},{"country":"Argentina","year":2008,"All Renewables":233,"Bioenergy":4.1,"Geothermal":0,"Hydropower":228,"Marine":0,"Multiple Renewables":0,"Solar":1.4,"Wind":0},{"country":"Argentina","year":2009,"All Renewables":232,"Bioenergy":4.9,"Geothermal":0,"Hydropower":235,"Marine":0,"Multiple Renewables":0.1,"Solar":3.3,"Wind":0},{"country":"Argentina","year":2010,"All Renewables":236,"Bioenergy":5.1,"Geothermal":0,"Hydropower":233,"Marine":0,"Multiple Renewables":0.2,"Solar":4.5,"Wind":0},{"country":"Argentina","year":2011,"All Renewables":234,"Bioenergy":4.9,"Geothermal":0,"Hydropower":243,"Marine":0,"Multiple Renewables":0.3,"Solar":5,"Wind":0},{"country":"Argentina","year":2012,"All Renewables":241,"Bioenergy":5.6,"Geothermal":0,"Hydropower":242,"Marine":0,"Multiple Renewables":0.3,"Solar":4.3,"Wind":0},{"country":"Argentina","year":2013,"All Renewables":239,"Bioenergy":5.6,"Geothermal":0,"Hydropower":239,"Marine":0,"Multiple Renewables":0.3,"Solar":4.3,"Wind":0},{"country":"Argentina","year":2014,"All Renewables":250,"Bioenergy":6.1,"Geothermal":0,"Hydropower":237,"Marine":0,"Multiple Renewables":0.2,"Solar":5.1,"Wind":0},{"country":"Argentina","year":2015,"All Renewables":251,"Bioenergy":6.2,"Geothermal":0,"Hydropower":236,"Marine":0,"Multiple Renewables":0.2,"Solar":17,"Wind":0},{"country":"Argentina","year":2016,"All Renewables":250,"Bioenergy":5.4,"Geothermal":0,"Hydropower":235,"Marine":0,"Multiple Renewables":4.4,"Solar":36,"Wind":0},{"country":"Argentina","year":2017,"All Renewables":247,"Bioenergy":6,"Geothermal":0,"Hydropower":233,"Marine":0,"Multiple Renewables":9.9,"Solar":58,"Wind":0},{"country":"Argentina","year":2018,"All Renewables":247,"Bioenergy":5.7,"Geothermal":0,"Hydropower":232,"Marine":0,"Multiple Renewables":17,"Solar":73,"Wind":0},{"country":"Argentina","year":2019,"All Renewables":245,"Bioenergy":5.6,"Geothermal":0,"Hydropower":231,"Marine":0,"Multiple Renewables":24,"Solar":73,"Wind":0},{"country":"Argentina","year":2020,"All Renewables":244,"Bioenergy":5,"Geothermal":0,"Hydropower":230,"Marine":0,"Multiple Renewables":24,"Solar":0,"Wind":0},{"country":"Argentina","year":2021,"All Renewables":259,"Bioenergy":6.7,"Geothermal":0,"Hydropower":229,"Marine":0,"Multiple Renewables":0.4,"Solar":0,"Wind":0},{"country":"Argentina","year":2022,"All Renewables":284,"Bioenergy":6.8,"Geothermal":0,"Hydropower":228,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Argentina","year":2023,"All Renewables":312,"Bioenergy":6.2,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Argentina","year":2024,"All Renewables":332,"Bioenergy":6.3,"Geothermal":232,"Hydropower":0,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Argentina","year":2025,"All Renewables":332,"Bioenergy":0,"Geothermal":230,"Hydropower":0,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2003,"All Renewables":1.8,"Bioenergy":0,"Geothermal":0,"Hydropower":1.7,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2004,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.7,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2005,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2006,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2007,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2008,"All Renewables":1.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.2,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2009,"All Renewables":1.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.6,"Marine":0,"Multiple Renewables":0.6,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2010,"All Renewables":1.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":0.7,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2011,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":0.9,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2012,"All Renewables":1.7,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":1.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2013,"All Renewables":1.8,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":1.2,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2014,"All Renewables":2.1,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2015,"All Renewables":2.2,"Bioenergy":0,"Geothermal":0,"Hydropower":1.5,"Marine":0,"Multiple Renewables":1.3,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2016,"All Renewables":2.5,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":1.5,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2017,"All Renewables":2.6,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":1.7,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2018,"All Renewables":2.8,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":2.1,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2019,"All Renewables":2.5,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":3,"Solar":0,"Wind":0},{"country":
     "Bangladesh","year":2020,"All Renewables":2.8,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":3.3,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2021,"All Renewables":2.9,"Bioenergy":0,"Geothermal":0,"Hydropower":1.4,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2022,"All Renewables":3.1,"Bioenergy":0,"Geothermal":0,"Hydropower":1.3,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2023,"All Renewables":3.5,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2024,"All Renewables":4.4,"Bioenergy":0,"Geothermal":1.8,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bangladesh","year":2025,"All Renewables":4.7,"Bioenergy":0,"Geothermal":1.7,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2003,"All Renewables":44,"Bioenergy":1.8,"Geothermal":0,"Hydropower":50,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2004,"All Renewables":45,"Bioenergy":1.8,"Geothermal":0,"Hydropower":51,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2005,"All Renewables":53,"Bioenergy":1.8,"Geothermal":0,"Hydropower":51,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2006,"All Renewables":52,"Bioenergy":5.6,"Geothermal":0,"Hydropower":52,"Marine":0,"Multiple Renewables":0.2,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2007,"All Renewables":57,"Bioenergy":5.5,"Geothermal":0,"Hydropower":51,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2008,"All Renewables":56,"Bioenergy":5.4,"Geothermal":0,"Hydropower":50,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2009,"All Renewables":57,"Bioenergy":8.8,"Geothermal":0,"Hydropower":50,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2010,"All Renewables":60,"Bioenergy":8.6,"Geothermal":0,"Hydropower":49,"Marine":0,"Multiple Renewables":0.4,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2011,"All Renewables":59,"Bioenergy":8.5,"Geothermal":0,"Hydropower":49,"Marine":0,"Multiple Renewables":0.5,"Solar":0.3,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2012,"All Renewables":58,"Bioenergy":8.3,"Geothermal":0,"Hydropower":49,"Marine":0,"Multiple Renewables":0.5,"Solar":0.3,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2013,"All Renewables":58,"Bioenergy":8.2,"Geothermal":0,"Hydropower":49,"Marine":0,"Multiple Renewables":0.5,"Solar":2.4,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2014,"All Renewables":58,"Bioenergy":8.1,"Geothermal":0,"Hydropower":47,"Marine":0,"Multiple Renewables":0.5,"Solar":2.4,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2015,"All Renewables":57,"Bioenergy":7.9,"Geothermal":0,"Hydropower":47,"Marine":0,"Multiple Renewables":0.9,"Solar":2.3,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2016,"All Renewables":57,"Bioenergy":12,"Geothermal":0,"Hydropower":46,"Marine":0,"Multiple Renewables":6,"Solar":2.3,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2017,"All Renewables":60,"Bioenergy":12,"Geothermal":0,"Hydropower":57,"Marine":0,"Multiple Renewables":10,"Solar":2.3,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2018,"All Renewables":60,"Bioenergy":12,"Geothermal":0,"Hydropower":63,"Marine":0,"Multiple Renewables":10,"Solar":11,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2019,"All Renewables":62,"Bioenergy":12,"Geothermal":0,"Hydropower":68,"Marine":0,"Multiple Renewables":14,"Solar":11,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2020,"All Renewables":72,"Bioenergy":15,"Geothermal":0,"Hydropower":67,"Marine":0,"Multiple Renewables":14,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2021,"All Renewables":86,"Bioenergy":16,"Geothermal":0,"Hydropower":66,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2022,"All Renewables":96,"Bioenergy":16,"Geothermal":0,"Hydropower":65,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2023,"All Renewables":95,"Bioenergy":21,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2024,"All Renewables":112,"Bioenergy":22,"Geothermal":42,"Hydropower":0,"Marine":0.1,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Bolivia (Plurinational State of)","year":2025,"All Renewables":112,"Bioenergy":0,"Geothermal":43,"Hydropower":0,"Marine":0.1,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Brazil","year":2003,"All Renewables":362,"Bioenergy":15,"Geothermal":0,"Hydropower":371,"Marine":0,"Multiple Renewables":0,"Solar":1.3,"Wind":0},{"country":"Brazil","year":2004,"All Renewables":365,"Bioenergy":15,"Geothermal":0,"Hydropower":374,"Marine":0,"Multiple Renewables":0,"Solar":1.3,"Wind":0},{"country":"Brazil","year":2005,"All Renewables":372,"Bioenergy":15,"Geothermal":0,"Hydropower":380,"Marine":0,"Multiple Renewables":0,"Solar":2.1,"Wind":0},{"country":"Brazil","year":2006,"All Renewables":386,"Bioenergy":17,"Geothermal":0,"Hydropower":390,"Marine":0,"Multiple Renewables":0,"Solar":3.1,"Wind":0},{"country":"Brazil","year":2007,"All Renewables":391,"Bioenergy":18,"Geothermal":0,"Hydropower":403,"Marine":0,"Multiple Renewables":0,"Solar":4.7,"Wind":0},{"country":"Brazil","year":2008,"All Renewables":398,"Bioenergy":20,"Geothermal":0,"Hydropower":402,"Marine":0,"Multiple Renewables":0,"Solar":7.2,"Wind":0},{"country":"Brazil","year":2009,"All Renewables":411,"Bioenergy":22,"Geothermal":0,"Hydropower":404,"Marine":0,"Multiple Renewables":0,"Solar":9.5,"Wind":0},{"country":"Brazil","year":2010,"All Renewables":426,"Bioenergy":26,"Geothermal":0,"Hydropower":411,"Marine":0,"Multiple Renewables":0,"Solar":11,"Wind":0},{"country":"Brazil","year":2011,"All Renewables":431,"Bioenergy":29,"Geothermal":0,"Hydropower":416,"Marine":0,"Multiple Renewables":0.1,"Solar":24,"Wind":0},{"country":"Brazil","year":2012,"All Renewables":437,"Bioenergy":40,"Geothermal":0,"Hydropower":422,"Marine":0,"Multiple Renewables":0.1,"Solar":37,"Wind":0},{"country":"Brazil","year":2013,"All Renewables":456,"Bioenergy":46,"Geothermal":0,"Hydropower":426,"Marine":0,"Multiple Renewables":0.2,"Solar":49,"Wind":0},{"country":"Brazil","year":2014,"All Renewables":469,"Bioenergy":50,"Geothermal":0,"Hydropower":438,"Marine":0,"Multiple Renewables":0.6,"Solar":59,"Wind":0},{"country":"Brazil","year":2015,"All Renewables":481,"Bioenergy":58,"Geothermal":0,"Hydropower":447,"Marine":0,"Multiple Renewables":5.8,"Solar":71,"Wind":0},{"country":"Brazil","year":2016,"All Renewables":495,"Bioenergy":61,"Geothermal":0,"Hydropower":469,"Marine":0,"Multiple Renewables":12,"Solar":73,"Wind":0},{"country":"Brazil","year":2017,"All Renewables":523,"Bioenergy":65,"Geothermal":0,"Hydropower":481,"Marine":0,"Multiple Renewables":22,"Solar":81,"Wind":0},{"country":"Brazil","year":2018,"All Renewables":549,"Bioenergy":69,"Geothermal":0,"Hydropower":497,"Marine":0,"Multiple Renewables":39,"Solar":99,"Wind":0},{"country":"Brazil","year":2019,"All Renewables":587,"Bioenergy":70,"Geothermal":0,"Hydropower":515,"Marine":0,"Multiple Renewables":66,"Solar":112,"Wind":0},{"country":"Brazil","year":2020,"All Renewables":616,"Bioenergy":71,"Geothermal":0,"Hydropower":513,"Marine":0,"Multiple Renewables":112,"Solar":0,"Wind":0},{"country":"Brazil","year":2021,"All Renewables":650,"Bioenergy":73,"Geothermal":0,"Hydropower":511,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Brazil","year":2022,"All Renewables":683,"Bioenergy":74,"Geothermal":0,"Hydropower":510,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Brazil","year":2023,"All Renewables":706,"Bioenergy":76,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Brazil","year":2024,"All Renewables":752,"Bioenergy":80,"Geothermal":347,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Brazil","year":2025,"All Renewables":814,"Bioenergy":0,"Geothermal":350,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Cameroon","year":2003,"All Renewables":48,"Bioenergy":0,"Geothermal":0,"Hydropower":44,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2004,"All Renewables":46,"Bioenergy":0,"Geothermal":0,"Hydropower":43,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2005,"All Renewables":45,"Bioenergy":0,"Geothermal":0,"Hydropower":42,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2006,"All Renewables":44,"Bioenergy":0,"Geothermal":0,"Hydropower":41,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2007,"All Renewables":43,"Bioenergy":0,"Geothermal":0,"Hydropower":39,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2008,"All Renewables":42,"Bioenergy":0,"Geothermal":0,"Hydropower":38,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Cameroon","year":2009,"All Renewables":41,"Bioenergy":0,"Geothermal":0,"Hydropower":37,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Cameroon","year":2010,"All Renewables":39,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Cameroon",
     "year":2011,"All Renewables":38,"Bioenergy":0,"Geothermal":0,"Hydropower":36,"Marine":0,"Multiple Renewables":0.2,"Solar":0,"Wind":0},{"country":"Cameroon","year":2012,"All Renewables":37,"Bioenergy":0,"Geothermal":0,"Hydropower":35,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"Cameroon","year":2013,"All Renewables":36,"Bioenergy":0,"Geothermal":0,"Hydropower":34,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"Cameroon","year":2014,"All Renewables":36,"Bioenergy":0,"Geothermal":0,"Hydropower":33,"Marine":0,"Multiple Renewables":0.4,"Solar":0,"Wind":0},{"country":"Cameroon","year":2015,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":32,"Marine":0,"Multiple Renewables":0.5,"Solar":0,"Wind":0},{"country":"Cameroon","year":2016,"All Renewables":34,"Bioenergy":0,"Geothermal":0,"Hydropower":31,"Marine":0,"Multiple Renewables":0.6,"Solar":0,"Wind":0},{"country":"Cameroon","year":2017,"All Renewables":33,"Bioenergy":0,"Geothermal":0,"Hydropower":30,"Marine":0,"Multiple Renewables":0.6,"Solar":0,"Wind":0},{"country":"Cameroon","year":2018,"All Renewables":32,"Bioenergy":0,"Geothermal":0,"Hydropower":29,"Marine":0,"Multiple Renewables":0.5,"Solar":0,"Wind":0},{"country":"Cameroon","year":2019,"All Renewables":31,"Bioenergy":0,"Geothermal":0,"Hydropower":32,"Marine":0,"Multiple Renewables":0.5,"Solar":0,"Wind":0},{"country":"Cameroon","year":2020,"All Renewables":30,"Bioenergy":0,"Geothermal":0,"Hydropower":31,"Marine":0,"Multiple Renewables":0.5,"Solar":0,"Wind":0},{"country":"Cameroon","year":2021,"All Renewables":30,"Bioenergy":0,"Geothermal":0,"Hydropower":30,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2022,"All Renewables":32,"Bioenergy":0,"Geothermal":0,"Hydropower":29,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2023,"All Renewables":31,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2024,"All Renewables":30,"Bioenergy":0,"Geothermal":48,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Cameroon","year":2025,"All Renewables":30,"Bioenergy":0,"Geothermal":46,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Chile","year":2003,"All Renewables":303,"Bioenergy":30,"Geothermal":0,"Hydropower":282,"Marine":0,"Multiple Renewables":0,"Solar":0.1,"Wind":0},{"country":"Chile","year":2004,"All Renewables":316,"Bioenergy":28,"Geothermal":0,"Hydropower":326,"Marine":0,"Multiple Renewables":0,"Solar":1.2,"Wind":0},{"country":"Chile","year":2005,"All Renewables":312,"Bioenergy":26,"Geothermal":0,"Hydropower":323,"Marine":0,"Multiple Renewables":0,"Solar":1.2,"Wind":0},{"country":"Chile","year":2006,"All Renewables":308,"Bioenergy":29,"Geothermal":0,"Hydropower":320,"Marine":0,"Multiple Renewables":0,"Solar":9.7,"Wind":0},{"country":"Chile","year":2007,"All Renewables":355,"Bioenergy":25,"Geothermal":0,"Hydropower":325,"Marine":0,"Multiple Renewables":0,"Solar":9.6,"Wind":0},{"country":"Chile","year":2008,"All Renewables":348,"Bioenergy":20,"Geothermal":0,"Hydropower":326,"Marine":0,"Multiple Renewables":0,"Solar":11,"Wind":0},{"country":"Chile","year":2009,"All Renewables":340,"Bioenergy":37,"Geothermal":0,"Hydropower":324,"Marine":0,"Multiple Renewables":0,"Solar":12,"Wind":0},{"country":"Chile","year":2010,"All Renewables":363,"Bioenergy":42,"Geothermal":0,"Hydropower":322,"Marine":0,"Multiple Renewables":0.1,"Solar":17,"Wind":0},{"country":"Chile","year":2011,"All Renewables":370,"Bioenergy":58,"Geothermal":0,"Hydropower":346,"Marine":0,"Multiple Renewables":0.9,"Solar":42,"Wind":0},{"country":"Chile","year":2012,"All Renewables":392,"Bioenergy":30,"Geothermal":0,"Hydropower":346,"Marine":0,"Multiple Renewables":12,"Solar":51,"Wind":0},{"country":"Chile","year":2013,"All Renewables":361,"Bioenergy":63,"Geothermal":0,"Hydropower":348,"Marine":0,"Multiple Renewables":32,"Solar":57,"Wind":0},{"country":"Chile","year":2014,"All Renewables":420,"Bioenergy":65,"Geothermal":0,"Hydropower":364,"Marine":0,"Multiple Renewables":62,"Solar":71,"Wind":0},{"country":"Chile","year":2015,"All Renewables":423,"Bioenergy":76,"Geothermal":0,"Hydropower":364,"Marine":0,"Multiple Renewables":98,"Solar":81,"Wind":0},{"country":"Chile","year":2016,"All Renewables":442,"Bioenergy":71,"Geothermal":0,"Hydropower":369,"Marine":0,"Multiple Renewables":114,"Solar":85,"Wind":0},{"country":"Chile","year":2017,"All Renewables":489,"Bioenergy":74,"Geothermal":0,"Hydropower":364,"Marine":0,"Multiple Renewables":139,"Solar":111,"Wind":0},{"country":"Chile","year":2018,"All Renewables":521,"Bioenergy":78,"Geothermal":1.3,"Hydropower":357,"Marine":0,"Multiple Renewables":166,"Solar":161,"Wind":0},{"country":"Chile","year":2019,"All Renewables":567,"Bioenergy":78,"Geothermal":2.6,"Hydropower":351,"Marine":0,"Multiple Renewables":229,"Solar":195,"Wind":0},{"country":"Chile","year":2020,"All Renewables":612,"Bioenergy":72,"Geothermal":2.1,"Hydropower":351,"Marine":0,"Multiple Renewables":319,"Solar":0,"Wind":0},{"country":"Chile","year":2021,"All Renewables":627,"Bioenergy":67,"Geothermal":2.1,"Hydropower":349,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Chile","year":2022,"All Renewables":645,"Bioenergy":64,"Geothermal":2,"Hydropower":372,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Chile","year":2023,"All Renewables":694,"Bioenergy":68,"Geothermal":2.6,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Chile","year":2024,"All Renewables":810,"Bioenergy":70,"Geothermal":289,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Chile","year":2025,"All Renewables":959,"Bioenergy":0,"Geothermal":285,"Hydropower":0,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"China","year":2003,"All Renewables":60,"Bioenergy":0.9,"Geothermal":0,"Hydropower":70,"Marine":0,"Multiple Renewables":0.1,"Solar":1.6,"Wind":0},{"country":"China","year":2004,"All Renewables":62,"Bioenergy":1.3,"Geothermal":0,"Hydropower":77,"Marine":0,"Multiple Renewables":0.1,"Solar":3.2,"Wind":0},{"country":"China","year":2005,"All Renewables":65,"Bioenergy":1.4,"Geothermal":0,"Hydropower":86,"Marine":0,"Multiple Renewables":0.2,"Solar":6.3,"Wind":0},{"country":"China","year":2006,"All Renewables":72,"Bioenergy":1.5,"Geothermal":0,"Hydropower":95,"Marine":0,"Multiple Renewables":0.2,"Solar":13,"Wind":0},{"country":"China","year":2007,"All Renewables":79,"Bioenergy":1.5,"Geothermal":0,"Hydropower":105,"Marine":0,"Multiple Renewables":0.3,"Solar":22,"Wind":0},{"country":"China","year":2008,"All Renewables":88,"Bioenergy":1.9,"Geothermal":0,"Hydropower":122,"Marine":0,"Multiple Renewables":0.8,"Solar":34,"Wind":0},{"country":"China","year":2009,"All Renewables":98,"Bioenergy":2.3,"Geothermal":0,"Hydropower":136,"Marine":0,"Multiple Renewables":2.3,"Solar":45,"Wind":0},{"country":"China","year":2010,"All Renewables":111,"Bioenergy":2.5,"Geothermal":0,"Hydropower":148,"Marine":0,"Multiple Renewables":4.9,"Solar":56,"Wind":0},{"country":"China","year":2011,"All Renewables":131,"Bioenergy":3.4,"Geothermal":0,"Hydropower":158,"Marine":0,"Multiple Renewables":13,"Solar":70,"Wind":0},{"country":"China","year":2012,"All Renewables":153,"Bioenergy":2.6,"Geothermal":0,"Hydropower":168,"Marine":0,"Multiple Renewables":21,"Solar":94,"Wind":0},{"country":"China","year":2013,"All Renewables":173,"Bioenergy":2.8,"Geothermal":0,"Hydropower":188,"Marine":0,"Multiple Renewables":31,"Solar":106,"Wind":0},{"country":"China","year":2014,"All Renewables":197,"Bioenergy":3.4,"Geothermal":0,"Hydropower":204,"Marine":0,"Multiple Renewables":56,"Solar":117,"Wind":0},{"country":"China","year":2015,"All Renewables":221,"Bioenergy":4.4,"Geothermal":0,"Hydropower":213,"Marine":0,"Multiple Renewables":93,"Solar":130,"Wind":0},{"country":"China","year":2016,"All Renewables":261,"Bioenergy":4.8,"Geothermal":0,"Hydropower":218,"Marine":0,"Multiple Renewables":124,"Solar":147,"Wind":0},{"country":"China","year":2017,"All Renewables":299,"Bioenergy":5.7,"Geothermal":0,"Hydropower":223,"Marine":0,"Multiple Renewables":144,"Solar":198,"Wind":0},{"country":"China","year":2018,"All Renewables":344,"Bioenergy":6.6,"Geothermal":0,"Hydropower":227,"Marine":0,"Multiple Renewables":178,"Solar":231,"Wind":0},{"country":"China","year":2019,"All Renewables":386,"Bioenergy":8,"Geothermal":0,"Hydropower":231,"Marine":0,"Multiple Renewables":215,"Solar":257,"Wind":0},{"country":"China","year":2020,"All Renewables":440,"Bioenergy":9.3,"Geothermal":0,"Hydropower":239,"Marine":0,"Multiple Renewables":276,"Solar":0,"Wind":0},{"country":"China","year":2021,"All Renewables":491,"Bioenergy":12,"Geothermal":0,"Hydropower":249,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"China","year":2022,"All Renewables":534,"Bioenergy":17,"Geothermal":0,"Hydropower":258,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"China","year":2023,"All Renewables":631,"Bioenergy":21,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0.4,"Solar":0,"Wind":0},{"country":"China","year":2024,"All Renewables":716,"Bioenergy":24,"Geothermal":59,"Hydropower":0,"Marine":0,"Multiple Renewables":0.4,"Solar":0,"Wind":0},{"country":"China","year":2025,"All Renewables":814,"Bioenergy":0,"Geothermal":61,"Hydropower":0,"Marine":0.1,"Multiple Renewables":0.6,"Solar":0,"Wind":0},{"country":"Colombia","year":2003,"All Renewables":213,"Bioenergy":2,"Geothermal":0,"Hydropower":216,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2004,"All Renewables":220,"Bioenergy":2,"Geothermal":0,"Hydropower":214,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2005,"All Renewables":226,"Bioenergy":1.9,"Geothermal":0,"Hydropower":212,"Marine":0,"Multiple Renewables":0,"Solar":0.4,
     "Wind":0},{"country":"Colombia","year":2006,"All Renewables":218,"Bioenergy":1.9,"Geothermal":0,"Hydropower":209,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2007,"All Renewables":217,"Bioenergy":1.9,"Geothermal":0,"Hydropower":208,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2008,"All Renewables":214,"Bioenergy":2.2,"Geothermal":0,"Hydropower":205,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2009,"All Renewables":212,"Bioenergy":2.2,"Geothermal":0,"Hydropower":203,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2010,"All Renewables":210,"Bioenergy":2.1,"Geothermal":0,"Hydropower":202,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2011,"All Renewables":208,"Bioenergy":2.6,"Geothermal":0,"Hydropower":214,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2012,"All Renewables":206,"Bioenergy":3.9,"Geothermal":0,"Hydropower":214,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2013,"All Renewables":206,"Bioenergy":4,"Geothermal":0,"Hydropower":213,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2014,"All Renewables":219,"Bioenergy":4,"Geothermal":0,"Hydropower":234,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2015,"All Renewables":218,"Bioenergy":4,"Geothermal":0,"Hydropower":244,"Marine":0,"Multiple Renewables":0.2,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2016,"All Renewables":218,"Bioenergy":4.6,"Geothermal":0,"Hydropower":244,"Marine":0,"Multiple Renewables":0.3,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2017,"All Renewables":239,"Bioenergy":5,"Geothermal":0,"Hydropower":243,"Marine":0,"Multiple Renewables":0.5,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2018,"All Renewables":250,"Bioenergy":5.4,"Geothermal":0,"Hydropower":240,"Marine":0,"Multiple Renewables":1.7,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2019,"All Renewables":250,"Bioenergy":6.4,"Geothermal":0,"Hydropower":238,"Marine":0,"Multiple Renewables":4,"Solar":0.4,"Wind":0},{"country":"Colombia","year":2020,"All Renewables":250,"Bioenergy":6.5,"Geothermal":0,"Hydropower":235,"Marine":0,"Multiple Renewables":9.5,"Solar":0,"Wind":0},{"country":"Colombia","year":2021,"All Renewables":247,"Bioenergy":6.4,"Geothermal":0,"Hydropower":232,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Colombia","year":2022,"All Renewables":245,"Bioenergy":6.5,"Geothermal":0,"Hydropower":242,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Colombia","year":2023,"All Renewables":243,"Bioenergy":7.7,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Colombia","year":2024,"All Renewables":244,"Bioenergy":7.6,"Geothermal":211,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Colombia","year":2025,"All Renewables":260,"Bioenergy":0,"Geothermal":218,"Hydropower":0,"Marine":0,"Multiple Renewables":0.5,"Solar":0,"Wind":0},{"country":"Costa Rica","year":2003,"All Renewables":358,"Bioenergy":3,"Geothermal":35,"Hydropower":309,"Marine":0,"Multiple Renewables":0.1,"Solar":16,"Wind":0},{"country":"Costa Rica","year":2004,"All Renewables":357,"Bioenergy":2.9,"Geothermal":39,"Hydropower":307,"Marine":0,"Multiple Renewables":0.1,"Solar":15,"Wind":0},{"country":"Costa Rica","year":2005,"All Renewables":362,"Bioenergy":3.9,"Geothermal":39,"Hydropower":302,"Marine":0,"Multiple Renewables":0.1,"Solar":15,"Wind":0},{"country":"Costa Rica","year":2006,"All Renewables":369,"Bioenergy":5.6,"Geothermal":38,"Hydropower":322,"Marine":0,"Multiple Renewables":0.1,"Solar":25,"Wind":0},{"country":"Costa Rica","year":2007,"All Renewables":367,"Bioenergy":5.6,"Geothermal":38,"Hydropower":360,"Marine":0,"Multiple Renewables":0.1,"Solar":26,"Wind":0},{"country":"Costa Rica","year":2008,"All Renewables":362,"Bioenergy":5.5,"Geothermal":37,"Hydropower":359,"Marine":0,"Multiple Renewables":0.1,"Solar":28,"Wind":0},{"country":"Costa Rica","year":2009,"All Renewables":382,"Bioenergy":6.8,"Geothermal":37,"Hydropower":364,"Marine":0,"Multiple Renewables":0.2,"Solar":31,"Wind":0},{"country":"Costa Rica","year":2010,"All Renewables":419,"Bioenergy":6.7,"Geothermal":36,"Hydropower":336,"Marine":0,"Multiple Renewables":0.5,"Solar":31,"Wind":0},{"country":"Costa Rica","year":2011,"All Renewables":418,"Bioenergy":6.6,"Geothermal":36,"Hydropower":351,"Marine":0,"Multiple Renewables":0.6,"Solar":41,"Wind":0},{"country":"Costa Rica","year":2012,"All Renewables":432,"Bioenergy":9.5,"Geothermal":46,"Hydropower":359,"Marine":0,"Multiple Renewables":1.1,"Solar":57,"Wind":0},{"country":"Costa Rica","year":2013,"All Renewables":407,"Bioenergy":9.5,"Geothermal":46,"Hydropower":360,"Marine":0,"Multiple Renewables":1.9,"Solar":65,"Wind":0},{"country":"Costa Rica","year":2014,"All Renewables":436,"Bioenergy":9.5,"Geothermal":45,"Hydropower":379,"Marine":0,"Multiple Renewables":2.9,"Solar":76,"Wind":0},{"country":"Costa Rica","year":2015,"All Renewables":446,"Bioenergy":9.9,"Geothermal":45,"Hydropower":395,"Marine":0,"Multiple Renewables":4,"Solar":81,"Wind":0},{"country":"Costa Rica","year":2016,"All Renewables":447,"Bioenergy":9.1,"Geothermal":44,"Hydropower":471,"Marine":0,"Multiple Renewables":6.5,"Solar":81,"Wind":0},{"country":"Costa Rica","year":2017,"All Renewables":474,"Bioenergy":10,"Geothermal":42,"Hydropower":466,"Marine":0,"Multiple Renewables":9.5,"Solar":77,"Wind":0},{"country":"Costa Rica","year":2018,"All Renewables":509,"Bioenergy":9.9,"Geothermal":41,"Hydropower":471,"Marine":0,"Multiple Renewables":11,"Solar":76,"Wind":0},{"country":"Costa Rica","year":2019,"All Renewables":590,"Bioenergy":9.8,"Geothermal":41,"Hydropower":461,"Marine":0,"Multiple Renewables":14,"Solar":75,"Wind":0},{"country":"Costa Rica","year":2020,"All Renewables":597,"Bioenergy":12,"Geothermal":52,"Hydropower":455,"Marine":0,"Multiple Renewables":14,"Solar":0,"Wind":0},{"country":"Costa Rica","year":2021,"All Renewables":611,"Bioenergy":16,"Geothermal":51,"Hydropower":462,"Marine":0,"Multiple Renewables":11,"Solar":0,"Wind":0},{"country":"Costa Rica","year":2022,"All Renewables":619,"Bioenergy":16,"Geothermal":50,"Hydropower":450,"Marine":0.1,"Multiple Renewables":15,"Solar":0,"Wind":0},{"country":"Costa Rica","year":2023,"All Renewables":610,"Bioenergy":16,"Geothermal":51,"Hydropower":0,"Marine":0.1,"Multiple Renewables":15,"Solar":0,"Wind":0},{"country":"Costa Rica","year":2024,"All Renewables":618,"Bioenergy":16,"Geothermal":308,"Hydropower":0,"Marine":0.1,"Multiple Renewables":16,"Solar":0,"Wind":0},{"country":"Costa Rica","year":2025,"All Renewables":606,"Bioenergy":36,"Geothermal":302,"Hydropower":0,"Marine":0.1,"Multiple Renewables":16,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2003,"All Renewables":36,"Bioenergy":0,"Geothermal":0,"Hydropower":33,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2004,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":33,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2005,"All Renewables":34,"Bioenergy":0,"Geothermal":0,"Hydropower":32,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2006,"All Renewables":33,"Bioenergy":0,"Geothermal":0,"Hydropower":31,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2007,"All Renewables":33,"Bioenergy":0,"Geothermal":0,"Hydropower":30,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2008,"All Renewables":32,"Bioenergy":0,"Geothermal":0,"Hydropower":30,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2009,"All Renewables":31,"Bioenergy":0,"Geothermal":0,"Hydropower":29,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2010,"All Renewables":30,"Bioenergy":0,"Geothermal":0,"Hydropower":29,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2011,"All Renewables":30,"Bioenergy":0,"Geothermal":0,"Hydropower":28,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2012,"All Renewables":29,"Bioenergy":0,"Geothermal":0,"Hydropower":27,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2013,"All Renewables":29,"Bioenergy":0,"Geothermal":0,"Hydropower":27,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2014,"All Renewables":28,"Bioenergy":0,"Geothermal":0,"Hydropower":26,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2015,"All Renewables":27,"Bioenergy":0,"Geothermal":0,"Hydropower":26,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2016,"All Renewables":27,"Bioenergy":0,"Geothermal":0,"Hydropower":25,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2017,"All Renewables":26,"Bioenergy":0,"Geothermal":0,"Hydropower":35,"Marine":0,"Multiple Renewables":0.2,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2018,"All Renewables":26,"Bioenergy":0,"Geothermal":0,"Hydropower":34,"Marine":0,"Multiple Renewables":0.2,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2019,"All Renewables":25,"Bioenergy":0,"Geothermal":0,"Hydropower":34,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2020,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":33,"Marine":0,"Multiple Renewables":0.3,"Solar":0,"Wind":0},{"country":"Côte d'Ivoire","year":2021,"All Renewables":35,"Bioenergy":0,"Geothermal":0,"Hydropower":32,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},
@@ -1313,8 +1706,8 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
     {"country":"Venezuela (Bolivarian Republic of)","year":2005,"All Renewables":493,"Bioenergy":0,"Geothermal":0,"Hydropower":541,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2006,"All Renewables":485,"Bioenergy":0,"Geothermal":0,"Hydropower":539,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2007,"All Renewables":529,"Bioenergy":0,"Geothermal":0,"Hydropower":530,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2008,"All Renewables":541,"Bioenergy":0,"Geothermal":0,"Hydropower":523,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2009,"All Renewables":539,"Bioenergy":0,"Geothermal":0,"Hydropower":516,"Marine":0,"Multiple Renewables":0.1,"Solar":2.8,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2010,"All Renewables":530,"Bioenergy":0,"Geothermal":0,"Hydropower":509,"Marine":0,"Multiple Renewables":0.1,"Solar":4.6,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2011,"All Renewables":523,"Bioenergy":0,"Geothermal":0,"Hydropower":503,"Marine":0,"Multiple Renewables":0.1,"Solar":4.6,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2012,"All Renewables":516,"Bioenergy":0,"Geothermal":0,"Hydropower":496,"Marine":0,"Multiple Renewables":0.1,"Solar":4.5,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2013,"All Renewables":509,"Bioenergy":0,"Geothermal":0,"Hydropower":499,"Marine":0,"Multiple Renewables":0.2,"Solar":4.5,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2014,"All Renewables":503,"Bioenergy":0,"Geothermal":0,"Hydropower":493,"Marine":0,"Multiple Renewables":0.2,"Solar":4.5,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2015,"All Renewables":499,"Bioenergy":0,"Geothermal":0,"Hydropower":496,"Marine":0,"Multiple Renewables":0.2,"Solar":4.6,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2016,"All Renewables":503,"Bioenergy":0,"Geothermal":0,"Hydropower":547,"Marine":0,"Multiple Renewables":0.1,"Solar":4,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2017,"All Renewables":498,"Bioenergy":0,"Geothermal":0,"Hydropower":551,"Marine":0,"Multiple Renewables":0.2,"Solar":4.8,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2018,"All Renewables":501,"Bioenergy":0,"Geothermal":0,"Hydropower":564,"Marine":0,"Multiple Renewables":0.2,"Solar":4.9,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2019,"All Renewables":552,"Bioenergy":0,"Geothermal":0,"Hydropower":581,"Marine":0,"Multiple Renewables":0.2,"Solar":4.9,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2020,"All Renewables":555,"Bioenergy":0,"Geothermal":0,"Hydropower":591,"Marine":0,"Multiple Renewables":0.2,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2021,"All Renewables":569,"Bioenergy":0,"Geothermal":0,"Hydropower":597,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2022,"All Renewables":585,"Bioenergy":0,"Geothermal":0,"Hydropower":595,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2023,"All Renewables":596,"Bioenergy":0,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2024,"All Renewables":602,"Bioenergy":0,"Geothermal":541,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Venezuela (Bolivarian Republic of)","year":2025,"All Renewables":600,"Bioenergy":0,"Geothermal":531,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2003,"All Renewables":43,"Bioenergy":1.6,"Geothermal":0,"Hydropower":51,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2004,"All Renewables":49,"Bioenergy":1.6,"Geothermal":0,"Hydropower":51,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2005,"All Renewables":53,"Bioenergy":1.5,"Geothermal":0,"Hydropower":51,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2006,"All Renewables":53,"Bioenergy":1.5,"Geothermal":0,"Hydropower":54,"Marine":0,"Multiple Renewables":0,"Solar":0.1,"Wind":0},{"country":"Viet Nam","year":2007,"All Renewables":53,"Bioenergy":1.5,"Geothermal":0,"Hydropower":58,"Marine":0,"Multiple Renewables":0,"Solar":0.4,"Wind":0},{"country":"Viet Nam","year":2008,"All Renewables":53,"Bioenergy":1.5,"Geothermal":0,"Hydropower":69,"Marine":0,"Multiple Renewables":0.1,"Solar":0.4,"Wind":0},{"country":"Viet Nam","year":2009,"All Renewables":55,"Bioenergy":1.5,"Geothermal":0,"Hydropower":83,"Marine":0,"Multiple Renewables":0.1,"Solar":0.3,"Wind":0},{"country":"Viet Nam","year":2010,"All Renewables":59,"Bioenergy":1.5,"Geothermal":0,"Hydropower":99,"Marine":0,"Multiple Renewables":0.1,"Solar":0.6,"Wind":0},{"country":"Viet Nam","year":2011,"All Renewables":71,"Bioenergy":1.4,"Geothermal":0,"Hydropower":114,"Marine":0,"Multiple Renewables":0.1,"Solar":0.6,"Wind":0},{"country":"Viet Nam","year":2012,"All Renewables":85,"Bioenergy":1.4,"Geothermal":0,"Hydropower":152,"Marine":0,"Multiple Renewables":0.1,"Solar":1.5,"Wind":0},{"country":"Viet Nam","year":2013,"All Renewables":101,"Bioenergy":1.4,"Geothermal":0,"Hydropower":163,"Marine":0,"Multiple Renewables":0.1,"Solar":1.7,"Wind":0},{"country":"Viet Nam","year":2014,"All Renewables":116,"Bioenergy":1.4,"Geothermal":0,"Hydropower":165,"Marine":0,"Multiple Renewables":0.1,"Solar":2.2,"Wind":0},{"country":"Viet Nam","year":2015,"All Renewables":154,"Bioenergy":1.4,"Geothermal":0,"Hydropower":173,"Marine":0,"Multiple Renewables":0.1,"Solar":2.5,"Wind":0},{"country":"Viet Nam","year":2016,"All Renewables":165,"Bioenergy":1.5,"Geothermal":0,"Hydropower":184,"Marine":0,"Multiple Renewables":1.1,"Solar":3.9,"Wind":0},{"country":"Viet Nam","year":2017,"All Renewables":167,"Bioenergy":1.7,"Geothermal":0,"Hydropower":189,"Marine":0,"Multiple Renewables":52,"Solar":5.4,"Wind":0},{"country":"Viet Nam","year":2018,"All Renewables":176,"Bioenergy":2,"Geothermal":0,"Hydropower":190,"Marine":0,"Multiple Renewables":172,"Solar":42,"Wind":0},{"country":"Viet Nam","year":2019,"All Renewables":188,"Bioenergy":2.1,"Geothermal":0,"Hydropower":212,"Marine":0,"Multiple Renewables":171,"Solar":47,"Wind":0},{"country":"Viet Nam","year":2020,"All Renewables":194,"Bioenergy":4,"Geothermal":0,"Hydropower":215,"Marine":0,"Multiple Renewables":188,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2021,"All Renewables":197,"Bioenergy":4,"Geothermal":0,"Hydropower":221,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2022,"All Renewables":272,"Bioenergy":4,"Geothermal":0,"Hydropower":223,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2023,"All Renewables":397,"Bioenergy":3.8,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2024,"All Renewables":438,"Bioenergy":3.7,"Geothermal":41,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Viet Nam","year":2025,"All Renewables":462,"Bioenergy":0,"Geothermal":48,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2003,"All Renewables":182,"Bioenergy":1.2,"Geothermal":0,"Hydropower":160,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2004,"All Renewables":177,"Bioenergy":1.2,"Geothermal":0,"Hydropower":155,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2005,"All Renewables":171,"Bioenergy":1.1,"Geothermal":0,"Hydropower":150,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2006,"All Renewables":161,"Bioenergy":1.1,"Geothermal":0,"Hydropower":144,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2007,"All Renewables":156,"Bioenergy":1.1,"Geothermal":0,"Hydropower":135,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2008,"All Renewables":151,"Bioenergy":1,"Geothermal":0,"Hydropower":130,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2009,"All Renewables":145,"Bioenergy":1,"Geothermal":0,"Hydropower":126,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2010,"All Renewables":136,"Bioenergy":3.3,"Geothermal":0,"Hydropower":137,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2011,"All Renewables":133,"Bioenergy":3.2,"Geothermal":0,"Hydropower":133,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2012,"All Renewables":129,"Bioenergy":3.1,"Geothermal":0,"Hydropower":129,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2013,"All Renewables":140,"Bioenergy":3,"Geothermal":0,"Hydropower":148,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2014,"All Renewables":136,"Bioenergy":2.9,"Geothermal":0,"Hydropower":144,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2015,"All Renewables":132,"Bioenergy":2.8,"Geothermal":0,"Hydropower":140,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2016,"All Renewables":151,"Bioenergy":2.7,"Geothermal":0,"Hydropower":142,"Marine":0,"Multiple Renewables":0.1,"Solar":0,"Wind":0},{"country":"Zambia","year":2017,"All Renewables":146,"Bioenergy":2.6,"Geothermal":0,"Hydropower":139,"Marine":0,"Multiple Renewables":5.2,"Solar":0,"Wind":0},{"country":"Zambia","year":2018,"All Renewables":142,"Bioenergy":2.6,"Geothermal":0,"Hydropower":134,"Marine":0,
     "Multiple Renewables":5.1,"Solar":0,"Wind":0},{"country":"Zambia","year":2019,"All Renewables":145,"Bioenergy":2.5,"Geothermal":0,"Hydropower":131,"Marine":0,"Multiple Renewables":5,"Solar":0,"Wind":0},{"country":"Zambia","year":2020,"All Renewables":141,"Bioenergy":2.4,"Geothermal":0,"Hydropower":127,"Marine":0,"Multiple Renewables":4.8,"Solar":0,"Wind":0},{"country":"Zambia","year":2021,"All Renewables":137,"Bioenergy":2.3,"Geothermal":0,"Hydropower":139,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2022,"All Renewables":138,"Bioenergy":2.3,"Geothermal":0,"Hydropower":158,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2023,"All Renewables":134,"Bioenergy":2.2,"Geothermal":0,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2024,"All Renewables":146,"Bioenergy":2.1,"Geothermal":181,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0},{"country":"Zambia","year":2025,"All Renewables":165,"Bioenergy":0,"Geothermal":176,"Hydropower":0,"Marine":0,"Multiple Renewables":0,"Solar":0,"Wind":0}]`)
 
-    globalData = data.filter((entry)=>{
-      return entry.year<2024
+    globalData = data.filter((entry) => {
+      return entry.year < 2024
     });
 
     // Filter out insignificant countries
@@ -1372,7 +1765,7 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
       const selectedCountries = $(countriesDropdown).val();
       const selectedCountries2 = $(countriesDropdown2).val()
       const selectedEnergyType = energyTypeDropdown.value;
-      const selectedEnergyType2  = energyTypeDropdown2.value;
+      const selectedEnergyType2 = energyTypeDropdown2.value;
 
       // Ensure at least one country is selected
       // if (!selectedCountries || selectedCountries.length === 0) {
@@ -1385,29 +1778,29 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
       const heatmapData = [];
       selectedCountries.forEach((country, i) => {
         years.forEach((year, j) => {
-         
-        const records = globalData.filter(item => item.country === country && item.year === year);
-        
-        let value = 0;
-        if (selectedEnergyType === 'All Renewables') {
+
+          const records = globalData.filter(item => item.country === country && item.year === year);
+
+          let value = 0;
+          if (selectedEnergyType === 'All Renewables') {
             // Sum the values of all relevant energy types for the current country and year
             value = records.reduce((sum, record) => {
-                return sum + (record['Bioenergy'] || 0) +
-                           (record['Geothermal'] || 0) +
-                           (record['Hydropower'] || 0) +
-                           (record['Marine'] || 0) +
-                           (record['Multiple Renewables'] || 0) +
-                           (record['Solar'] || 0) +
-                           (record['Wind'] || 0);
+              return sum + (record['Bioenergy'] || 0) +
+                (record['Geothermal'] || 0) +
+                (record['Hydropower'] || 0) +
+                (record['Marine'] || 0) +
+                (record['Multiple Renewables'] || 0) +
+                (record['Solar'] || 0) +
+                (record['Wind'] || 0);
             }, 0);
-        } else {
+          } else {
             // Get the value for the selected energy type
             const record = records.find(item => item[selectedEnergyType] !== undefined);
             value = record ? record[selectedEnergyType] || 0 : 0;
-        }
-        
-        heatmapData.push([j, i, value]); // [x (year index), y (country index), value]
-    });
+          }
+
+          heatmapData.push([j, i, value]); // [x (year index), y (country index), value]
+        });
       });
 
       Highcharts.chart('chart1', {
@@ -1418,16 +1811,16 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
           categories: selectedCountries,
           title: { text: 'Country' },
           reversed: true, // Flip Y-axis for better readability,
-       
+
         },
         colorAxis: {
           min: 0,
           stops: [
-          [0, 'white'],   // Light green for very low values
-    [0.1, '#a5d6a7'], // Soft green for low-mid values
-    [0.3, '#4caf50'], // Medium green for mid values
-    [0.5, '#388e3c'], // Dark green for high-mid values
-    [0.7, '#1b5e20']   // Dark green for high values
+            [0, 'white'],   // Light green for very low values
+            [0.1, '#a5d6a7'], // Soft green for low-mid values
+            [0.3, '#4caf50'], // Medium green for mid values
+            [0.5, '#388e3c'], // Dark green for high-mid values
+            [0.7, '#1b5e20']   // Dark green for high values
           ]
         },
         tooltip: {
@@ -1447,532 +1840,532 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
       // Chart 2: Stacked bar chart for multiple energy types
       const energyTypesAll = ['Bioenergy', 'Geothermal', 'Hydropower', 'Marine', 'Multiple Renewables', 'Solar', 'Wind'];
 
-// Define individual energy type based on selection
-const energyTypeIndi = [selectedEnergyType];
+      // Define individual energy type based on selection
+      const energyTypeIndi = [selectedEnergyType];
 
-// Determine which energy types to include based on selection
-const energyType = (selectedEnergyType === 'All Renewables') ? energyTypesAll : energyTypeIndi;
+      // Determine which energy types to include based on selection
+      const energyType = (selectedEnergyType === 'All Renewables') ? energyTypesAll : energyTypeIndi;
 
-// Define color palette
-const blueShades = [
-    '#a2c2e0', // Soft Blue
-    '#f4a261', // Soft Orange
-    '#90be6d', // Soft Green
-    '#f94144', // Soft Red
-    '#577590', // Soft Teal
-    '#f3722c', // Soft Coral
-    '#f8961e', // Soft Amber
-    '#277da1'   // Soft Dark Blue
-];
+      // Define color palette
+      const blueShades = [
+        '#a2c2e0', // Soft Blue
+        '#f4a261', // Soft Orange
+        '#90be6d', // Soft Green
+        '#f94144', // Soft Red
+        '#577590', // Soft Teal
+        '#f3722c', // Soft Coral
+        '#f8961e', // Soft Amber
+        '#277da1'   // Soft Dark Blue
+      ];
 
-// Preprocess globalData into a nested object for faster access
-const dataIndex = {};
-globalData.forEach(item => {
-    const year = parseInt(item.year, 10);
-    if (!dataIndex[item.country]) dataIndex[item.country] = {};
-    dataIndex[item.country][year] = item;
-});
+      // Preprocess globalData into a nested object for faster access
+      const dataIndex = {};
+      globalData.forEach(item => {
+        const year = parseInt(item.year, 10);
+        if (!dataIndex[item.country]) dataIndex[item.country] = {};
+        dataIndex[item.country][year] = item;
+      });
 
-// Initialize the chart2Series array
-const chart2Series = energyType.map((type, index) => {
-    const values = years.map(year => {
-        const numericYear = parseInt(year, 10);
-        return selectedCountries.reduce((sum, country) => {
+      // Initialize the chart2Series array
+      const chart2Series = energyType.map((type, index) => {
+        const values = years.map(year => {
+          const numericYear = parseInt(year, 10);
+          return selectedCountries.reduce((sum, country) => {
             const record = dataIndex[country] ? dataIndex[country][numericYear] : null;
             const value = record ? (parseFloat(record[type]) || 0) : 0;
             // Debugging logs (optional)
             console.log(`Country: ${country}, Year: ${year}, Type: ${type}, Value: ${value}`);
             return sum + value;
-        }, 0);
-    });
+          }, 0);
+        });
 
-    // Debugging log for each series (optional)
-    console.log(`Series: ${type}, Values: ${values}`);
+        // Debugging log for each series (optional)
+        console.log(`Series: ${type}, Values: ${values}`);
 
-    return {
-        name: type, // Current energy type name
-        data: values, // Computed data for the energy type across years
-        color: blueShades[index % blueShades.length], // Assign color based on index
-    };
-});
+        return {
+          name: type, // Current energy type name
+          data: values, // Computed data for the energy type across years
+          color: blueShades[index % blueShades.length], // Assign color based on index
+        };
+      });
 
-// Debugging log for all series (optional)
-console.log('Chart Series Data:', chart2Series);
+      // Debugging log for all series (optional)
+      console.log('Chart Series Data:', chart2Series);
 
-// Determine if stacking should be enabled
-const isStacked = selectedEnergyType === 'All Renewables';
+      // Determine if stacking should be enabled
+      const isStacked = selectedEnergyType === 'All Renewables';
 
-let obj1={
-    chart: { type: 'column' },
-    title: { text: 'Financial flow for '+ selectedEnergyType + ' over years' },
-    xAxis: { 
-        categories: years, 
-        title: { text: 'Year' } 
-    },
-    yAxis: { 
-        title: { text: 'Total Financial Flow in USD millions' },
-        stackLabels: isStacked ? { // Enable stack labels only if stacked
+      let obj1 = {
+        chart: { type: 'column' },
+        title: { text: 'Financial flow for ' + selectedEnergyType + ' over years' },
+        xAxis: {
+          categories: years,
+          title: { text: 'Year' }
+        },
+        yAxis: {
+          title: { text: 'Total Financial Flow in USD millions' },
+          stackLabels: isStacked ? { // Enable stack labels only if stacked
             enabled: true,
             style: {
-                fontWeight: 'bold',
-                color: 'black'
+              fontWeight: 'bold',
+              color: 'black'
             },
-            formatter: function() {
-                return this.total; // Show only the total
+            formatter: function () {
+              return this.total; // Show only the total
             }
-        } : null,
-        allowDecimals: false 
-    },
-    tooltip: {
-        shared: true,
-        valueDecimals: 0, // Ensure no decimal places are shown
-        pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y} USD millions</b><br/>'
-    },
-    plotOptions: {
-        column: {
+          } : null,
+          allowDecimals: false
+        },
+        tooltip: {
+          shared: true,
+          valueDecimals: 0, // Ensure no decimal places are shown
+          pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.y} USD millions</b><br/>'
+        },
+        plotOptions: {
+          column: {
             stacking: isStacked ? 'normal' : null, // Enable stacking only if 'All Renewables' is selected
             dataLabels: { enabled: false }
-        }
-    },
-    series: chart2Series
-}
-let obj2 = {
-    chart: { type: 'column' },
-    title: { text: `Percentage Share of Financial Flow over years` },
-    xAxis: { 
-        categories: years, 
-        title: { text: 'Year' } 
-    },
-    yAxis: { 
-        title: { text: 'Percentage Share of Financial Flow' },
-        labels: {
-            format: '{value}%', 
-            enabled: false
+          }
         },
-        max: 100,
-        stackLabels: { // Enable stack labels to show total value in USD
+        series: chart2Series
+      }
+      let obj2 = {
+        chart: { type: 'column' },
+        title: { text: `Percentage Share of Financial Flow over years` },
+        xAxis: {
+          categories: years,
+          title: { text: 'Year' }
+        },
+        yAxis: {
+          title: { text: 'Percentage Share of Financial Flow' },
+          labels: {
+            format: '{value}%',
+            enabled: false
+          },
+          max: 100,
+          stackLabels: { // Enable stack labels to show total value in USD
             enabled: true,
             style: {
-                fontWeight: 'bold',
-                color: 'black'
+              fontWeight: 'bold',
+              color: 'black'
             },
-            formatter: function() {
-                return '$' + this.total.toFixed(0); // Show total value in USD
+            formatter: function () {
+              return '$' + this.total.toFixed(0); // Show total value in USD
             }
+          },
+          allowDecimals: false
         },
-        allowDecimals: false 
-    },
-    tooltip: {
-        shared: true,
-        pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.percentage:.1f}%</b><br/>',
-    },
-    plotOptions: {
-        column: {
+        tooltip: {
+          shared: true,
+          pointFormat: '<span style="color:{series.color}">\u25CF</span> {series.name}: <b>{point.percentage:.1f}%</b><br/>',
+        },
+        plotOptions: {
+          column: {
             stacking: isStacked ? 'percent' : null,
             dataLabels: {
-                enabled: false // Disable individual data labels
+              enabled: false // Disable individual data labels
             }
-        }
-    },
-    series: chart2Series
-}
+          }
+        },
+        series: chart2Series
+      }
 
-// Initialize the Highcharts chart
-Highcharts.chart('chart2', (isStacked)?obj2:obj1);
-const countryFlags = {
-    'Angola': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ao.png',
-    'Argentina': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ar.png',
-    'Bangladesh': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/bd.png',
-    'Bolivia (Plurinational State of)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/bo.png',
-    'Brazil': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/br.png',
-    'Cameroon': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cm.png',
-    'Chile': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cl.png',
-    'China': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cn.png',
-    'Colombia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/co.png',
-    'Costa Rica': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cr.png',
-    "Côte d'Ivoire": 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ci.png',
-    'Democratic Republic of the Congo (the)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cd.png',
-    'Ecuador': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ec.png',
-    'Egypt': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/eg.png',
-    'El Salvador': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/sv.png',
-    'Ethiopia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/et.png',
-    'Ghana': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/gh.png',
-    'Guinea': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/gn.png',
-    'Honduras': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/hn.png',
-    'India': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/in.png',
-    'Indonesia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/id.png',
-    'Jordan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/jo.png',
-    'Kazakhstan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/kz.png',
-    'Kenya': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ke.png',
-    "Lao People's Democratic Republic (the)": 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/la.png',
-    'Mexico': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/mx.png',
-    'Morocco': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ma.png',
-    'Mozambique': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/mz.png',
-    'Nepal': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/np.png',
-    'Nicaragua': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ni.png',
-    'Nigeria': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ng.png',
-    'Pakistan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/pk.png',
-    'Panama': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/pa.png',
-    'Peru': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/pe.png',
-    'Senegal': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/sn.png',
-    'South Africa': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/za.png',
-    'Sri Lanka': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/lk.png',
-    'Sudan (the)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/sd.png',
-    'Thailand': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/th.png',
-    'Tunisia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/tn.png',
-    'Türkiye': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/tr.png',
-    'Uganda': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ug.png',
-    'Ukraine': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ua.png',
-    'United Republic of Tanzania (the)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/tz.png',
-    'Uruguay': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/uy.png',
-    'Uzbekistan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/uz.png',
-    'Venezuela (Bolivarian Republic of)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ve.png',
-    'Viet Nam': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/vn.png',
-    'Zambia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/zm.png'
-};
+      // Initialize the Highcharts chart
+      Highcharts.chart('chart2', (isStacked) ? obj2 : obj1);
+      const countryFlags = {
+        'Angola': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ao.png',
+        'Argentina': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ar.png',
+        'Bangladesh': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/bd.png',
+        'Bolivia (Plurinational State of)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/bo.png',
+        'Brazil': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/br.png',
+        'Cameroon': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cm.png',
+        'Chile': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cl.png',
+        'China': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cn.png',
+        'Colombia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/co.png',
+        'Costa Rica': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cr.png',
+        "Côte d'Ivoire": 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ci.png',
+        'Democratic Republic of the Congo (the)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/cd.png',
+        'Ecuador': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ec.png',
+        'Egypt': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/eg.png',
+        'El Salvador': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/sv.png',
+        'Ethiopia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/et.png',
+        'Ghana': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/gh.png',
+        'Guinea': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/gn.png',
+        'Honduras': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/hn.png',
+        'India': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/in.png',
+        'Indonesia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/id.png',
+        'Jordan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/jo.png',
+        'Kazakhstan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/kz.png',
+        'Kenya': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ke.png',
+        "Lao People's Democratic Republic (the)": 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/la.png',
+        'Mexico': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/mx.png',
+        'Morocco': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ma.png',
+        'Mozambique': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/mz.png',
+        'Nepal': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/np.png',
+        'Nicaragua': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ni.png',
+        'Nigeria': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ng.png',
+        'Pakistan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/pk.png',
+        'Panama': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/pa.png',
+        'Peru': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/pe.png',
+        'Senegal': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/sn.png',
+        'South Africa': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/za.png',
+        'Sri Lanka': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/lk.png',
+        'Sudan (the)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/sd.png',
+        'Thailand': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/th.png',
+        'Tunisia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/tn.png',
+        'Türkiye': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/tr.png',
+        'Uganda': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ug.png',
+        'Ukraine': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ua.png',
+        'United Republic of Tanzania (the)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/tz.png',
+        'Uruguay': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/uy.png',
+        'Uzbekistan': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/uz.png',
+        'Venezuela (Bolivarian Republic of)': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/ve.png',
+        'Viet Nam': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/vn.png',
+        'Zambia': 'https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/png100px/zm.png'
+      };
 
 
 
-// Step 1: Filter and preprocess data for selected countries
-const globalEnergyTypeValues = energy_install
-    .filter(record => selectedCountries2.includes(record.country)) // Filter for selected countries
-    .map(record => ({
-        country: record.country,
-        year: parseInt(record.year, 10), // Ensure year is numeric
-        value: parseFloat(record[selectedEnergyType2]) || 0 // Ensure value is numeric
-    }))
-    .sort((a, b) => a.year - b.year);
-
-// Step 2: Group data by country
-const groupedByCountry = globalEnergyTypeValues.reduce((acc, record) => {
-    acc[record.country] = acc[record.country] || [];
-    acc[record.country].push(record);
-    return acc;
-}, {});
-
-const globalEnergyTypeValues2 = energy_install
-    .map(record => ({
-        country: record.country,
-        year: parseInt(record.year, 10), // Ensure year is numeric
-        value: parseFloat(record[selectedEnergyType]) || 0 // Ensure value is numeric
-    }))
-const groupedByCountry2 = globalEnergyTypeValues2.reduce((acc, record) => {
-    acc[record.country] = acc[record.country] || [];
-    acc[record.country].push(record);
-    return acc;
-}, {});
-// Step 3: Calculate yearly changes for each selected country
-const globalChanges = [];
-Object.values(groupedByCountry2).forEach(countryData => {
-    for (let i = 1; i < countryData.length; i++) {
-        const diff = countryData[i].value - countryData[i - 1].value;
-        globalChanges.push(diff); // Include decreases as negative
-    }
-});
-
-// Step 4: Calculate global average change based on selected countries
-const globalAvgChange = 
-    globalChanges.length > 0
-        ? globalChanges.reduce((sum, val) => sum + val, 0) / globalChanges.length
-        : 0;
-    
-
-// Step 5: Calculate average change per selected country
-const avgChangeData = selectedCountries2.map(country => {
-    const countryData = energy_install
-        .filter(item => item.country === country)
+      // Step 1: Filter and preprocess data for selected countries
+      const globalEnergyTypeValues = energy_install
+        .filter(record => selectedCountries2.includes(record.country)) // Filter for selected countries
         .map(record => ({
-            year: parseInt(record.year, 10),
-            value: parseFloat(record[selectedEnergyType2]) || 0
+          country: record.country,
+          year: parseInt(record.year, 10), // Ensure year is numeric
+          value: parseFloat(record[selectedEnergyType2]) || 0 // Ensure value is numeric
         }))
         .sort((a, b) => a.year - b.year);
-    
-    const changes = [];
-    for (let i = 1; i < countryData.length; i++) {
-        const diff = countryData[i].value - countryData[i - 1].value;
-        changes.push(diff); // Include decreases as negative
-    }
-    
-    const avgChange =
-        changes.length > 0
+
+      // Step 2: Group data by country
+      const groupedByCountry = globalEnergyTypeValues.reduce((acc, record) => {
+        acc[record.country] = acc[record.country] || [];
+        acc[record.country].push(record);
+        return acc;
+      }, {});
+
+      const globalEnergyTypeValues2 = energy_install
+        .map(record => ({
+          country: record.country,
+          year: parseInt(record.year, 10), // Ensure year is numeric
+          value: parseFloat(record[selectedEnergyType]) || 0 // Ensure value is numeric
+        }))
+      const groupedByCountry2 = globalEnergyTypeValues2.reduce((acc, record) => {
+        acc[record.country] = acc[record.country] || [];
+        acc[record.country].push(record);
+        return acc;
+      }, {});
+      // Step 3: Calculate yearly changes for each selected country
+      const globalChanges = [];
+      Object.values(groupedByCountry2).forEach(countryData => {
+        for (let i = 1; i < countryData.length; i++) {
+          const diff = countryData[i].value - countryData[i - 1].value;
+          globalChanges.push(diff); // Include decreases as negative
+        }
+      });
+
+      // Step 4: Calculate global average change based on selected countries
+      const globalAvgChange =
+        globalChanges.length > 0
+          ? globalChanges.reduce((sum, val) => sum + val, 0) / globalChanges.length
+          : 0;
+
+
+      // Step 5: Calculate average change per selected country
+      const avgChangeData = selectedCountries2.map(country => {
+        const countryData = energy_install
+          .filter(item => item.country === country)
+          .map(record => ({
+            year: parseInt(record.year, 10),
+            value: parseFloat(record[selectedEnergyType2]) || 0
+          }))
+          .sort((a, b) => a.year - b.year);
+
+        const changes = [];
+        for (let i = 1; i < countryData.length; i++) {
+          const diff = countryData[i].value - countryData[i - 1].value;
+          changes.push(diff); // Include decreases as negative
+        }
+
+        const avgChange =
+          changes.length > 0
             ? changes.reduce((sum, val) => sum + val, 0) / changes.length
             : 0;
-    
-    return {
-        name: country,
-        y: Math.round(avgChange * 100) / 100, // Rounded to 2 decimal places
-        isAboveAvg: avgChange > globalAvgChange // Flag to determine above/below average
-    };
-});
 
-// Step 6: Sort the data by the average change (lowest to highest)
-avgChangeData.sort((a, b) => a.y - b.y);
+        return {
+          name: country,
+          y: Math.round(avgChange * 100) / 100, // Rounded to 2 decimal places
+          isAboveAvg: avgChange > globalAvgChange // Flag to determine above/below average
+        };
+      });
 
-// Debugging Logs
-console.log(avgChangeData,'avf change')
+      // Step 6: Sort the data by the average change (lowest to highest)
+      avgChangeData.sort((a, b) => a.y - b.y);
 
-
-// Step 7: Prepare Scatter Plot Data with Flags
-const scatterData = avgChangeData.map(point => ({
-    name: point.name,
-    y: point.y,
-    marker: {
-        symbol: countryFlags[point.name] ? `url(${countryFlags[point.name]})` : 'circle',
-        width: 25, // Adjust width as needed
-        height: 20 // Adjust height as needed
-    },
-    color: point.isAboveAvg ? '#90ee7e' : '#f45b5b' // Green for above average, red for below
-}));
-
-const newColumns = avgChangeData.map(point => (
-     point.name
-));
+      // Debugging Logs
+      console.log(avgChangeData, 'avf change')
 
 
-// Highcharts Scatter Plot with Flags
-Highcharts.chart('chart3', {
-    chart: { type: 'scatter', zoomType: 'xy' },
-    title: { text: `Average Yearly Change in Energy Generation Capacity for ${selectedEnergyType2}` },
-    xAxis: {
-        categories: newColumns,
-        title: { text: 'Country' },
-        labels: {
-            rotation: -45,
-            style: {
-                fontSize: '12px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        },
-        tickLength: 0 // Hide tick lines for categories
-    },
-    yAxis: {
-        title: { text: 'Avg Change in Energy Generation per capita (Watt/capita)' },
-        plotLines: [{
-            value: globalAvgChange,
-            color: 'red',
-            dashStyle: 'ShortDash',
-            width: 2,
-            label: {
-                text: `Avg across developing countries (${globalAvgChange.toFixed(2)})`,
-                align: 'right',
-                style: {
-                    color: 'red'
-                }
-            }
-        }],
-        allowDecimals: true
-    },
-    tooltip: {
-        headerFormat: '<b>{series.name}</b><br>',
-        pointFormat: '{point.name}: <b>{point.y} (Watt/Capita)</b>'
-    },
-    plotOptions: {
-        scatter: {
-            marker: {
-                radius: 0, // Disable default marker radius since we're using images
-                states: {
-                    hover: {
-                        enabled: true,
-                        lineColor: 'rgb(100,100,100)'
-                    }
-                }
-            },
-            states: {
-                hover: {
-                    marker: {
-                        enabled: true,
-                        radius: 15 // Show a larger image on hover
-                    }
-                }
-            },
-            tooltip: {
-                headerFormat: '<b>{series.name}</b><br>',
-                pointFormat: '{point.name}: <b>{point.y} USD millions</b>'
-            }
-        }
-    },
-    series: [{
-        name: 'Average Change',
-        data: scatterData,
-        colorByPoint: false // Colors are defined per point
-    }],
-    legend: {
-        enabled: false
-    },
-    credits: {
-        enabled: false
-    }
-});
-
-
-// Step 7: Choose Visualization Type
-// Below are two options: Combination Chart and Scatter Plot.
-// Uncomment the desired chart type and comment out the other.
-
-// --- Option A: Combination Chart (Column + Line) ---
-
-// Highcharts.chart('chart3', {
-//     chart: { type: 'column' },
-//     title: { text: `Average Yearly Change in Financial Flow for ${selectedEnergyType}` },
-//     xAxis: {
-//         type: 'category',
-//         title: { text: 'Country' },
-//         labels: {
-//             rotation: -45,
-//             style: {
-//                 fontSize: '13px',
-//                 fontFamily: 'Verdana, sans-serif'
-//             }
-//         }
-//     },
-//     yAxis: [{
-//         title: { text: 'Average Change (USD millions)' },
-//         allowDecimals: true
-//     }, {
-//         // Secondary yAxis for the global average line
-//         title: { text: 'Global Average Change (USD millions)' },
-//         opposite: true,
-//         gridLineWidth: 0
-//     }],
-//     tooltip: {
-//         shared: true,
-//         valueDecimals: 2,
-//         crosshairs: true
-//     },
-//     plotOptions: {
-//         column: {
-//             dataLabels: {
-//                 enabled: true,
-//                 format: '{point.y}'
-//             },
-//             colorByPoint: true,
-//             colors: ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354']
-//         },
-//         line: {
-//             marker: {
-//                 enabled: true
-//             },
-//             dataLabels: {
-//                 enabled: true,
-//                 format: '{point.y}'
-//             }
-//         }
-//     },
-//     series: [{
-//         name: 'Average Change',
-//         data: avgChangeData.map(point => ({
-//             name: point.name,
-//             y: point.y,
-//             color: point.isAboveAvg ? '#90ee7e' : '#f45b5b' // Green for above average, red for below
-//         })),
-//         tooltip: {
-//             pointFormat: 'Average Change: <b>{point.y} USD millions</b>'
-//         }
-//     }, {
-//         name: 'Global Average Change',
-//         type: 'line',
-//         yAxis: 1, // Link to secondary yAxis
-//         data: selectedCountries.map(() => globalAvgChange), // Repeat the global average for each country
-//         color: 'red',
-//         dashStyle: 'ShortDash',
-//         marker: {
-//             enabled: false
-//         },
-//         enableMouseTracking: false,
-//         showInLegend: true // Show in legend
-//     }],
-//     legend: {
-//         enabled: true
-//     },
-//     credits: {
-//         enabled: false
-//     }
-// });
-
-// --- Option B: Scatter Plot with Reference Line ---
-
-/*
-Highcharts.chart('chart3', {
-    chart: { type: 'scatter', zoomType: 'xy' },
-    title: { text: `Average Yearly Change in Financial Flow for ${selectedEnergyType}` },
-    xAxis: {
-        title: { text: 'Country' },
-        categories: selectedCountries,
-        labels: {
-            rotation: -45,
-            style: {
-                fontSize: '13px',
-                fontFamily: 'Verdana, sans-serif'
-            }
-        }
-    },
-    yAxis: {
-        title: { text: 'Average Change (USD millions)' },
-        plotLines: [{
-            value: globalAvgChange,
-            color: 'red',
-            dashStyle: 'ShortDash',
-            width: 2,
-            label: {
-                text: `Global Average (${globalAvgChange.toFixed(2)})`,
-                align: 'right',
-                style: {
-                    color: 'red'
-                }
-            }
-        }],
-        allowDecimals: true
-    },
-    tooltip: {
-        shared: false,
-        headerFormat: '<b>{series.name}</b><br>',
-        pointFormat: '{point.category}: <b>{point.y} USD millions</b>'
-    },
-    plotOptions: {
-        scatter: {
-            marker: {
-                radius: 10,
-                states: {
-                    hover: {
-                        enabled: true,
-                        lineColor: 'rgb(100,100,100)'
-                    }
-                }
-            },
-            states: {
-                hover: {
-                    marker: {
-                        enabled: true
-                    }
-                }
-            },
-            tooltip: {
-                headerFormat: '<b>{series.name}</b><br>',
-                pointFormat: '{point.category}: <b>{point.y} USD millions</b>'
-            }
-        }
-    },
-    series: [{
-        name: 'Average Change',
-        data: avgChangeData.map(point => ({
-            category: point.name,
-            y: point.y,
-            color: point.isAboveAvg ? '#90ee7e' : '#f45b5b' // Green for above average, red for below
-        })),
+      // Step 7: Prepare Scatter Plot Data with Flags
+      const scatterData = avgChangeData.map(point => ({
+        name: point.name,
+        y: point.y,
         marker: {
-            symbol: 'circle'
-        }
-    }],
-    legend: {
-        enabled: false
-    },
-    credits: {
-        enabled: false
-    }
-});
-*/
+          symbol: countryFlags[point.name] ? `url(${countryFlags[point.name]})` : 'circle',
+          width: 25, // Adjust width as needed
+          height: 20 // Adjust height as needed
+        },
+        color: point.isAboveAvg ? '#90ee7e' : '#f45b5b' // Green for above average, red for below
+      }));
+
+      const newColumns = avgChangeData.map(point => (
+        point.name
+      ));
+
+
+      // Highcharts Scatter Plot with Flags
+      Highcharts.chart('chart3', {
+        chart: { type: 'scatter', zoomType: 'xy' },
+        title: { text: `Average Yearly Change in Energy Generation Capacity for ${selectedEnergyType2}` },
+        xAxis: {
+          categories: newColumns,
+          title: { text: 'Country' },
+          labels: {
+            rotation: -45,
+            style: {
+              fontSize: '12px',
+              fontFamily: 'Verdana, sans-serif'
+            }
+          },
+          tickLength: 0 // Hide tick lines for categories
+        },
+        yAxis: {
+          title: { text: 'Avg Change in Energy Generation per capita (Watt/capita)' },
+          plotLines: [{
+            value: globalAvgChange,
+            color: 'red',
+            dashStyle: 'ShortDash',
+            width: 2,
+            label: {
+              text: `Avg across developing countries (${globalAvgChange.toFixed(2)})`,
+              align: 'right',
+              style: {
+                color: 'red'
+              }
+            }
+          }],
+          allowDecimals: true
+        },
+        tooltip: {
+          headerFormat: '<b>{series.name}</b><br>',
+          pointFormat: '{point.name}: <b>{point.y} (Watt/Capita)</b>'
+        },
+        plotOptions: {
+          scatter: {
+            marker: {
+              radius: 0, // Disable default marker radius since we're using images
+              states: {
+                hover: {
+                  enabled: true,
+                  lineColor: 'rgb(100,100,100)'
+                }
+              }
+            },
+            states: {
+              hover: {
+                marker: {
+                  enabled: true,
+                  radius: 15 // Show a larger image on hover
+                }
+              }
+            },
+            tooltip: {
+              headerFormat: '<b>{series.name}</b><br>',
+              pointFormat: '{point.name}: <b>{point.y} USD millions</b>'
+            }
           }
-         
+        },
+        series: [{
+          name: 'Average Change',
+          data: scatterData,
+          colorByPoint: false // Colors are defined per point
+        }],
+        legend: {
+          enabled: false
+        },
+        credits: {
+          enabled: false
+        }
+      });
+
+
+      // Step 7: Choose Visualization Type
+      // Below are two options: Combination Chart and Scatter Plot.
+      // Uncomment the desired chart type and comment out the other.
+
+      // --- Option A: Combination Chart (Column + Line) ---
+
+      // Highcharts.chart('chart3', {
+      //     chart: { type: 'column' },
+      //     title: { text: `Average Yearly Change in Financial Flow for ${selectedEnergyType}` },
+      //     xAxis: {
+      //         type: 'category',
+      //         title: { text: 'Country' },
+      //         labels: {
+      //             rotation: -45,
+      //             style: {
+      //                 fontSize: '13px',
+      //                 fontFamily: 'Verdana, sans-serif'
+      //             }
+      //         }
+      //     },
+      //     yAxis: [{
+      //         title: { text: 'Average Change (USD millions)' },
+      //         allowDecimals: true
+      //     }, {
+      //         // Secondary yAxis for the global average line
+      //         title: { text: 'Global Average Change (USD millions)' },
+      //         opposite: true,
+      //         gridLineWidth: 0
+      //     }],
+      //     tooltip: {
+      //         shared: true,
+      //         valueDecimals: 2,
+      //         crosshairs: true
+      //     },
+      //     plotOptions: {
+      //         column: {
+      //             dataLabels: {
+      //                 enabled: true,
+      //                 format: '{point.y}'
+      //             },
+      //             colorByPoint: true,
+      //             colors: ['#7cb5ec', '#434348', '#90ed7d', '#f7a35c', '#8085e9', '#f15c80', '#e4d354']
+      //         },
+      //         line: {
+      //             marker: {
+      //                 enabled: true
+      //             },
+      //             dataLabels: {
+      //                 enabled: true,
+      //                 format: '{point.y}'
+      //             }
+      //         }
+      //     },
+      //     series: [{
+      //         name: 'Average Change',
+      //         data: avgChangeData.map(point => ({
+      //             name: point.name,
+      //             y: point.y,
+      //             color: point.isAboveAvg ? '#90ee7e' : '#f45b5b' // Green for above average, red for below
+      //         })),
+      //         tooltip: {
+      //             pointFormat: 'Average Change: <b>{point.y} USD millions</b>'
+      //         }
+      //     }, {
+      //         name: 'Global Average Change',
+      //         type: 'line',
+      //         yAxis: 1, // Link to secondary yAxis
+      //         data: selectedCountries.map(() => globalAvgChange), // Repeat the global average for each country
+      //         color: 'red',
+      //         dashStyle: 'ShortDash',
+      //         marker: {
+      //             enabled: false
+      //         },
+      //         enableMouseTracking: false,
+      //         showInLegend: true // Show in legend
+      //     }],
+      //     legend: {
+      //         enabled: true
+      //     },
+      //     credits: {
+      //         enabled: false
+      //     }
+      // });
+
+      // --- Option B: Scatter Plot with Reference Line ---
+
+      /*
+      Highcharts.chart('chart3', {
+          chart: { type: 'scatter', zoomType: 'xy' },
+          title: { text: `Average Yearly Change in Financial Flow for ${selectedEnergyType}` },
+          xAxis: {
+              title: { text: 'Country' },
+              categories: selectedCountries,
+              labels: {
+                  rotation: -45,
+                  style: {
+                      fontSize: '13px',
+                      fontFamily: 'Verdana, sans-serif'
+                  }
+              }
+          },
+          yAxis: {
+              title: { text: 'Average Change (USD millions)' },
+              plotLines: [{
+                  value: globalAvgChange,
+                  color: 'red',
+                  dashStyle: 'ShortDash',
+                  width: 2,
+                  label: {
+                      text: `Global Average (${globalAvgChange.toFixed(2)})`,
+                      align: 'right',
+                      style: {
+                          color: 'red'
+                      }
+                  }
+              }],
+              allowDecimals: true
+          },
+          tooltip: {
+              shared: false,
+              headerFormat: '<b>{series.name}</b><br>',
+              pointFormat: '{point.category}: <b>{point.y} USD millions</b>'
+          },
+          plotOptions: {
+              scatter: {
+                  marker: {
+                      radius: 10,
+                      states: {
+                          hover: {
+                              enabled: true,
+                              lineColor: 'rgb(100,100,100)'
+                          }
+                      }
+                  },
+                  states: {
+                      hover: {
+                          marker: {
+                              enabled: true
+                          }
+                      }
+                  },
+                  tooltip: {
+                      headerFormat: '<b>{series.name}</b><br>',
+                      pointFormat: '{point.category}: <b>{point.y} USD millions</b>'
+                  }
+              }
+          },
+          series: [{
+              name: 'Average Change',
+              data: avgChangeData.map(point => ({
+                  category: point.name,
+                  y: point.y,
+                  color: point.isAboveAvg ? '#90ee7e' : '#f45b5b' // Green for above average, red for below
+              })),
+              marker: {
+                  symbol: 'circle'
+              }
+          }],
+          legend: {
+              enabled: false
+          },
+          credits: {
+              enabled: false
+          }
+      });
+      */
+    }
+
   </script>
   <script
     type='text/javascript'>                    var divElement = document.getElementById('viz1733041649651'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1300px'; vizElement.style.height = '1000px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1000px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1277px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
