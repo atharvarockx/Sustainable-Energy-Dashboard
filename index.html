@@ -12,33 +12,26 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 
-
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://code.highcharts.com/highcharts-more.js"></script>
-  <script src="https://code.highcharts.com/modules/sunburst.js"></script>
-  <script src="https://code.highcharts.com/modules/heatmap.js"></script>
-  <script src="https://code.highcharts.com/modules/waterfall.js"></script>
-
-  <script src="https://code.highcharts.com/modules/exporting.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-  <style>
-    .charts-container {
-      display: flex;
-      flex-direction: row;
-      /* Change from column to row */
-      justify-content: space-between;
-      /* Distribute space between items */
-      align-items: center;
-      /* Align items vertically */
-      gap: 20px;
-      /* Optional: Add space between the divs */
-      padding: 100px;
-      padding-top: 130px;
-      padding-bottom: 130px;
-    }
-
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://public.flourish.studio/resources/embed.js"></script>
+    <style>
+       .charts-container {
+        display: flex;
+        flex-direction: row;
+        /* Change from column to row */
+        justify-content: space-between;
+        /* Distribute space between items */
+        align-items: center;
+        /* Align items vertically */
+        gap: 20px;
+        /* Optional: Add space between the divs */
+        padding: 100px;
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
     #charts {
       display: flex;
       flex-direction: column;
@@ -432,8 +425,8 @@
   </section>
   <section id="cooking-data">
   </section>
-  <!-- <section id="renewable-energy-share">
-  </section> -->
+  <section id="renewable-energy-share">
+  </section>
 
   <!-- <section class="u-align-center u-clearfix u-container-align-center u-grey-5 u-section-2" id="carousel_f1a4">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
@@ -470,7 +463,10 @@
   </section>
   <section id="cooking-data" style="display:none">
   </section>
-  <section id="renewable-energy">
+  <section id="renewable-energy-share" style="display:none">
+  </section>
+
+  <!-- <section>
     <div class="pch">
       <h3 class="u-align-center header-text">SDG 7.2 - Increase Renewable Energy Share</h3>
     </div>
@@ -489,6 +485,40 @@
           behind surging consumption, reducing its share in the overall energy mix and underscoring sustainability
           challenges.
 
+  <section>
+    <div class="row" style="background-color:#41807c; color:#efefef;">
+      <h3 class="u-align-center">The Evolving Story of Renewable Energy: A Tale of Two Trends</h3>
+      <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
+        <p>
+          As the world accelerates its efforts toward achieving Sustainable Development Goal 7 (SDG 7), the journey of renewable energy adoption reveals contrasting narratives between developed and developing nations.  
+        </br>
+        In developed countries, stable energy demand reflects mature economies, with a growing share of renewables driven by clean energy investments, supportive policies, and public awareness. This steady transition marks significant progress toward sustainability.
+        </br>
+        Conversely, in developing nations, rapid economic and population growth fuels rising energy demand. While renewable energy production is increasing through international collaborations and local initiatives, it lags behind surging consumption, reducing its share in the overall energy mix and underscoring sustainability challenges.
+        </p>
+      </div>
+    </div>
+    <div class="u-align-center row d-flex" style="background-color:#41807c; color:#efefef;">
+      <div class="col-md-12 d-flex justify-content-center" style="margin:0 auto;">
+        <div class='tableauPlaceholder' id='viz1733006071822' style='position: relative'>
+          <noscript><a href='#'><img alt='Dashboard 1 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1_rss.png'
+                style='border: none' /></a></noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='path' value='shared&#47;M4BYJ73MS' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;M4&#47;M4BYJ73MS&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+          </object>
         </div>
         <div class="viz">
           <div class="u-align-center row d-flex" style="background-color:#41807c; color:#efefef;">
@@ -535,8 +565,47 @@
           </div>
         </div>
       </div>
-      <div class="content-segment">
-        <div class="explain">
+    </div>
+  </section>
+
+  <section style="background-color: #f2f2f2; color:#111111">
+    <div class="row d-flex justify-content-center" style="margin:0 20px;">
+      <div class="col-md-8 col-lg-9 d-flex align-items-center justify-content-center">
+        <div class='tableauPlaceholder' id='viz1733278411659' style='position: relative'>
+          <noscript><a href='#'><img alt='Dashboard 2 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyUsageinHeatTransportandElectricty&#47;Dashboard2&#47;1_rss.png'
+                style='border: none' /></a></noscript>
+          <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='EnergyUsageinHeatTransportandElectricty&#47;Dashboard2' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;En&#47;EnergyUsageinHeatTransportandElectricty&#47;Dashboard2&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+          </object>
+       </div>
+       <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1733198973761');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='650px';vizElement.style.height='727px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='650px';vizElement.style.height='727px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='727px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+       </script>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <h4>Diving Deeper: The Sectoral Story of Renewable Energy</h4>
+        <p style="font-size: 16px;">
           While the global renewable energy narrative offers a broad view, sector-specific trends highlight the
           transition's complexity. A heatmap of renewable energy use across transport, heat, and electricity reveals
           varying national priorities.
@@ -547,6 +616,10 @@
           technologies like solar and wind, while transport and heating lag due to technological, policy, and cost
           barriers. For example, EVs and biofuels are growing but require robust incentives, and renewable heating
           systems face competition from traditional alternatives.
+        </p>
+        
+        <h4>Connecting the Stories: Holistic Action Across Sectors</h4>
+        <p style="font-size: 16px;">
           Sectoral insights highlight progress and challenges in achieving SDG 7, emphasizing the need for balanced
           renewable energy growth across all key areas.
           This transition requires tailored strategies: developed nations can focus on decarbonizing sectors like
@@ -595,48 +668,43 @@
             <!-- <h3 class="u-align-center">Renewable Energy Mix: A Global Ranking of Progress</h3> -->
             <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
 
-              <p>
-                The renewable energy landscape gains depth when examining the contributions of wind, hydro, solar, and
-                other
-                sources across nations. A global ranking shows rising renewable energy percentages, though growth rates
-                vary
-                by source, revealing key opportunities and challenges.
-                <br>
-                Countries like Denmark and Germany excel in wind energy due to abundant resources and infrastructure.
-                Norway
-                and Brazil lead in hydroelectric power, leveraging water abundance, while solar energy thrives in sunny
-                regions like Australia and the Middle East.
-                <br>
-              </p>
-            </div>
-          </div>
-          <div class="row">
-            <!-- <h3 class="u-align-center">Broadening the Renewable Energy Story</h3> -->
-            <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
-              <p>
-                Global renewable energy rankings highlight that sustainability requires tailored solutions based on each
-                country's unique resources and needs. Slower-growing renewables present opportunities for innovation and
-                investment.
-                <br>
-                As efforts toward SDG 7 advance, embracing diverse energy sources, leveraging local strengths, and
-                tackling
-                challenges can ensure meaningful contributions from all renewables, paving the way for a cleaner,
-                sustainable
-                future.
-              </p>
+  <section style="background-color: #41807c; color:#efefef">
+    <div class="row">
+      <h3 class="u-align-center">Renewable Energy Mix: A Global Ranking of Progress</h3>
+      <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
 
-            </div>
-          </div>
-        </div>
-        <div class="viz">
-          <div class="u-align-center row d-flex">
-            <div class="flourish-embed col-md-9" style="margin:0 auto;" data-src="story/2742285">
-              <script src="https://public.flourish.studio/resources/embed.js"></script>
-              <noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="10%"
-                  alt="visualization" /></noscript>
-            </div>
-          </div>
-        </div>
+        <p>
+          The renewable energy landscape gains depth when examining the contributions of wind, hydro, solar, and other
+          sources across nations. A global ranking shows rising renewable energy percentages, though growth rates vary
+          by source, revealing key opportunities and challenges.
+          <br>
+          Countries like Denmark and Germany excel in wind energy due to abundant resources and infrastructure. Norway
+          and Brazil lead in hydroelectric power, leveraging water abundance, while solar energy thrives in sunny
+          regions like Australia and the Middle East.
+          <br>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <h3 class="u-align-center">Broadening the Renewable Energy Story</h3>
+      <div class="col-md-9 d-flex justify-content-center" align="justify" style="margin:0 auto;">
+        <p>
+          Global renewable energy rankings highlight that sustainability requires tailored solutions based on each
+          country's unique resources and needs. Slower-growing renewables present opportunities for innovation and
+          investment.
+          <br>
+          As efforts toward SDG 7 advance, embracing diverse energy sources, leveraging local strengths, and tackling
+          challenges can ensure meaningful contributions from all renewables, paving the way for a cleaner, sustainable
+          future.
+        </p>
+        
+      </div>
+    </div>
+    <div class="u-align-center row d-flex">
+      <div class="flourish-embed col-md-9" style="margin:0 auto;" data-src="story/2742285">
+        <script src="https://public.flourish.studio/resources/embed.js"></script>
+        <noscript><img src="https://public.flourish.studio/story/2742285/thumbnail" width="10%"
+            alt="visualization" /></noscript>
       </div>
     </div>
   </section>
@@ -684,13 +752,13 @@
 
       </div>
       <div class="col-md-6 col-lg-4 col-xl-3">
-        <!-- <h4>The Efficiency Challenge: Energy Use in a Growing Economy</h4> -->
+        <h4>The Efficiency Challenge: Energy Use in a Growing Economy</h4>
         <p style="font-size: 16px;">
           The global energy landscape faces a critical challenge: declining energy efficiency. Despite clean energy
           advancements, the energy needed to generate economic value is rising, hindering progress toward SDG 7,
           particularly Target 7.3, which seeks to double energy efficiency improvements by 2030.
         </p>
-        <!-- <h4>Understanding the Decline</h4> -->
+        <h4>Understanding the Decline</h4>
         <p style="font-size: 16px;">
           This global decline in energy efficiency can be attributed to several factors:
         <ul style="font-size: 16px;">
@@ -701,7 +769,7 @@
           <li> Energy-Intensive Sectors: Growth in industries like heavy manufacturing exacerbates inefficiency.
         </ul>
         </p>
-        <!-- <h4>A Call for Action</h4> -->
+        <h4>A Call for Action</h4>
         <p style="font-size: 16px;">
           This decline undermines renewable energy gains and heightens environmental pressures. Addressing it demands
           immediate actions like technology upgrades and policy reforms to ensure energy efficiency complements
@@ -709,7 +777,7 @@
         </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section>
     <div class="pch-2">
@@ -1329,21 +1397,33 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
       title: {
         text: 'Financial Flows - Energy Type split per country'
       },
-      colors: [
-        '#1E90FF', // Bright Blue (India)
-        '#32CD32', // Lime Green (Türkiye)
-        '#FF6347', // Tomato (South Africa)
-        '#DA70D6', // Orchid (Egypt)
-        '#20B2AA', // Light Sea Green (Brazil)
-        '#FF4500', // Orange Red (Argen
-        '#2980B9', // Bright Blue
-        '#34495E', // Wet Asphalt
-        '#7F8C8D', // Nephritis
-        '#BDC3C7', // Silver
-        '#ECF0F1',
-        '#5B8FF9', '#5AD8A6', '#5D7092', '#F6BD16', '#6F5EF9',
-        '#6DC8EC', '#945FB9', '#FF9845', '#1E9493', '#FF99C3',
-        '#CDDDFD', '#CDF3E4', '#CED4DE', '#FFD591', '#D3CEFD',
+      legend: {
+        enabled: true, // Enable the legend
+        layout: 'vertical', // Arrange items vertically
+        align: 'right', // Align the legend to the right
+        verticalAlign: 'middle', // Center the legend vertically
+        itemMarginBottom: 10, // Add spacing between legend items
+        title: {
+            text: 'Countries and Energy Types' // Add a title to the legend
+        }
+    },
+      colors:[
+      '#1E90FF', // Bright Blue (India)
+  '#32CD32', // Lime Green (Türkiye)
+  '#FF6347', // Tomato (South Africa)
+  '#DA70D6', // Orchid (Egypt)
+  '#20B2AA', // Light Sea Green (Brazil)
+  '#FF4500' , // Orange Red (Argen
+    '#2980B9', // Bright Blue
+    '#34495E', // Wet Asphalt
+    '#7F8C8D', // Nephritis
+    '#BDC3C7', // Silver
+    '#ECF0F1',
+    '#5B8FF9', '#5AD8A6', '#5D7092', '#F6BD16', '#6F5EF9',
+  '#6DC8EC', '#945FB9', '#FF9845', '#1E9493', '#FF99C3',
+  '#CDDDFD', '#CDF3E4', '#CED4DE', '#FFD591', '#D3CEFD',
+ 
+  '#92A8D1', '#955251', '#B565A7', '#009B77', '#DD4124',
 
         '#92A8D1', '#955251', '#B565A7', '#009B77', '#DD4124',
 
@@ -1477,12 +1557,16 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
       tooltip: {
         headerFormat: '',
         pointFormat: '<b>{point.name}</b>: {point.value} Billion USD'
-      }
-    });
-
-
-    Highcharts.chart('glyph-chart', {
-      chart: {
+      },
+      legend: {
+    enabled: true,
+   
+  }
+  });
+  
+  
+  Highcharts.chart('glyph-chart', {
+    chart: {
         polar: true,
         type: 'column',
         height: 800
@@ -1504,7 +1588,7 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
         min: 0,
         max: 50, // Adjusted maximum based on updated data range
         title: {
-          text: 'Installation Capacity (Watt/Capita)'
+            // text: 'Installation Capacity (Watt/Capita)'
         }
       },
       tooltip: {
