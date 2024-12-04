@@ -66,7 +66,7 @@
     .chart-container {
       flex: 2;
       /* Slightly reduced to allocate more space to text */
-      height: 500px;
+      height: 750px;
       /* Increased height */
       background-color: #f5f5f5;
       /* Placeholder background for charts */
@@ -217,7 +217,7 @@
     <div class="card-deck card-deck-container" style="margin-bottom:60px;">
       <div class="row">
         <div class="col-md-4 d-flex">
-          <div class="card flex-fill" style="background-color: #f2f2f2;">
+          <div class="card flex-fill">
             <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
               src="./images/eco-house.png" alt="Card image cap">
             <div class="card-body">
@@ -229,7 +229,7 @@
           </div>
         </div>
         <div class="col-md-4 d-flex">
-          <div class="card flex-fill" style="background-color: #f2f2f2;">
+          <div class="card flex-fill">
             <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
               src="./images/renewable-energy.png" alt="Card image cap">
             <div class="card-body">
@@ -240,7 +240,7 @@
           </div>
         </div>
         <div class="col-md-4 d-flex">
-          <div class="card flex-fill" style="background-color: #f2f2f2;">
+          <div class="card flex-fill">
             <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
               src="./images/green-energy.png" alt="Card image cap">
             <div class="card-body">
@@ -252,7 +252,7 @@
       </div>
       <div class="row mt-4">
         <div class="col-md-6 d-flex">
-          <div class="card flex-fill" style="background-color: #f2f2f2;">
+          <div class="card flex-fill">
             <img class="card-img-top mt-3 mb-0 center" style="max-height:80px; max-width:80px; margin:0 auto"
               src="./images/recpc-removebg-preview.png" alt="Card image cap">
             <div class="card-body pt-0">
@@ -265,7 +265,7 @@
           </div>
         </div>
         <div class="col-md-6 d-flex">
-          <div class="card flex-fill" style="background-color: #f2f2f2;">
+          <div class="card flex-fill">
             <img class="card-img-top mt-4 center" style="max-height:50px; max-width:50px; margin:0 auto"
               src="./images/financial.png" alt="Card image cap">
             <div class="card-body">
@@ -625,24 +625,26 @@
           <div id="chart1" class="chart-container"></div>
           <div class="chart-text" placeholder="Enter notes for Chart 1" style="text-align:justify;">
             <h3>Mapping the Global Flow of Renewable Energy Investments</h3>
-            The evolution of financial flows for renewable energy investments highlights how developing nations have
-            prioritized transitioning to sustainable energy systems. Since the early 2007s, countries like India,
-            Indonesia, and Pakistan have consistently attracted substantial financial support, reflecting their growing
-            populations and urgent energy demands. A remarkable surge in funding is observed around 2014, with a peak in
-            2016 driven by large-scale hydropower projects. China stands out, receiving steady funding for bioenergy
-            projects, likely driven by its vast agricultural waste resources and focus on waste-to-energy technologies.
-            Traditional technologies like wind and hydropower have remained dominant, forming the backbone of renewable
-            energy transitions in these regions.
-            However, diversification into emerging technologies like marine energy began around 2022, signaling
-            innovation in the sector. Indonesia’s consistent funding for geothermal energy underscores how regional
-            geographies influence energy strategies, leveraging abundant natural resources. These patterns reflect a
-            global focus on scalable, reliable, and geographically advantageous renewable technologies while gradually
-            embracing innovation.
+            <div style="font-size: 1.25rem;">
+              The evolution of financial flows for renewable energy investments highlights how developing nations have
+              prioritized transitioning to sustainable energy systems. Since the early 2007s, countries like India,
+              Indonesia, and Pakistan have consistently attracted substantial financial support, reflecting their growing
+              populations and urgent energy demands. A remarkable surge in funding is observed around 2014, with a peak in
+              2016 driven by large-scale hydropower projects. China stands out, receiving steady funding for bioenergy
+              projects, likely driven by its vast agricultural waste resources and focus on waste-to-energy technologies.
+              Traditional technologies like wind and hydropower have remained dominant, forming the backbone of renewable
+              energy transitions in these regions.
+              However, diversification into emerging technologies like marine energy began around 2022, signaling
+              innovation in the sector. Indonesia’s consistent funding for geothermal energy underscores how regional
+              geographies influence energy strategies, leveraging abundant natural resources. These patterns reflect a
+              global focus on scalable, reliable, and geographically advantageous renewable technologies while gradually
+              embracing innovation.
+            </div>
           </div>
         </div>
 
         <!-- Second Chart -->
-        <div class="chart-wrapper">
+        <div class="chart-wrapper" style="margin-top:30px;">
           <div id="chart2" class="chart-container"></div>
           <div class="chart-text" placeholder="Enter notes for Chart 2" style="text-align:justify;">
             <h3>Evolving Investment Trends in Renewable Energy</h3>
@@ -661,23 +663,25 @@
             <p>
               <strong>Technology Focus:</strong> The data emphasizes a preference for established technologies like hydropower and wind, with limited diversification into emerging renewable technologies.
             </p> -->
-            Over the past decade, the share of energy investments in hydropower has declined, while funding for solar
-            energy and multiple/other technologies has grown. This reflects a shift toward diversification, with smaller
-            financial commitments and multi-purpose instruments like green bonds and investment funds gaining
-            prominence. Large-scale hydropower projects, once dominant, are now less frequent, as donors increasingly
-            favor smaller, flexible grants and loans targeting energy efficiency, electrification programs, and
-            renewable infrastructure. The rise in the multiple technologies category, encompassing non-specific entries
-            and broad-based commitments, underscores a growing focus on adaptable financial mechanisms and decentralized
-            energy solutions. This trend is likely to persist, with occasional large hydropower investments and a
-            growing emphasis on emerging technologies like marine and hydrogen energy, alongside advanced storage
-            solutions. These evolving patterns highlight a future driven by innovation and inclusivity, ensuring energy
-            investments meet both sustainability goals and global equity needs.
+            <div style="font-size: 1.25rem;">
+              Over the past decade, the share of energy investments in hydropower has declined, while funding for solar
+              energy and multiple/other technologies has grown. This reflects a shift toward diversification, with smaller
+              financial commitments and multi-purpose instruments like green bonds and investment funds gaining
+              prominence. Large-scale hydropower projects, once dominant, are now less frequent, as donors increasingly
+              favor smaller, flexible grants and loans targeting energy efficiency, electrification programs, and
+              renewable infrastructure. The rise in the multiple technologies category, encompassing non-specific entries
+              and broad-based commitments, underscores a growing focus on adaptable financial mechanisms and decentralized
+              energy solutions. This trend is likely to persist, with occasional large hydropower investments and a
+              growing emphasis on emerging technologies like marine and hydrogen energy, alongside advanced storage
+              solutions. These evolving patterns highlight a future driven by innovation and inclusivity, ensuring energy
+              investments meet both sustainability goals and global equity needs.
+            </div>
           </div>
         </div>
 
         <!-- Third Chart -->
 
-        <div style="margin:0 50px; text-align:justify;">
+        <div style="margin:0 50px; text-align:justify;font-size: 1.25rem;">
           The trends in renewable energy investments over the past decade reflect a significant shift toward
           diversification and adaptability. With declining investments in hydropower and rising commitments to solar
           energy and multiple technologies, donors are demonstrating a clear preference for scalable, flexible
@@ -757,7 +761,7 @@
   </section>
 
   <section class="u-clearfix u-section-6" id="carousel_28cc"
-    style="background-color:#f2f2f2; color:#111111; padding-top:50px; padding-bottom:50px;padding-right:30px;">
+    style="color:#111111; padding-top:50px; padding-bottom:50px;padding-right:30px;">
     <!-- <div style="text-align:center; margin-top:40px">
       <h3>
         Examining Financial Support and Renewable Energy Installations
@@ -827,20 +831,22 @@
 
         <div class="chart-text" placeholder="Enter notes for Chart 3" style="text-align:justify">
           <h3>Countrywise Growth in Renewable Energy Generation</h3>
-          The average yearly changes in renewable energy capacity reveal stark disparities among developing countries.
-          Overall China and Turkey lead the way, with China leveraging large-scale solar and wind investments supported
-          by cost-efficient manufacturing, while Turkey benefits from strategic hydropower expansion and energy
-          independence policies.
+          <div style="font-size: 1.25rem;">
+            The average yearly changes in renewable energy capacity reveal stark disparities among developing countries.
+            Overall China and Turkey lead the way, with China leveraging large-scale solar and wind investments supported
+            by cost-efficient manufacturing, while Turkey benefits from strategic hydropower expansion and energy
+            independence policies.
 
-          In contrast, Uganda and Egypt lag significantly, with Uganda constrained by limited financial resources and
-          small-scale projects, and Egypt facing delays in implementing large-scale initiatives. India and Indonesia
-          perform near the average, driven by steady investments in solar, wind, and geothermal energy aligned with
-          growing domestic needs. South Africa reflects moderate progress as it transitions from coal dependency amidst
-          policy and grid challenges.
+            In contrast, Uganda and Egypt lag significantly, with Uganda constrained by limited financial resources and
+            small-scale projects, and Egypt facing delays in implementing large-scale initiatives. India and Indonesia
+            perform near the average, driven by steady investments in solar, wind, and geothermal energy aligned with
+            growing domestic needs. South Africa reflects moderate progress as it transitions from coal dependency amidst
+            policy and grid challenges.
 
-          These disparities underscore the need for effective implementation mechanisms to ensure financial investments
-          translate into infrastructure growth, especially in underperforming nations. Addressing these gaps will be
-          critical for achieving equitable and sustainable energy transitions globally.
+            These disparities underscore the need for effective implementation mechanisms to ensure financial investments
+            translate into infrastructure growth, especially in underperforming nations. Addressing these gaps will be
+            critical for achieving equitable and sustainable energy transitions globally.
+          </div>
         </div>
       </div>
 
