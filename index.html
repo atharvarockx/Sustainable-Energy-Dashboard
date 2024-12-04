@@ -67,7 +67,7 @@
 
 .chart-text {
   flex: 1.7; /* Increased flex ratio for more width */
-  height: 650px; /* Increased height */
+  height: 500px; /* Increased height */
   resize: vertical; /* Allow vertical resizing if needed */
   padding: 15px; /* Increased padding for better readability */
   font-size: 16px; /* Larger font size */
@@ -187,8 +187,8 @@
         more</a> -->
     </div>
   </section>
-  <button  type="button" onclick="openContent(event,'electricity-data')">open electricity data</button>
-  <button  type="button" onclick="openContent(event,'cooking-data')">open cooking data</button>
+  <!-- <button  type="button" onclick="openContent(event,'electricity-data')">open electricity data</button>
+  <button  type="button" onclick="openContent(event,'cooking-data')">open cooking data</button> -->
 
   <section class="u-align-center u-clearfix u-container-align-center u-image u-section-1"
     style="background-color: #41807c; padding-top:40px;">
@@ -702,9 +702,15 @@
     </div>
   </section>
 
-
   <section>
-    <div style="margin-top: 80px;">
+    <div class="pch-2">
+        <h3 class="u-align-center header-text">SDG 7.A - Enhance International Cooperation and Technology Access</h3>
+    </div>
+  </section>
+
+
+  <section style="background-color:#41807c; color:#efefef">
+    <!-- <div style="margin-top: 80px;">
       <h3 class="u-align-center">
         FINANCIAL
         FLOWS & ENERGY GENERATION PER CAPITA</h3>
@@ -712,14 +718,14 @@
 
     <div style="margin: 40px;" class="u-align-center">
       Tracking financial flows is essential for understanding the global push toward renewable energy, particularly in developing nations. The uneven distribution of funds highlights both opportunities and challenges in scaling clean energy adoption.
-    </div>
+    </div> -->
 
-    <div class="u-align-center" style="width: 100%; margin-top: 50px;">
-      <div id="filters" style="text-align: center; margin-bottom: 20px;">
-        <label for="countries">Select Countries:</label>
+    <div class="u-align-center" style="width: 100%; margin-top: 50px; padding-top:50px; padding-bottom:50px;">
+      <div id="filters" style="text-align: center; margin-bottom: 20px;color:#111111">
+        <label for="countries" style="color:#efefef">Select Countries:</label>
         <select id="countries" multiple></select>
     
-        <label for="energyType">Select Energy Type:</label>
+        <label for="energyType" style="color:#efefef">Select Energy Type:</label>
         <select id="energyType">
           <option value="All Renewables">All Renewables</option>
           <option value="Bioenergy">Bioenergy</option>
@@ -736,7 +742,7 @@
         <!-- First Chart -->
         <div class="chart-wrapper">
           <div id="chart1" class="chart-container"></div>
-          <div class="chart-text" placeholder="Enter notes for Chart 1">
+          <div class="chart-text" placeholder="Enter notes for Chart 1" style="text-align:justify;">
             <h3>Mapping the Global Flow of Renewable Energy Investments</h3>
             The evolution of financial flows for renewable energy investments highlights how developing nations have prioritized transitioning to sustainable energy systems. Since the early 2007s, countries like India, Indonesia, and Pakistan have consistently attracted substantial financial support, reflecting their growing populations and urgent energy demands. A remarkable surge in funding is observed around 2014, with a peak in 2016 driven by large-scale hydropower projects. China stands out, receiving steady funding for bioenergy projects, likely driven by its vast agricultural waste resources and focus on waste-to-energy technologies. Traditional technologies like wind and hydropower have remained dominant, forming the backbone of renewable energy transitions in these regions. 
             However, diversification into emerging technologies like marine energy began around 2022, signaling innovation in the sector. Indonesia’s consistent funding for geothermal energy underscores how regional geographies influence energy strategies, leveraging abundant natural resources. These patterns reflect a global focus on scalable, reliable, and geographically advantageous renewable technologies while gradually embracing innovation.
@@ -746,7 +752,7 @@
         <!-- Second Chart -->
         <div class="chart-wrapper">
           <div id="chart2" class="chart-container"></div>
-          <div class="chart-text" placeholder="Enter notes for Chart 2">
+          <div class="chart-text" placeholder="Enter notes for Chart 2" style="text-align:justify;">
             <h3>Evolving Investment Trends in Renewable Energy</h3>
             <!-- <p>
               <strong>Peak Years:</strong> Investments reached their highest levels in 2014–2017 at over 1,000 USD million, driven primarily by large-scale projects in hydropower.
@@ -769,7 +775,7 @@
     
         <!-- Third Chart -->
        
-        <div>
+        <div style="margin:0 50px; text-align:justify;">
           The trends in renewable energy investments over the past decade reflect a significant shift toward diversification and adaptability. With declining investments in hydropower and rising commitments to solar energy and multiple technologies, donors are demonstrating a clear preference for scalable, flexible solutions. Instruments like green bonds, decentralized energy systems, and multi-purpose funds have become key drivers of this transformation, enabling smaller yet impactful projects targeting energy efficiency, electrification, and sustainable infrastructure. The growing prominence of emerging technologies such as marine and hydrogen energy, along with advanced storage systems, points to a future focused on innovation and resilience. These patterns highlight not only the changing priorities of financial flows but also their alignment with evolving global energy demands and climate goals. As the renewable energy landscape continues to adapt, financial strategies will play a pivotal role in bridging the gap between investment and tangible energy infrastructure development.
         </div>
       </div>
@@ -831,21 +837,28 @@
       </div>
     </div>
   </section> -->
-  <section class="u-clearfix u-section-6" id="carousel_28cc">
-    <div style="text-align:center; margin-top:40px">
+
+  <section>
+    <div class="pch-3">
+        <h3 class="u-align-center header-text">SDG 7.B - Expand Energy Infrastructure for Developing Nations</h3>
+    </div>
+  </section>
+
+  <section class="u-clearfix u-section-6" id="carousel_28cc" style="background-color:#f2f2f2; color:#111111; padding-top:50px; padding-bottom:50px;padding-right:30px;">
+    <!-- <div style="text-align:center; margin-top:40px">
       <h3>
         Examining Financial Support and Renewable Energy Installations
       </h3>
       <p>
         The transition to clean energy systems is not only a matter of technological innovation but also a question of financial commitment and strategic investment. The presented visualizations provide a holistic view of the financial support allocated to developing countries and how this investment translates into on-ground renewable energy capacity.
       </p>
-    </div>
-    <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+    </div> -->
+    <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1" style="margin:0 30px;">
       <div class="u-layout">
         <div class="u-layout-row">
           <!-- Left Column: Charts stacked vertically -->
           <div
-            class="u-container-align-left u-container-style u-layout-cell u-left-cell u-size-42 charts-column"
+            class="d-flex justify-content-center u-container-style u-layout-cell u-left-cell u-size-42 charts-column"
             data-image-width="1500" data-image-height="1000">
             <div id="sunburst-chart" class="chart-box"></div>
             <div id="glyph-chart" class="chart-box"></div>
@@ -853,26 +866,28 @@
     
           <!-- Right Column: Text -->
           <div class="u-container-style u-layout-cell u-right-cell u-shape-rectangle u-size-18">
-            <div
+            <div style="text-align: justify; padding-left:30px;"
               class="u-container-layout u-valign-middle-lg u-valign-middle-md u-valign-middle-xl u-valign-top-sm u-valign-top-xs">
               <h3>Mapping Financial Flow to Renewable Energy Capacity </h3>
               <p>Financial flows often translate into increased renewable energy capacity, as seen in countries like India, Brazil, and Indonesia, where significant investments in hydropower, solar, and wind align with high energy installations per capita. India exemplifies this with diverse funding translating into substantial infrastructure growth, while Brazil leverages wind and hydropower investments effectively. Similarly, Indonesia’s focus on hydropower and geothermal funding reflects efficient outcomes.</p>
 
-<p>However, not all financial commitments yield proportional results. Countries like Egypt and Turkey show financial inflows that lag in installation capacity, indicating inefficiencies or delays. The multiple renewables category highlights broader funding mechanisms, such as green bonds, which often lack clear links to specific outcomes.</p>
+              <p>However, not all financial commitments yield proportional results. Countries like Egypt and Turkey show financial inflows that lag in installation capacity, indicating inefficiencies or delays. The multiple renewables category highlights broader funding mechanisms, such as green bonds, which often lack clear links to specific outcomes.</p>
 
-<p>As investments expand into emerging technologies like marine and hydrogen energy, ensuring alignment between financial flows and on-ground infrastructure will be critical. Addressing inefficiencies will enable equitable and impactful energy transitions globally.</p>
+              <p>As investments expand into emerging technologies like marine and hydrogen energy, ensuring alignment between financial flows and on-ground infrastructure will be critical. Addressing inefficiencies will enable equitable and impactful energy transitions globally.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
+  <section class="u-clearfix u-section-6" id="carousel_28cc" style="background-color:#41807c; color:#efefef; padding-bottom:50px;">
 
     <div class="u-align-center" style="width: 100%; margin-top: 50px;">
-      <div id="filters" style="text-align: center; margin-bottom: 20px;">
-        <label for="countries2">Select Countries:</label>
+      <div id="filters" style="text-align: center; margin-bottom: 20px;color:#111111">
+        <label for="countries2" style="color:#efefef">Select Countries:</label>
         <select id="countries2" multiple></select>
     
-        <label for="energyType2">Select Energy Type:</label>
+        <label for="energyType2" style="color:#efefef">Select Energy Type:</label>
         <select id="energyType2">
           <option value="All Renewables">All Renewables</option>
           <option value="Bioenergy">Bioenergy</option>
@@ -884,27 +899,29 @@
           <option value="Wind">Wind</option>
         </select>
       </div>
-    </div>
-    <div class="chart-wrapper">
-      <div id="chart3" class="chart-container"></div>
-     
-      <div class="chart-text" placeholder="Enter notes for Chart 3">
-        <h3>Countrywise Growth in Renewable Energy Generation</h3>
-        The average yearly changes in renewable energy capacity reveal stark disparities among developing countries. Overall China and Turkey lead the way, with China leveraging large-scale solar and wind investments supported by cost-efficient manufacturing, while Turkey benefits from strategic hydropower expansion and energy independence policies.
-
-        In contrast, Uganda and Egypt lag significantly, with Uganda constrained by limited financial resources and small-scale projects, and Egypt facing delays in implementing large-scale initiatives. India and Indonesia perform near the average, driven by steady investments in solar, wind, and geothermal energy aligned with growing domestic needs. South Africa reflects moderate progress as it transitions from coal dependency amidst policy and grid challenges.
-        
-        These disparities underscore the need for effective implementation mechanisms to ensure financial investments translate into infrastructure growth, especially in underperforming nations. Addressing these gaps will be critical for achieving equitable and sustainable energy transitions globally.
-      </div>
-    </div>
     
+      <div class="chart-wrapper" style="margin-left:50px;">
+        <div id="chart3" class="chart-container"></div>
+      
+          <div class="chart-text" placeholder="Enter notes for Chart 3" style="text-align:justify">
+            <h3>Countrywise Growth in Renewable Energy Generation</h3>
+            The average yearly changes in renewable energy capacity reveal stark disparities among developing countries. Overall China and Turkey lead the way, with China leveraging large-scale solar and wind investments supported by cost-efficient manufacturing, while Turkey benefits from strategic hydropower expansion and energy independence policies.
+
+            In contrast, Uganda and Egypt lag significantly, with Uganda constrained by limited financial resources and small-scale projects, and Egypt facing delays in implementing large-scale initiatives. India and Indonesia perform near the average, driven by steady investments in solar, wind, and geothermal energy aligned with growing domestic needs. South Africa reflects moderate progress as it transitions from coal dependency amidst policy and grid challenges.
+            
+            These disparities underscore the need for effective implementation mechanisms to ensure financial investments translate into infrastructure growth, especially in underperforming nations. Addressing these gaps will be critical for achieving equitable and sustainable energy transitions globally.
+          </div>
+        </div>
+      
       </div>
     </div>
+    </section>
 
-    <section style="background-color: #f2f2f2;">
+
+    <section style="background-color: #f2f2f2;color:#111111; padding-bottom:50px;">
       <div class="row d-flex justify-content-center">
-        <div class="col-md-6 d-flex align-items-center ">
-          <div class="tableauPlaceholder" id="viz1733041649651" style="position: relative">
+        <div class="col-md-9 d-flex align-items-center ">
+          <div class="tableauPlaceholder" id="viz1733041649651" style="position: relative;">
             <noscript>
               <a href="#"><img alt="Dashboard 3"
                   src="https://public.tableau.com/static/images/DV/DVPProjectfinancial/Dashboard3/1_rss.png"
@@ -930,7 +947,7 @@
           </div>
          
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
           <div>
             <h3>Correlating Financial Flow with Energy Generation Per Capita</h3>
             The relationship between financial flows and energy capacity generation reveals that initial funding spikes often drive sustained growth even with reduced subsequent investments. In hydropower and wind, peaks in funding, such as in 2011 and 2010 respectively, resulted in long-term capacity increases with minimal additional financial input. Geothermal energy shows a consistent correlation, particularly in countries like Indonesia, where steady investments align with sustained growth. Bioenergy, despite smaller financial flows, highlights efficiency improvements contributing to capacity gains and suggests a growing role for technology-driven advancements.
@@ -939,18 +956,29 @@
           </div>
         </div>
       </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+          <h3>Advancing Targets 7.a and 7.b for Global Energy Transition</h3>
+
+          The journey toward achieving SDG 7 targets highlights the critical role of international cooperation (7.a) and infrastructure expansion (7.b) in advancing global energy transitions. Financial flows to developing countries have driven clean energy research, technology transfer, and renewable production, with nations like India, Indonesia, and China showcasing significant progress. However, disparities in converting financial investments into energy capacity, particularly in less developed and landlocked nations, reveal the need for targeted support and efficiency improvements.
+
+          As renewable capacity per capita grows in some regions, leveraging decentralized solutions, green bonds, and emerging technologies like marine energy will be key to bridging gaps. Aligning financial strategies with tailored infrastructure plans and fostering innovation will ensure equitable, efficient, and sustainable energy transitions, achieving the ambitious goals of SDG 7.
+    
+        </div>
+        
+      </div>
     </section>
 
-    <div>
+    <!-- <div>
       <h3>Advancing Targets 7.a and 7.b for Global Energy Transition</h3>
 
       The journey toward achieving SDG 7 targets highlights the critical role of international cooperation (7.a) and infrastructure expansion (7.b) in advancing global energy transitions. Financial flows to developing countries have driven clean energy research, technology transfer, and renewable production, with nations like India, Indonesia, and China showcasing significant progress. However, disparities in converting financial investments into energy capacity, particularly in less developed and landlocked nations, reveal the need for targeted support and efficiency improvements.
 
 As renewable capacity per capita grows in some regions, leveraging decentralized solutions, green bonds, and emerging technologies like marine energy will be key to bridging gaps. Aligning financial strategies with tailored infrastructure plans and fostering innovation will ensure equitable, efficient, and sustainable energy transitions, achieving the ambitious goals of SDG 7.
-    </div>
+    </div> -->
   </section>
 
-  <section class="u-clearfix u-section-7" id="carousel_02d0">
+  <!-- <section class="u-clearfix u-section-7" id="carousel_02d0">
     <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
       <div class="u-clearfix u-expanded-width u-gutter-30 u-layout-wrap u-layout-wrap-1">
         <div class="u-layout">
@@ -1202,7 +1230,7 @@ As renewable capacity per capita grows in some regions, leveraging decentralized
   </section>
   <section class="u-clearfix u-section-11" id="sec-480e">
     <div class="u-clearfix u-sheet u-sheet-1"></div>
-  </section>
+  </section> -->
 
   <section class="u-backlink u-clearfix u-grey-80">
     <p class="u-text">
