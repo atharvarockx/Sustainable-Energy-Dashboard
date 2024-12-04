@@ -10,7 +10,12 @@
   left: 50%;
   transform: translate(-50%, -50%); */
 }
-
+#conclusion{
+  padding:2rem 7rem;
+  font-size:1.25rem;
+  background-color: #41807c;
+  color:#efefef !important;
+}
 .pch {
   /* The image used */
   background-image: url('./images/renewable\ energy\ header.png');
